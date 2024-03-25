@@ -3,3 +3,13 @@ transformers==4.38.1
 datasets==2.18.0
 numpy==1.26.3
 pandas==2.1.4
+spacy==3.7.4
+
+# English !python -m spacy download en_core_web_sm 
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz
+
+# Romanian !python -m spacy download ro_core_news_sm
+https://github.com/explosion/spacy-models/releases/download/ro_core_news_sm-3.7.0/ro_core_news_sm-3.7.0.tar.gz
+
+# Dutch !python -m spacy download nl_core_news_sm
+https://github.com/explosion/spacy-models/releases/download/nl_core_news_sm-3.7.0/nl_core_news_sm-3.7.0.tar.gz
