@@ -92,3 +92,5 @@ if __name__ == "__main__":
         dataset_by_split["sentence_context"] = context_by_split
             
         final_dataset = pd.concat([final_dataset, pd.DataFrame(dataset_by_split)], ignore_index=True)
+
+    json_extracted_relevant_data_with_context = final_dataset.to_json("extracted_relevant_data_with_context.json", orient='records', lines=True)  
