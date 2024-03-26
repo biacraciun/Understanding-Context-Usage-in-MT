@@ -1,5 +1,6 @@
 from datasets import load_dataset
 import spacy
+from spacy.cli.download import download
 import pandas as pd
 
 variants_romanian = [
@@ -34,13 +35,13 @@ def check_formality(sent, language, nlp):
     #     pronouns_variants = variants_bulgarian
     
     doc = nlp(sent)
-    words = []
+    words = set()
     for token in doc:
-        words.append(token.text.lower())
+        words.add(token.text.lower())
 
     for pronoun in pronouns_variants:
         if pronoun in words:
-          return True
+            return True
     return False
     
 def extract_context(url, i, split, context_window=4):
@@ -59,6 +60,20 @@ def extract_context(url, i, split, context_window=4):
       maximum_context_window -= 1     
   return context
 
+
+def load_spacy_models(model_name):
+    """ """
+
+    try:
+        return spacy.load(model_name)
+    except:
+        try:
+            download(model_name)
+            return spacy.load(model_name)
+        except:
+            return None
+
+
 if __name__ == "__main__":
 
     dataset_romanian = load_dataset("facebook/flores", "eng_Latn-ron_Latn")
@@ -67,9 +82,10 @@ if __name__ == "__main__":
 
     splits = ['dev', 'devtest']
 
-    nlp_ro = spacy.load('ro_core_news_sm')
-    nlp_en = spacy.load('en_core_web_sm')
-    nlp_nl = spacy.load('nl_core_news_sm')  
+    # Load models and download them if missing
+    nlp_ro = load_spacy_models('ro_core_news_sm')
+    nlp_en = load_spacy_models('en_core_web_sm')
+    nlp_nl = load_spacy_models('nl_core_news_sm')
 
     final_dataset = pd.DataFrame()
     
@@ -93,4 +109,4 @@ if __name__ == "__main__":
             
         final_dataset = pd.concat([final_dataset, pd.DataFrame(dataset_by_split)], ignore_index=True)
 
-    json_extracted_relevant_data_with_context = final_dataset.to_json("extracted_relevant_data_with_context.json", orient='records', lines=True)  
+    json_extracted_relevant_data_with_context = final_dataset.to_json("data/data_with_context.json", orient='records', lines=True)

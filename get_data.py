@@ -67,4 +67,4 @@ if __name__ == "__main__":
     use_dataset = filtered_dataset.shuffle(seed=random_seed).select(range(50))
 
     # Save data set locally
-    use_dataset.save_to_disk("data")
+    use_dataset.save_to_disk("data/divemt_data")
