@@ -1,16 +1,16 @@
 import argparse
-from datasets import Dataset, load_dataset, load_from_disk
+from datasets import load_from_disk
 import sys
-import numpy as np
-import pandas as pd
 from transformers import (
     set_seed
 )
 import inseq
+import os
 
 
 def load_inseq_model(model_name, gradient):
     """ Load the inseq model to use"""
+    print(f"Loading the inseq model...", file=sys.stderr)
     return inseq.load_model(
         model_name,
         gradient,
@@ -32,6 +32,11 @@ def comp_sal_scores(example, idx):
         step_scores=["probability"],
     )
 
+    # Check if html folder exists, if not, create it
+    if not os.path.exists("html"):
+        print(f"html folder does not yet exist, creating it right away!", file=sys.stderr)
+        os.makedirs("html")
+
     # Create html and output it into predefined folder
     # Use aggregate("subwords") as we want the attributes for each word
     html = out.aggregate("subwords").show(display=False, return_html=True)
@@ -43,7 +48,6 @@ def comp_sal_scores(example, idx):
     words_to_analyse = [example["mt_tokens"][c] for c, tag in enumerate(example["mt_wmt22_qe"]) if tag == "BAD"]
     with open(f"html/sen_{idx}.txt", "w") as f:
         f.write(f"Target text: {example['tgt_text']} \nModified words during post-editing: {str(words_to_analyse)}")
-
 
 
 if __name__ == "__main__":
@@ -97,6 +101,7 @@ if __name__ == "__main__":
     tgt_lang = args.target_language
 
     # Reload data from disk
+    print(f"Reloading 'divemt_data' from disk...", file=sys.stderr)
     dataset = load_from_disk("data/divemt_data")
 
     # Load model
