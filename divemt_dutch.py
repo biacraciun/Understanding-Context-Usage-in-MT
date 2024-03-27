@@ -32,21 +32,26 @@ def comp_sal_scores(example, idx):
         step_scores=["probability"],
     )
 
-    # Check if html folder exists, if not, create it
-    if not os.path.exists("html"):
-        print(f"html folder does not yet exist, creating it right away!", file=sys.stderr)
-        os.makedirs("html")
+    # Check if divemt_dutch_analyse folder exists, if not, create it
+    if not os.path.exists("divemt_dutch_analyse"):
+        print(f"'divemt_dutch_analyse' folder does not yet exist, creating it right away!", file=sys.stderr)
+        os.makedirs("divemt_dutch_analyse")
+
+    # Check if sentence subfolder folder exists, if not, create it
+    if not os.path.exists(f"divemt_dutch_analyse/sen_{idx}"):
+        print(f"Sentence subfolder: 'sen_{idx}' does not yet exist, creating it right away!", file=sys.stderr)
+        os.makedirs(f"divemt_dutch_analyse/sen_{idx}")
 
     # Create html and output it into predefined folder
     # Use aggregate("subwords") as we want the attributes for each word
     html = out.aggregate("subwords").show(display=False, return_html=True)
-    with open(f"html/sen_{idx}.html", "w") as f:
+    with open(f"divemt_dutch_analyse/sen_{idx}/sen_{idx}.html", "w") as f:
         f.write(html)
 
     # Get all the words that are modified during post-editing \
     # and output them along with the target text
     words_to_analyse = [example["mt_tokens"][c] for c, tag in enumerate(example["mt_wmt22_qe"]) if tag == "BAD"]
-    with open(f"html/sen_{idx}.txt", "w") as f:
+    with open(f"divemt_dutch_analyse/sen_{idx}/sen_{idx}.txt", "w") as f:
         f.write(f"Target text: {example['tgt_text']} \nModified words during post-editing: {str(words_to_analyse)}")
 
 
