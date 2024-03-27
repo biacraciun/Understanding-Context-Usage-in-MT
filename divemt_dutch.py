@@ -38,6 +38,13 @@ def comp_sal_scores(example, idx):
     with open(f"html/sen_{idx}.html", "w") as f:
         f.write(html)
 
+    # Get all the words that are modified during post-editing \
+    # and output them along with the target text
+    words_to_analyse = [example["mt_tokens"][c] for c, tag in enumerate(example["mt_wmt22_qe"]) if tag == "BAD"]
+    with open(f"html/sen_{idx}.txt", "w") as f:
+        f.write(f"Target text: {example['tgt_text']} \nModified words during post-editing: {str(words_to_analyse)}")
+
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -96,7 +103,7 @@ if __name__ == "__main__":
     model = load_inseq_model(args.model, args.gradient)
 
     # Use the first 10 instances for now
-    dataset.select(range(5)).map(
+    dataset.select(range(10)).map(
         comp_sal_scores,
         with_indices=True,
     )
