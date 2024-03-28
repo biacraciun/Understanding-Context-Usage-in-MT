@@ -4,6 +4,10 @@ datasets==2.18.0
 numpy==1.26.3
 pandas==2.1.4
 spacy==3.7.4
+js
+
+# for pecore 
+git+https://github.com/inseq-team/inseq.git@main
 
 # English !python -m spacy download en_core_web_sm 
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz
