@@ -26,10 +26,16 @@ def setup_pecore():
     This function sets up the PECORE model by opening the data set,\
     filtering it (selecting only examples with context) and\
     randomly selects 10 examples.
+    Args:
+        None
+    Returns:
+        Dataset: The filtered data set with 10 randomly examples.
     """
 
     # Convert to Pandas DataFrame to filter data
     df = pd.DataFrame(open_data())
+    
+    # Only select examples with context
     filtered_df = df.loc[(df["sentence_context_eng_Latn"].apply(lambda x: len(x) > 0))]
 
     # Convert back to Dataset object
