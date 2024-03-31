@@ -14,7 +14,7 @@ def run_pecore(langugage_code):
     data = setup_pecore()
     model = load_model(langugage_code)
     indices = []
-    for i in range(2):
+    for i in range(len(data)):
         try:
             output = use_pecore(data["sentence_eng_Latn"][i], data["sentence_context_eng_Latn"][i], data["sentence_context_" + langugage_code][i], langugage_code, model)
             if output.output_current == "":
