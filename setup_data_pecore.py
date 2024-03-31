@@ -46,6 +46,6 @@ def setup_pecore():
     set_seed(random_seed)
 
     # Randomly select 10 examples
-    data_10_exmples = data.shuffle(seed=random_seed)[:10]
+    #data_10_exmples = data.shuffle(seed=random_seed)[:10]
 
-    return data_10_exmples
+    return data

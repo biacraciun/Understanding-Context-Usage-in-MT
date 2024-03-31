@@ -4,7 +4,19 @@ from inseq.commands.attribute_context.attribute_context import (
     attribute_context_with_model,
 )
 
-def use_pecore(sentence_eng_Latn, context_eng_Latn, context_target_language, language_code):
+def load_model(language_code):
+    
+    # Load the model speecific to the target language
+    inseq_model = inseq.load_model(
+        "facebook/nllb-200-distilled-600M",
+        "saliency",
+        tokenizer_kwargs={'src_lang': 'eng_Latn', 'tgt_lang': language_code},
+    )
+    
+    return inseq_model
+
+
+def use_pecore(sentence_eng_Latn, context_eng_Latn, context_target_language, language_code, inseq_model):
     """
     This function uses the PECORE model to attribute the context of a sentence in a target language.
     The code was adapted from the PECORE demo. https://huggingface.co/spaces/gsarti/pecore
@@ -17,21 +29,14 @@ def use_pecore(sentence_eng_Latn, context_eng_Latn, context_target_language, lan
         Output of the overall context attribution process.
     """
 
-    # Load the model speecific to the target language
-    inseq_model = inseq.load_model(
-        "facebook/nllb-200-distilled-600M",
-        "saliency",
-        tokenizer_kwargs={'src_lang': 'eng_Latn', 'tgt_lang': language_code},
-    )
-
     # Set the arguments for the PECORE model
     pecore_args = AttributeContextArgs(
         model_name_or_path="facebook/nllb-200-distilled-600M",
         attribution_method="saliency",
         attributed_fn="contrast_prob_diff",
         context_sensitivity_metric="kl_divergence",
-        context_sensitivity_std_threshold=0,
-        attribution_std_threshold=0,
+        context_sensitivity_std_threshold=2,
+        attribution_std_threshold=2,
         attribution_topk=5,
         input_current_text=sentence_eng_Latn,
         input_context_text=context_eng_Latn,

@@ -1,0 +1,2 @@
+The indices for the target languages are: {'bul_Cyrl': [0], 'nld_Latn': [1], 'ron_Latn': [0, 1]}
+The intersection of the indices is: set()
