@@ -33,7 +33,7 @@ def use_pecore(sentence_eng_Latn, context_eng_Latn, context_target_language, lan
     pecore_args = AttributeContextArgs(
         model_name_or_path="facebook/nllb-200-distilled-600M",
         attribution_method="saliency",
-        attributed_fn="contrast_prob_diff",
+        attributed_fn="probability",
         context_sensitivity_metric="kl_divergence",
         context_sensitivity_std_threshold=2,
         attribution_std_threshold=2,
