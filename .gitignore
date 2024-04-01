@@ -153,6 +153,7 @@ dmypy.json
 cython_debug/
 
 # html and json from pecore
+pecore_output/
 pecore_output.html
 pecore_output.json
 

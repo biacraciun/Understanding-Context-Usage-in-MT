@@ -16,7 +16,7 @@ def load_model(language_code):
     return inseq_model
 
 
-def use_pecore(sentence_eng_Latn, context_eng_Latn, context_target_language, language_code, inseq_model):
+def use_pecore(sentence_eng_Latn, context_eng_Latn, context_target_language, language_code, inseq_model, sub_directory_name):
     """
     This function uses the PECORE model to attribute the context of a sentence in a target language.
     The code was adapted from the PECORE demo. https://huggingface.co/spaces/gsarti/pecore
@@ -28,6 +28,8 @@ def use_pecore(sentence_eng_Latn, context_eng_Latn, context_target_language, lan
     Returns:
         Output of the overall context attribution process.
     """
+    # create directory for saving the output
+        
 
     # Set the arguments for the PECORE model
     pecore_args = AttributeContextArgs(
@@ -45,8 +47,8 @@ def use_pecore(sentence_eng_Latn, context_eng_Latn, context_target_language, lan
         output_context_text=context_target_language,
         contextless_output_current_text="""{current}""",
         output_template="{context} {current}",
-        save_path="pecore_output.json",
-        viz_path="pecore_output.html",
+        save_path=sub_directory_name + ".json",
+        viz_path=sub_directory_name + ".html",
         tokenizer_kwargs={'src_lang': 'eng_Latn', 'tgt_lang': language_code},
     )
     
