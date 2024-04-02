@@ -4,32 +4,48 @@ from transformers import (
 )
 import pandas as pd
 from datasets import Dataset
+import os
 from use_pecore import use_pecore
 
-
-def open_data():
+def open_data(input_file_path='data/data_with_context.json'):
     """
-    This function opens the data set with the correct encoding, and returns it.
+    This function opens the data set with the correct encoding, and returns it.\
+    If the file does not exist, it creates it.
+    Args:
+        input_file_path (str): The path to the data set.
+    Returns:
+        list: The data set as a list of dictionaries.
     """
+    
+    output_file_path = 'data/data_with_context_fixed_encoding.json'
 
-    json_data = []
-    with open("extracted_relevant_data_with_context.json", "r", encoding='utf-8') as file:
-        for line in file:
-            line = line.strip()
-            if line:
-                json_data.append(json.loads(line))
-    return json_data
+    data_to_save = []
+
+    # Open the data set
+    with open(input_file_path, 'r', encoding='utf-8') as input_file:
+        for line in input_file:
+            try:
+                data = json.loads(line)
+                data_to_save.append(data)
+            except json.JSONDecodeError as e:
+                print(f"Error decoding JSON: {e}")
+    
+    # Save the data set with the correct encoding if it does not exist
+    if not os.path.exists(output_file_path):
+        with open(output_file_path, 'w', encoding='utf-8') as output_file:
+            json.dump(data_to_save, output_file, ensure_ascii=False, indent=4)
+        
+    return data_to_save
 
     
 def setup_pecore():
     """
     This function sets up the PECORE model by opening the data set,\
-    filtering it (selecting only examples with context) and\
-    randomly selects 10 examples.
+    filtering it (selecting only examples with context).
     Args:
         None
     Returns:
-        Dataset: The filtered data set with 10 randomly examples.
+        Dataset: The filtered data set.
     """
 
     # Convert to Pandas DataFrame to filter data
@@ -47,5 +63,11 @@ def setup_pecore():
 
     # Randomly select 10 examples
     #data_10_exmples = data.shuffle(seed=random_seed)[:10]
+    
+    data.to_json("data/filtered_data_with_context.json", orient='records', lines=True)
 
     return data
+    
+if __name__ == "__main__":
+    
+    data = setup_pecore()

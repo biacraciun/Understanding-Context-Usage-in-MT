@@ -5,14 +5,14 @@ import os
 
 def run_pecore(langugage_code):
     """
-    This function runs the PECORE model on the data after setting 
+    This function runs the PECORE model on the data after filtering it.
     Args:
         langugage_code (str): The language code of the target language.
     Returns:
         None
     """
     
-    # Set up the data for the PECORE model 
+    # Set up the data for the PECORE model     
     data = setup_pecore()
     # Load the model speecific to the target language
     model = load_model(langugage_code)
