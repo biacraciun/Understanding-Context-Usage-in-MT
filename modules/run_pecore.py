@@ -26,8 +26,12 @@ def run_pecore(langugage_code, notebook=False):
         else:
             data = load_from_disk("data/filtered_data_with_context") 
             
-        # Load the model speecific to the target language
-        model = load_model(langugage_code)
+    # Load the model speecific to the target language
+    model = load_model(langugage_code)
+    
+    # Create the output directory for saving the output if it does not exist
+    if not os.path.exists("pecore_output"):
+       os.makedirs("pecore_output")
     
     # Create the output directory per language if it does not exist
     directory_path = os.path.join("pecore_output", langugage_code)
@@ -51,10 +55,6 @@ def run_pecore(langugage_code, notebook=False):
 if __name__ == "__main__":
     
     #langugage_codes = ['bul_Cyrl', 'nld_Latn', 'ron_Latn']
-    
-    # Create the output directory for saving the output if it does not exist
-    if not os.path.exists("pecore_output"):
-       os.makedirs("pecore_output")
     
     run_pecore('ron_Latn', notebook=False)
     
