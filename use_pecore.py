@@ -37,7 +37,7 @@ def use_pecore(sentence_eng_Latn, context_eng_Latn, context_target_language, lan
         attribution_method="saliency",
         attributed_fn="probability",
         context_sensitivity_metric="kl_divergence",
-        context_sensitivity_std_threshold=2,
+        context_sensitivity_std_threshold=0,
         attribution_std_threshold=2,
         attribution_topk=5,
         input_current_text=sentence_eng_Latn,
