@@ -1,0 +1,68 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "id": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "URL": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "domain": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "topic": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "has_image": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "has_hyperlink": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "sentence_bul_Cyrl": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "sentence_context_bul_Cyrl": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "sentence_nld_Latn": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "sentence_context_nld_Latn": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "sentence_eng_Latn": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "sentence_context_eng_Latn": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "sentence_ron_Latn": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "sentence_context_ron_Latn": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "__index_level_0__": {
+      "dtype": "int64",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

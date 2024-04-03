@@ -1,6 +1,6 @@
 from setup_data_pecore import setup_pecore, use_pecore
 from use_pecore import use_pecore, load_model
-
+from datasets import load_from_disk
 import os
 
 def run_pecore(langugage_code):
@@ -12,8 +12,14 @@ def run_pecore(langugage_code):
         None
     """
     
-    # Set up the data for the PECORE model     
-    data = setup_pecore()
+    # Set up the data for the PECORE model if it does not exist
+    if not os.path.exists("data/filtered_data_with_context"):
+        data = setup_pecore()
+        
+    # Load the data if it exists
+    else:
+        data = load_from_disk("data/filtered_data_with_context") 
+        
     # Load the model speecific to the target language
     model = load_model(langugage_code)
     
@@ -25,6 +31,7 @@ def run_pecore(langugage_code):
 
     # Indices of the examples to run the PECORE model on
     indices = [12, 18, 25, 29, 39, 53]
+
     
     # Run the PECORE model for the target language 
     for i in indices:

@@ -65,6 +65,7 @@ def setup_pecore():
     #data_10_exmples = data.shuffle(seed=random_seed)[:10]
     
     data.to_json("data/filtered_data_with_context.json", orient='records', lines=True)
+    data.save_to_disk("data/filtered_data_with_context")
 
     return data
     
