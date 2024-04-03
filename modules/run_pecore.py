@@ -40,7 +40,8 @@ def run_pecore(langugage_code, notebook=False):
        os.makedirs(directory_path)
 
     # Indices of the examples to run the PECORE model on
-    indices = [12, 18, 25, 29, 39, 53]
+    # indices = [12, 18, 25, 29, 39, 53]
+    indices = [0]
 
     
     # Run the PECORE model for the target language 
@@ -57,7 +58,3 @@ if __name__ == "__main__":
     #langugage_codes = ['bul_Cyrl', 'nld_Latn', 'ron_Latn']
     
     run_pecore('ron_Latn', notebook=False)
-    
-
-    
-    

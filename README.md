@@ -16,7 +16,7 @@ However, to utilise this dataset, preprocessing is required. First, we need to e
 
 These preprocessing steps are included in the. 
 
-To identify formality-sensitive pronouns, we drew inspiration from the Multilingual Discourse-Aware Benchmark (MuDA) repository, but we developed our own language-specific taggers to detect formality. For the second step, we utilize the 'URL' feature to detect context, setting the maximum size of the context window to be 4, equivalent to 4 preceding sentences. The resulting dataset can be observed in [...]. Before delving into the PECoRe  part, we need to filter the data to include only sentences that do not have an empty context. Our final dataset can be found in [...]
+To identify formality-sensitive pronouns, we drew inspiration from the [Multilingual Discourse-Aware Benchmark (MuDA)](https://github.com/CoderPat/MuDA) repository, but we developed our own language-specific taggers to detect formality. For the second step, we utilize the 'URL' feature to detect context, setting the maximum size of the context window to be 4, equivalent to 4 preceding sentences. The resulting dataset is located at [data_with_context.json](data/data_with_context.json). Before delving into the PECoRe part, we need to filter the data to include only sentences that do not have an empty context. Our final dataset can be found at [filtered_data_with_context.json](data/filtered_data_with_context.json).
 
 ### PECoRe 
 
@@ -34,16 +34,20 @@ pip install -r requirements.txt
 
 The preprocessing part can be performed running the following command:
 ```bash
-pip extract_relevant_data_with_context.py
+python modules/extract_relevant_data_with_context.py
 ```
 
 The postprocessing step can be achieved by running the following command:
 ```bash
-pip run_pecore.py
+python modules/setup_data_pecore.py
 ```
 
-For convinience, we provided both datasets in ... Moreover, the dataset is provided for visual inspection of the preprocessed data with the correct encoding adapted to the Bulgarian Cyrillic alphabet and Romanian diacritics.
+For convenience, we already provided the required datasets for this project in the [data](data) folder. Moreover, the [data_with_context_fixed_encoding.json](data/data_with_context_fixed_encoding.json) is provided for visual inspection of the preprocessed data with the correct encoding adapted to the Bulgarian Cyrillic alphabet and Romanian diacritics. Lastly, this folder also includes the [filtered dataset](data/filtered_data_with_context) exported as a 🤗 dataset such that it can be easily accessible by the PECoRe framework, located in the [modules](modules) folder. The default language is set to Romanian, but it can be changed with ease in the [run_pecore.py](modules/run_pecore.py) file, namely in the main block.
 
+To deploy the PECoRe framework, run the following command: 
+```bash
+python modules/run_pecore.py
+```
 
 ### Visualization of the PECoRe output
-A notebook for each language is provided for inspecting the generated explanations with inference. These can be found in the [...]() folder.
+A notebook for each language is provided for inspecting the generated output of the PECoRe method. These can be found in the [notebooks](notebooks) folder.
