@@ -10,17 +10,17 @@ Abstract
 
 The dataset that is used for investigating how formality transfers given the English source pronouns 'you', 'your', and 'yours' into the three target languages is [FLORES-200](https://huggingface.co/datasets/facebook/flores) dataset. It consists of parallel sentence translations for 200 languages, including Dutch, Romanian, and Bulgarian. 
 
-### Pre-processing and post-processing 
+### Preprocessing and postprocessing 
 
-However, to utilise this dataset, preprocessing is required. First, we need to extract the sentences that contain formality-sensitive pronouns ('you', 'your', and 'yours'), and then we perform the extraction of the preceding context of this sentence. It is important to mention that this context extraction is possible because sentences with consecutive IDs sharing the same 'URL' are consecutive in the text. 
+However, to utilise this dataset, preprocessing is required. First, we need to extract the sentences that contain formality-sensitive pronouns ('you', 'your', and 'yours'), and then we perform the extraction of the preceding context of this sentence. It is important to mention that this context extraction is possible because sentences with consecutive 'IDs' sharing the same 'URL' are consecutive in the text. 
 
-These preprocessing steps are included in the. 
+These preprocessing and postprocessing steps are included in the [extract_relevant_data_with_context.py](modules/extract_relevant_data_with_context.py) and, respectively, [setup_data_pecore.py](modules/setup_data_pecore.py) file. 
 
 To identify formality-sensitive pronouns, we drew inspiration from the [Multilingual Discourse-Aware Benchmark (MuDA)](https://github.com/CoderPat/MuDA) repository, but we developed our own language-specific taggers to detect formality. For the second step, we utilize the 'URL' feature to detect context, setting the maximum size of the context window to be 4, equivalent to 4 preceding sentences. The resulting dataset is located at [data_with_context.json](data/data_with_context.json). Before delving into the PECoRe part, we need to filter the data to include only sentences that do not have an empty context. Our final dataset can be found at [filtered_data_with_context.json](data/filtered_data_with_context.json).
 
 ### PECoRe 
 
-
+[PECoRe](https://huggingface.co/spaces/gsarti/pecore), or Plausibility Evaluation of Context Reliance, is an interpretability framework that aims to evaluate and quantify how language models utilize contextual information when generating texts. Using this framework, we can identify the specific tokens that contribute to the translation performed by the model. The exact parameters used for this study can be observed in the [use_pecore.py](modules/use_pecore.py) file.  
 
 ## Running the code
 
