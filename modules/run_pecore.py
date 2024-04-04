@@ -15,7 +15,7 @@ def run_pecore(langugage_code, notebook=False):
     
     # Load the data if running in a notebook environment
     if notebook:
-        data = load_from_disk("NLP---Understanding-Context-Usage-in-Machine-Translation/data/filtered_data_with_context")
+        data = load_from_disk("Understanding-Context-Usage-in-MT/data/filtered_data_with_context")
     
     else:
         # Set up the data for the PECORE model if it does not exist
