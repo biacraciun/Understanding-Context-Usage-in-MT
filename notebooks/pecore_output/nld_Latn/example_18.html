@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> 
+<span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  There are many things you have to take into consideration before and when you travel somewhere.
+<span class="r2">Input current:</span> When you travel, expect things not to be like they are <span class="r6">&quot;back home&quot;</span>. Manners, laws, food, traffic, 
+lodging, standards, language and so on will to some extent differ from where you live.
+<span class="r2">Output context:</span> Er zijn veel dingen waar je goed over na moet denken voordat je en wanneer je ergens heen reist.
+<span class="r2">Output current:</span> Wanneer je reist, verwacht dan dat het niet zoals het is <span class="r6">&quot;thuis terug&quot;</span>. Manieren, wetten, voedsel, 
+verkeer, verblijf, normen, taal enzovoort zullen in zekere mate verschillen van waar je woont.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.051</span><span class="r2">):</span>  Wanneer<span class="r5"> je(</span><span class="r5">1.219</span><span class="r5">)</span> reist, verwacht dan dat het niet zoals het is <span class="r6">&quot;thuis terug&quot;</span>. 
+Manieren, wetten, voedsel, verkeer, verblijf, normen, taal enzovoort zullen in zekere mate verschillen van waar je 
+woont.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     There are many things you have to take into consideration before and when you 
+travel somewhere.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Er zijn veel dingen waar<span class="r1"> je(</span><span class="r1">0.001</span><span class="r1">)</span> goed over na moet denken voordat je en wanneer 
+je ergens heen reist.
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.051</span><span class="r2">):</span> <span class="r5"> Wanneer(</span><span class="r5">0.488</span><span class="r5">)</span> je reist, verwacht dan dat het niet zoals het is <span class="r6">&quot;thuis terug&quot;</span>. 
+Manieren, wetten, voedsel, verkeer, verblijf, normen, taal enzovoort zullen in zekere mate verschillen van waar je 
+woont.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     There are many things you have to take into consideration before and when you 
+travel somewhere.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    Er zijn veel dingen waar je goed over na moet denken voordat je en wanneer je 
+ergens heen <span class="r7">reist</span><span class="r1">.(</span><span class="r1">0.008</span><span class="r1">)</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.051</span><span class="r2">):</span>  Wanneer je<span class="r5"> re(</span><span class="r5">0.180</span><span class="r5">)</span>ist, verwacht dan dat het niet zoals het is <span class="r6">&quot;thuis terug&quot;</span>. 
+Manieren, wetten, voedsel, verkeer, verblijf, normen, taal enzovoort zullen in zekere mate verschillen van waar je 
+woont.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     There are many things you have to take into consideration before and when you 
+travel somewhere.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    Er zijn veel dingen waar je goed over na moet denken voordat je en wanneer je 
+ergens heen <span class="r7">reist</span><span class="r1">.(</span><span class="r1">0.007</span><span class="r1">)</span>
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.051</span><span class="r2">):</span>  Wanneer je reist, verwacht dan dat het niet zoals het is <span class="r6">&quot;thuis terug&quot;</span>.<span class="r5"> </span>
+<span class="r5">Mani(</span><span class="r5">0.104</span><span class="r5">)</span>eren, wetten, voedsel, verkeer, verblijf, normen, taal enzovoort zullen in zekere mate verschillen van 
+waar je woont.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     There are many things you have to take into consideration before and when you<span class="r1"> </span>
+<span class="r1">travel(</span><span class="r1">0.003</span><span class="r1">) somewhere(</span><span class="r1">0.003</span><span class="r1">)</span>.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Er zijn veel dingen waar je goed over na moet denken voordat je en wanneer je 
+ergens heen <span class="r7">reist</span><span class="r1">.(</span><span class="r1">0.003</span><span class="r1">)</span>
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.051</span><span class="r2">):</span>  Wanneer je reist, verwacht dan dat het niet zoals het is <span class="r6">&quot;thuis</span><span class="r5"> terug(0.059)</span><span class="r6">&quot;</span>. 
+Manieren, wetten, voedsel, verkeer, verblijf, normen, taal enzovoort zullen in zekere mate verschillen van waar je 
+woont.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     There are many things you have to take into consideration before and when you 
+travel somewhere.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    Er zijn veel dingen waar je goed over na moet denken voordat je en wanneer je 
+ergens<span class="r1"> heen(</span><span class="r1">0.007</span><span class="r1">)</span> reist.
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.051</span><span class="r2">):</span>  Wanneer je reist, verwacht<span class="r5"> dan(</span><span class="r5">0.057</span><span class="r5">)</span> dat het niet zoals het is <span class="r6">&quot;thuis terug&quot;</span>. 
+Manieren, wetten, voedsel, verkeer, verblijf, normen, taal enzovoort zullen in zekere mate verschillen van waar je 
+woont.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     There are many things you have to take into consideration before and when you 
+travel<span class="r1"> somewhere(</span><span class="r1">0.003</span><span class="r1">).(</span><span class="r1">0.003</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Er zijn veel dingen waar je goed over na moet denken voordat je en wanneer je 
+ergens heen <span class="r7">reist</span><span class="r1">.(</span><span class="r1">0.003</span><span class="r1">)</span>
+#<span class="r4">7</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.051</span><span class="r2">):</span>  Wanneer je reist, verwacht dan dat het niet zoals het is <span class="r6">&quot;thuis terug&quot;</span>. Manieren, 
+wetten, voedsel, verkeer,<span class="r5"> verb(</span><span class="r5">0.052</span><span class="r5">)</span>lijf, normen, taal enzovoort zullen in zekere mate verschillen van waar je 
+woont.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     There are many things you have to take into consideration before and when<span class="r1"> </span>
+<span class="r1">you(</span><span class="r1">0.001</span><span class="r1">) travel(</span><span class="r1">0.001</span><span class="r1">) somewhere(</span><span class="r1">0.001</span><span class="r1">).(</span><span class="r1">0.001</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Er zijn veel dingen waar je goed over na moet denken voordat je en wanneer je 
+ergens heen reist.
+
+</code></pre>
+</body>
+</html>

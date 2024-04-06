@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> 
+<span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  Ecuador requires that Cuban citizens receive an invitation letter prior to entering Ecuador through
+international airports or frontier admission points. This letter must be legalized by the Ecuadorian Ministry of 
+Foreign Affairs, and comply with certain requirements. These requirements are designed to provide an organized 
+migratory flow between both countries. Cuban citizens who are US green card holders should visit an Ecuadorian 
+Consulate to obtain an exemption to this requirement.
+<span class="r2">Input current:</span> Your passport must be valid for at least <span class="r4">6</span> months beyond your travel dates. A round/onward trip 
+ticket is needed to prove the length of your stay.
+<span class="r2">Output context:</span> Ecuador vereist van Cubaanse burgers dat zij een uitnodiging kunnen laten zien, voordat ze Ecuador 
+binnenkomen via internationale luchthavens of grensposten. Het Ministerie van Buitenlandse Zaken van Ecuador moet 
+de brief legaliseren en deze moet voldoen aan bepaalde vereisten. Om een georganiseerde migratiestroom tussen beide
+landen mogelijk te maken, zijn deze eisen opgesteld. Cubaanse burgers die in de VS over een Green Card beschikken, 
+moeten naar een Ecuadoraans consulaat gaan om een vrijstelling van deze eis te krijgen.
+<span class="r2">Output current:</span> Uw paspoort moet minstens <span class="r4">6</span> maanden geldig zijn na de reisdatum.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.137</span><span class="r2">):</span> <span class="r5"> Uw(</span><span class="r5">1.335</span><span class="r5">)</span> paspoort moet minstens <span class="r4">6</span> maanden geldig zijn na de reisdatum.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Ecuador requires that Cuban citizens receive an invitation letter prior to 
+entering Ecuador through international airports or frontier admission points. This letter must be legalized by the 
+Ecuadorian Ministry of Foreign Affairs, and comply with certain requirements. These requirements are designed to 
+provide an organized migratory flow between both countries. Cuban citizens who are US green card holders should 
+visit an Ecuadorian Consulate to obtain an exemption to this <span class="r7">requir</span><span class="r1">ement(</span><span class="r1">0.003</span><span class="r1">).(</span><span class="r1">0.002</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Ecuador vereist van Cubaanse burgers dat zij een uitnodiging kunnen laten zien, 
+voordat ze Ecuador binnenkomen via internationale luchthavens of grensposten. Het Ministerie van Buitenlandse Zaken
+van Ecuador moet de brief legaliseren en deze moet voldoen aan bepaalde vereisten. Om een georganiseerde 
+migratiestroom tussen beide landen mogelijk te maken, zijn deze eisen opgesteld. Cubaanse burgers die in de VS over
+een Green Card beschikken, moeten naar een Ecuadoraans consulaat gaan om een vrijstelling van deze eis te 
+<span class="r7">krijgen</span><span class="r1">.(</span><span class="r1">0.008</span><span class="r1">)</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.137</span><span class="r2">):</span>  Uw paspoort moet minstens <span class="r4">6</span> maanden geldig zijn na de <span class="r7">reisdatum</span><span class="r5">.(</span><span class="r5">0.547</span><span class="r5">)</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Ecuador requires that Cuban citizens receive an invitation letter prior to 
+entering Ecuador through international airports or frontier admission points. This letter must be legalized by the 
+Ecuadorian Ministry of Foreign Affairs, and comply with certain requirements. These requirements are designed to 
+provide an organized migratory flow between both countries. Cuban citizens who are US green card holders should 
+visit an Ecuadorian Consulate to obtain an exemption to this <span class="r7">requir</span><span class="r1">ement(</span><span class="r1">0.001</span><span class="r1">).(</span><span class="r1">0.001</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Ecuador vereist van Cubaanse burgers dat zij een uitnodiging kunnen laten zien, 
+voordat ze Ecuador binnenkomen via internationale luchthavens of grensposten. Het Ministerie van Buitenlandse Zaken
+van Ecuador moet de brief legaliseren en deze moet voldoen aan bepaalde <span class="r7">vereisten</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">) Om(</span><span class="r1">0.001</span><span class="r1">)</span> een 
+georganiseerde migratiestroom tussen beide landen mogelijk te maken<span class="r1">,(</span><span class="r1">0.001</span><span class="r1">)</span> zijn deze eisen opgesteld. Cubaanse 
+burgers die in de VS over een Green Card<span class="r1"> beschik(</span><span class="r1">0.001</span><span class="r1">)</span>ken, moeten naar een Ecuadoraans consulaat gaan om een 
+vrijstelling van deze eis te <span class="r7">krijgen</span><span class="r1">.(</span><span class="r1">0.002</span><span class="r1">)</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.137</span><span class="r2">):</span>  Uw paspoort<span class="r5"> moet(</span><span class="r5">0.170</span><span class="r5">)</span> minstens <span class="r4">6</span> maanden geldig zijn na de reisdatum.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Ecuador requires that Cuban citizens receive an invitation letter prior to 
+entering Ecuador through international airports or frontier admission points. This letter must be legalized by<span class="r1"> </span>
+<span class="r1">the(</span><span class="r1">0.001</span><span class="r1">)</span> Ecuadorian Ministry of Foreign Affairs, and comply with certain requirements. These requirements are 
+designed to provide an organized migratory flow between both countries. Cuban citizens who are US green card 
+holders should visit an Ecuadorian Consulate to obtain an <span class="r7">exemp</span><span class="r1">tion(</span><span class="r1">0.001</span><span class="r1">)</span> to this <span class="r7">requir</span><span class="r1">ement(</span><span class="r1">0.001</span><span class="r1">).(</span><span class="r1">0.001</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Ecuador vereist van Cubaanse burgers dat zij een uitnodiging kunnen laten zien, 
+voordat ze Ecuador binnenkomen via internationale luchthavens of grensposten. Het Ministerie van Buitenlandse Zaken
+van Ecuador<span class="r1"> moet(</span><span class="r1">0.001</span><span class="r1">)</span> de brief legaliseren en deze moet voldoen aan bepaalde vereisten.<span class="r1"> Om(</span><span class="r1">0.001</span><span class="r1">)</span> een 
+georganiseerde migratiestroom tussen beide landen mogelijk te maken, zijn deze eisen opgesteld. Cubaanse burgers 
+die in de VS over een Green Card<span class="r1"> beschik(</span><span class="r1">0.001</span><span class="r1">)</span>ken, moeten naar een Ecuadoraans consulaat gaan om een vrijstelling 
+van deze eis te <span class="r7">krijgen</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span>
+
+</code></pre>
+</body>
+</html>

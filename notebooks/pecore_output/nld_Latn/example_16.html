@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> 
+<span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  The world has over <span class="r4">5</span>,<span class="r4">000</span> different languages, including more than twenty with <span class="r4">50</span> million or more 
+speakers. Written words are often easier to understand than spoken words, also. This is especially true of 
+addresses, which are often difficult to pronounce intelligibly.
+<span class="r2">Input current:</span> Many entire nations are completely fluent in English, and in even more you can expect a limited 
+knowledge - especially among younger people.
+<span class="r2">Output context:</span> Er bestaan wereldwijd meer dan <span class="r4">5000</span> talen, waarvan meer dan twintig minimaal <span class="r4">50</span> miljoen sprekers 
+hebben. Woorden op papier zijn ook vaak eenvoudiger te begrijpen dan uitgesproken woorden. Dit is vooral van 
+toepassing op adressen, die vaak moeilijk goed uit te spreken zijn.
+<span class="r2">Output current:</span> Veel hele naties spreken Engels volledig vloeiend, en in nog meer dingen kan je verwachten dat je 
+beperkte kennis hebt - vooral bij jongere mensen.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span> <span class="r5"> Veel(</span><span class="r5">0.662</span><span class="r5">)</span> hele naties spreken Engels volledig vloeiend, en in nog meer dingen 
+kan je verwachten dat je beperkte kennis hebt - vooral bij jongere mensen.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     The world has over <span class="r4">5</span>,<span class="r4">000</span> different languages, including more than twenty with <span class="r4">50</span> 
+million or more speakers. Written words are often easier to understand than spoken words, also. This is especially 
+true of addresses, which are often difficult to pronounce <span class="r7">intelligib</span><span class="r1">ly(</span><span class="r1">0.003</span><span class="r1">)</span>.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Er bestaan wereldwijd meer dan <span class="r4">5000</span> talen, waarvan meer dan twintig minimaal <span class="r4">50</span> 
+miljoen sprekers hebben. Woorden op papier zijn ook vaak eenvoudiger te begrijpen dan uitgesproken woorden. Dit is 
+vooral van toepassing op adressen, die vaak moeilijk goed uit te spreken<span class="r1"> zijn(</span><span class="r1">0.004</span><span class="r1">).(</span><span class="r1">0.012</span><span class="r1">)</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Veel hele naties spreken Engels volledig vloeiend, en in nog meer dingen kan je 
+verwachten dat<span class="r5"> je(</span><span class="r5">0.127</span><span class="r5">)</span> beperkte kennis hebt - vooral bij jongere mensen.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    <span class="r1"> The(</span><span class="r1">0.001</span><span class="r1">)</span> world has over <span class="r4">5</span>,<span class="r4">000</span> different languages, including more than twenty 
+with <span class="r4">50</span> million or more speakers. Written words are often easier to understand than spoken words, also. This is 
+especially true of addresses, which are often difficult to <span class="r7">prono</span><span class="r1">unce(</span><span class="r1">0.001</span><span class="r1">)</span> <span class="r7">intelligib</span><span class="r1">ly(</span><span class="r1">0.001</span><span class="r1">).(</span><span class="r1">0.001</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Er bestaan wereldwijd meer dan <span class="r4">5000</span> talen, waarvan meer dan twintig minimaal <span class="r4">50</span> 
+miljoen sprekers hebben. Woorden op<span class="r1"> papier(</span><span class="r1">0.001</span><span class="r1">)</span> zijn ook vaak eenvoudiger te begrijpen dan uitgesproken woorden. 
+Dit is vooral van toepassing op adressen, die vaak<span class="r1"> moeilijk(</span><span class="r1">0.001</span><span class="r1">)</span> goed uit te spreken <span class="r7">zijn</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Veel hele naties spreken Engels volledig vloeiend, en in nog meer dingen kan<span class="r5"> </span>
+<span class="r5">je(</span><span class="r5">0.107</span><span class="r5">)</span> verwachten dat je beperkte kennis hebt - vooral bij jongere mensen.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     The world has over <span class="r4">5</span>,<span class="r4">000</span> different languages, including more than twenty with <span class="r4">50</span> 
+million or more <span class="r7">speakers</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span> Written words are often easier to understand than spoken words,<span class="r1"> also(</span><span class="r1">0.001</span><span class="r1">)</span>. This 
+is especially true of addresses, which are often difficult to pronounce <span class="r7">intelligib</span><span class="r1">ly(</span><span class="r1">0.001</span><span class="r1">)</span>.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Er<span class="r1"> bestaan(</span><span class="r1">0.001</span><span class="r1">)</span> <span class="r7">wereldwi</span><span class="r1">jd(</span><span class="r1">0.001</span><span class="r1">)</span> meer dan <span class="r4">5000</span> talen, waarvan meer dan twintig 
+minimaal <span class="r4">50</span> miljoen sprekers hebben. Woorden op papier zijn ook vaak eenvoudiger te begrijpen dan uitgesproken 
+woorden. Dit is vooral van<span class="r1"> toepassing(</span><span class="r1">0.001</span><span class="r1">)</span> op adressen, die vaak moeilijk goed uit te spreken zijn.
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Veel hele naties spreken Engels volledig vloeiend, en in nog meer<span class="r5"> dingen(</span><span class="r5">0.078</span><span class="r5">)</span> 
+kan je verwachten dat je beperkte kennis hebt - vooral bij jongere mensen.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     The world has over <span class="r4">5</span>,<span class="r4">000</span> different languages, including<span class="r1"> more(</span><span class="r1">0.002</span><span class="r1">)</span> than twenty 
+with <span class="r4">50</span> million or more speakers. Written words are often easier to understand than spoken words, also. This is 
+especially true of addresses, which are often difficult to pronounce intelligibly.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Er bestaan wereldwijd meer dan <span class="r4">5000</span> talen, waarvan meer dan twintig minimaal <span class="r4">50</span> 
+miljoen sprekers hebben. Woorden op papier zijn ook vaak eenvoudiger te begrijpen dan uitgesproken woorden. Dit is 
+vooral van toepassing op adressen, die vaak<span class="r1"> moeilijk(</span><span class="r1">0.001</span><span class="r1">)</span> goed uit te spreken <span class="r7">zijn</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span>
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Veel hele naties spreken Engels<span class="r5"> volledig(</span><span class="r5">0.069</span><span class="r5">)</span> vloeiend, en in nog meer dingen 
+kan je verwachten dat je beperkte kennis hebt - vooral bij jongere mensen.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     The world has over <span class="r4">5</span>,<span class="r4">000</span> different languages, including more than twenty with <span class="r4">50</span> 
+million or more <span class="r7">speakers</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span> Written words are often easier to understand than spoken words, also. This is 
+especially true of addresses, which are often difficult to pronounce <span class="r7">intellig</span><span class="r1">ib(</span><span class="r1">0.001</span><span class="r1">)ly(</span><span class="r1">0.002</span><span class="r1">).(</span><span class="r1">0.001</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Er bestaan wereldwijd meer dan <span class="r4">5000</span> talen, waarvan meer dan twintig<span class="r1"> </span>
+<span class="r1">minima(</span><span class="r1">0.002</span><span class="r1">)</span>al <span class="r4">50</span> miljoen sprekers hebben. Woorden op<span class="r1"> papier(</span><span class="r1">0.002</span><span class="r1">)</span> zijn ook vaak eenvoudiger te begrijpen dan 
+uitgesproken woorden. Dit is vooral van toepassing op adressen, die vaak moeilijk<span class="r1"> goed(</span><span class="r1">0.002</span><span class="r1">)</span> uit te spreken 
+<span class="r7">zijn</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span>
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Veel hele <span class="r7">nati</span><span class="r5">es(</span><span class="r5">0.069</span><span class="r5">)</span> spreken Engels volledig vloeiend, en in nog meer dingen 
+kan je verwachten dat je beperkte kennis hebt - vooral bij jongere mensen.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     The world has over <span class="r4">5</span>,<span class="r4">000</span> different languages, including more than twenty with <span class="r4">50</span> 
+million or more speakers. Written words are often easier to understand than spoken words, also. This is especially 
+true of addresses, which are often difficult to pronounce intelligibly.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Er bestaan wereldwijd meer dan <span class="r4">5000</span> talen, waarvan meer dan twintig minimaal <span class="r4">50</span> 
+miljoen sprekers hebben. Woorden op papier zijn ook vaak eenvoudiger te begrijpen dan uitgesproken woorden. Dit is 
+vooral van toepassing op<span class="r1"> adress(</span><span class="r1">0.009</span><span class="r1">)</span>en, die vaak moeilijk<span class="r1"> goed(</span><span class="r1">0.005</span><span class="r1">) uit(</span><span class="r1">0.004</span><span class="r1">)</span> te spreken zijn.
+#<span class="r4">7</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Veel hele naties<span class="r5"> spreken(</span><span class="r5">0.059</span><span class="r5">)</span> Engels volledig vloeiend, en in nog meer dingen 
+kan je verwachten dat je beperkte kennis hebt - vooral bij jongere mensen.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     The world has<span class="r1"> over(</span><span class="r1">0.001</span><span class="r1">)</span> <span class="r4">5</span>,<span class="r4">000</span> different languages, including more than twenty 
+with <span class="r4">50</span> million or<span class="r1"> more(</span><span class="r1">0.001</span><span class="r1">)</span> <span class="r7">speakers</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span> Written words are often easier to understand than spoken words, 
+also. This is especially true of addresses, which are often difficult to pronounce <span class="r7">intelligib</span><span class="r1">ly(</span><span class="r1">0.001</span><span class="r1">).(</span><span class="r1">0.001</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Er bestaan wereldwijd meer dan <span class="r4">5000</span> talen, waarvan meer dan twintig minimaal <span class="r4">50</span> 
+miljoen sprekers hebben. Woorden op papier<span class="r1"> zijn(</span><span class="r1">0.001</span><span class="r1">)</span> ook vaak eenvoudiger te begrijpen dan uitgesproken woorden. 
+Dit is vooral van toepassing op adressen, die vaak moeilijk goed uit te spreken <span class="r7">zijn</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span>
+#<span class="r4">8</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Veel hele naties spreken Engels volledig vloeiend, en in nog meer dingen kan je 
+verwachten dat je<span class="r5"> beper(</span><span class="r5">0.057</span><span class="r5">)</span>kte kennis hebt - vooral bij jongere mensen.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     The world has over <span class="r4">5</span>,<span class="r4">000</span> different languages, including more than twenty with <span class="r4">50</span> 
+million or more speakers. Written words are often easier to understand than spoken words, also. This is especially 
+true of addresses, which are often difficult to pronounce <span class="r7">intelligib</span><span class="r1">ly(</span><span class="r1">0.001</span><span class="r1">)</span>.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Er bestaan wereldwijd meer dan <span class="r4">5000</span> talen, waarvan meer dan twintig minimaal <span class="r4">50</span> 
+miljoen sprekers hebben. Woorden op<span class="r1"> papier(</span><span class="r1">0.001</span><span class="r1">)</span> zijn ook vaak eenvoudiger te begrijpen dan uitgesproken 
+<span class="r7">woorden</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span> Dit is vooral van toepassing op adressen, die vaak moeilijk<span class="r1"> goed(</span><span class="r1">0.001</span><span class="r1">)</span> uit te spreken zijn.
+#<span class="r4">9</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Veel<span class="r5"> hele(</span><span class="r5">0.056</span><span class="r5">)</span> naties spreken Engels volledig vloeiend, en in nog meer dingen 
+kan je verwachten dat je beperkte kennis hebt - vooral bij jongere mensen.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     The world has over <span class="r4">5</span>,<span class="r4">000</span> different languages, including more than twenty with <span class="r4">50</span> 
+million or more speakers. Written words are often easier to understand than spoken words, also. This is especially 
+true of addresses, which are often difficult to pronounce <span class="r7">intelligib</span><span class="r1">ly(</span><span class="r1">0.007</span><span class="r1">).(</span><span class="r1">0.008</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Er bestaan wereldwijd meer dan <span class="r4">5000</span> talen, waarvan meer dan twintig<span class="r1"> </span>
+<span class="r1">minima(</span><span class="r1">0.003</span><span class="r1">)</span>al <span class="r4">50</span> miljoen sprekers hebben. Woorden op<span class="r1"> papier(</span><span class="r1">0.002</span><span class="r1">)</span> zijn ook vaak eenvoudiger te begrijpen dan 
+uitgesproken woorden. Dit is vooral van toepassing op adressen, die vaak moeilijk goed uit te spreken zijn.
+
+</code></pre>
+</body>
+</html>

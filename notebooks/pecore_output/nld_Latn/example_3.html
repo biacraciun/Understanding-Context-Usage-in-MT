@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> 
+<span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  Make sure your hand is as relaxed as possible while still hitting all the notes correctly - also 
+try not to make much extraneous motion with your fingers.
+<span class="r2">Input current:</span> This way, you will tire yourself out as little as possible. Remember there&#x27;s no need to hit the keys
+with a lot of force for extra volume like on the piano.
+<span class="r2">Output context:</span> Probeer alle noten te raken met zo min mogelijk spanning in en overbodige bewegingen met uw hand.
+<span class="r2">Output current:</span> Zo zult u zo min mogelijk moe worden.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.404</span><span class="r2">):</span>  Zo zult u zo min mogelijk moe <span class="r7">worden</span><span class="r5">.(</span><span class="r5">2.532</span><span class="r5">)</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>     Make sure your hand is as relaxed as possible while still hitting all the notes 
+correctly - also try not to make much extraneous motion with your <span class="r7">fing</span><span class="r1">ers(</span><span class="r1">0.000</span><span class="r1">)</span>.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    Probeer alle noten te raken met zo min mogelijk spanning in en overbodige 
+bewegingen met uw <span class="r7">hand</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span>
+
+</code></pre>
+</body>
+</html>

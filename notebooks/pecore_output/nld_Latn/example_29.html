@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> 
+<span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  Fill your home with a rich coffee in the morning and some relaxing chamomile tea at night. When 
+you&#x27;re on a staycation, you have the time to treat yourself and take a few extra minutes to brew up something 
+special. If you&#x27;re feeling more adventurous, take the opportunity to juice or blend up some smoothies:
+<span class="r2">Input current:</span> maybe you&#x27;ll discover a simple beverage that you can make for breakfast when you&#x27;re back to your 
+daily routine.
+<span class="r2">Output context:</span> Vul je huis <span class="r6">&#x27;s ochtends met de rijke geur van koffie en &#x27;</span>s avonds met ontspannende kamillethee. 
+Tijdens een staycation heb je de tijd om jezelf te verwennen en om eens iets speciaals te bereiden. Als je in een 
+avontuurlijke bui bent, grijp dan de kans om smoothies te persen of te mixen:
+<span class="r2">Output current:</span> misschien zul je een simpele drankje ontdekken die je kunt maken voor het ontbijt als je weer aan 
+je dagelijkse routine bent.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.155</span><span class="r2">):</span> <span class="r5"> misschien(</span><span class="r5">2.922</span><span class="r5">)</span> zul je een simpele drankje ontdekken die je kunt maken voor het 
+ontbijt als je weer aan je dagelijkse routine bent.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     Fill your home with a rich coffee in the morning and some relaxing chamomile tea 
+at night. When you&#x27;re on a staycation, you have the time to treat yourself and take a few extra minutes to brew up 
+something special. If you&#x27;re feeling more adventurous, take the opportunity to juice or blend up some 
+<span class="r7">smoothi</span><span class="r1">es(</span><span class="r1">0.008</span><span class="r1">):(</span><span class="r1">0.005</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Vul je huis <span class="r6">&#x27;s ochtends met de rijke geur van koffie en &#x27;</span>s avonds met ontspannende
+kamillethee. Tijdens een staycation heb je de tijd om jezelf te verwennen en om<span class="r1"> eens(</span><span class="r1">0.002</span><span class="r1">)</span> iets speciaals te 
+bereiden. Als je in een avontuurlijke bui bent, grijp dan de kans om smoothies te persen of te mixen<span class="r1">:(</span><span class="r1">0.006</span><span class="r1">)</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.155</span><span class="r2">):</span>  misschien<span class="r5"> zul(</span><span class="r5">0.320</span><span class="r5">)</span> je een simpele drankje ontdekken die je kunt maken voor het 
+ontbijt als je weer aan je dagelijkse routine bent.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Fill your home with a rich coffee in the morning and some relaxing chamomile tea 
+at night. When you&#x27;re on a staycation, you have the time to treat yourself and take a few extra minutes to brew up 
+something special. If you&#x27;re feeling more adventurous, take the opportunity to juice or blend up some 
+<span class="r7">smoothi</span><span class="r1">es(</span><span class="r1">0.001</span><span class="r1">):(</span><span class="r1">0.002</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Vul je huis <span class="r6">&#x27;s ochtends met de rijke geur van koffie en &#x27;</span>s avonds met ontspannende
+kamillethee. Tijdens een staycation<span class="r1"> heb(</span><span class="r1">0.001</span><span class="r1">)</span> je de tijd om jezelf te verwennen en om<span class="r1"> eens(</span><span class="r1">0.002</span><span class="r1">)</span> iets speciaals 
+te bereiden. Als je in een avontuurlijke bui bent, grijp dan de kans om smoothies te persen of te mixen<span class="r1">:(</span><span class="r1">0.003</span><span class="r1">)</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.155</span><span class="r2">):</span>  misschien zul je een simpele drankje ontdekken die je kunt maken voor het ontbijt<span class="r5"> </span>
+<span class="r5">als(</span><span class="r5">0.268</span><span class="r5">)</span> je weer aan je dagelijkse routine bent.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Fill your home with a rich coffee in the morning and some relaxing chamomile tea 
+at night. When you&#x27;re on<span class="r1"> a(</span><span class="r1">0.001</span><span class="r1">)</span> staycation, you have the time to treat yourself and take a few extra minutes to 
+brew up something special. If you&#x27;re feeling more adventurous, take the opportunity<span class="r1"> to(</span><span class="r1">0.001</span><span class="r1">)</span> juice or blend up 
+some <span class="r7">smoothi</span><span class="r1">es(</span><span class="r1">0.001</span><span class="r1">)</span>:
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Vul je huis <span class="r6">&#x27;s ochtends met de rijke geur van koffie en &#x27;</span>s avonds met ontspannende
+kamillethee. Tijdens een staycation heb je de tijd om jezelf te verwennen en om<span class="r1"> eens(</span><span class="r1">0.001</span><span class="r1">)</span> iets speciaals te 
+<span class="r7">bereiden</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span> Als je in een avontuurlijke bui bent, grijp dan de kans om smoothies te persen of te mixen:
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.155</span><span class="r2">):</span>  misschien zul je een simpele drankje ontdekken<span class="r5"> die(</span><span class="r5">0.173</span><span class="r5">)</span> je kunt maken voor het 
+ontbijt als je weer aan je dagelijkse routine bent.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>     Fill your home with a rich coffee in the morning and some relaxing chamomile tea 
+at night. When you&#x27;re on a staycation, you have the time to treat yourself and take a few extra minutes to brew up 
+something special. If you&#x27;re feeling more adventurous, take the opportunity<span class="r1"> to(</span><span class="r1">0.001</span><span class="r1">)</span> juice or <span class="r7">bl</span><span class="r1">end(</span><span class="r1">0.001</span><span class="r1">)</span> up some
+smoothies:
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    Vul je huis <span class="r6">&#x27;s ochtends met de rijke geur van koffie en &#x27;</span>s avonds met ontspannende
+kamillethee. Tijdens een staycation heb je de tijd om jezelf te verwennen en om<span class="r1"> eens(</span><span class="r1">0.001</span><span class="r1">)</span> iets speciaals te 
+bereiden. Als je in een avontuurlijke<span class="r1"> bui(</span><span class="r1">0.001</span><span class="r1">)</span> bent, grijp dan de kans om smoothies te persen of te<span class="r1"> </span>
+<span class="r1">mix(</span><span class="r1">0.000</span><span class="r1">)</span>en<span class="r1">:(</span><span class="r1">0.001</span><span class="r1">)</span>
+
+</code></pre>
+</body>
+</html>

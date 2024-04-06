@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> 
+<span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  How would Io&#x27;s gravity pull on me? If you stood on the surface of Io, you would weigh less than you
+do on Earth.
+<span class="r2">Input current:</span> A person who weighs <span class="r4">200</span> pounds <span class="r2">(</span>90kg<span class="r2">)</span> on Earth would weigh about <span class="r4">36</span> pounds <span class="r2">(</span>16kg<span class="r2">)</span> on Io. So the 
+gravity, of course, pulls less on you.
+<span class="r2">Output context:</span> Welk effect heeft de zwaartekracht van Io op mij? Op het oppervlak van Io weeg je minder dan op 
+aarde.
+<span class="r2">Output current:</span> Een persoon die <span class="r4">90</span> kg weegt op aarde zou ongeveer <span class="r4">16</span> kg wegen op Io.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.109</span><span class="r2">):</span>  Een persoon die <span class="r4">90</span> kg weegt op aarde zou ongeveer <span class="r4">16</span> kg wegen op <span class="r7">Io</span><span class="r5">.(</span><span class="r5">0.521</span><span class="r5">)</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>     How would Io&#x27;s gravity pull on me? If you stood on the surface of Io, you would 
+weigh less than you do on Earth.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    Welk effect heeft de zwaartekracht van Io op mij? Op het oppervlak van Io weeg je 
+minder dan op <span class="r7">aarde</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.109</span><span class="r2">):</span> <span class="r5"> Een(</span><span class="r5">0.306</span><span class="r5">)</span> persoon die <span class="r4">90</span> kg weegt op aarde zou ongeveer <span class="r4">16</span> kg wegen op Io.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     How would Io&#x27;s gravity pull on me? If you stood on the surface of Io, you would 
+weigh less than you do on Earth.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Welk effect heeft de zwaartekracht van Io op mij? Op het oppervlak van Io weeg je 
+minder dan op<span class="r1"> aarde(</span><span class="r1">0.002</span><span class="r1">).(</span><span class="r1">0.005</span><span class="r1">)</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.109</span><span class="r2">):</span>  Een persoon die <span class="r4">90</span> kg weegt op aarde zou ongeveer <span class="r4">16</span> kg wegen op<span class="r5"> Io(</span><span class="r5">0.281</span><span class="r5">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.012</span><span class="r2">):</span>     How would Io&#x27;s gravity pull on me? If you stood on the surface of Io, you would 
+weigh less than you do on Earth.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.013</span><span class="r2">):</span>    Welk effect heeft de zwaartekracht van Io op mij? Op het oppervlak van Io weeg je 
+minder dan op<span class="r1"> aarde(</span><span class="r1">0.031</span><span class="r1">)</span>.
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.109</span><span class="r2">):</span>  Een persoon die <span class="r4">90</span> kg weegt op<span class="r5"> aarde(</span><span class="r5">0.215</span><span class="r5">)</span> zou ongeveer <span class="r4">16</span> kg wegen op Io.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     How would Io&#x27;s gravity pull on me? If you stood on the surface of Io, you would 
+weigh less than you do on Earth.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Welk effect heeft de zwaartekracht van Io op mij? Op het oppervlak van Io weeg je 
+minder dan op<span class="r1"> aarde(</span><span class="r1">0.005</span><span class="r1">)</span>.
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.109</span><span class="r2">):</span>  Een persoon die <span class="r4">90</span> kg<span class="r5"> we(</span><span class="r5">0.128</span><span class="r5">)</span>egt op aarde zou ongeveer <span class="r4">16</span> kg wegen op Io.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     How would Io&#x27;s gravity pull on me? If you stood on the surface of Io, you would 
+weigh less than you do on Earth.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Welk effect heeft de<span class="r1"> zwa(</span><span class="r1">0.005</span><span class="r1">)</span>artekracht van Io op mij? Op het oppervlak van Io<span class="r1"> </span>
+<span class="r1">we(</span><span class="r1">0.004</span><span class="r1">)</span>eg je minder dan op aarde.
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.109</span><span class="r2">):</span>  Een persoon die <span class="r4">90</span> kg weegt op aarde zou ongeveer <span class="r4">16</span> kg wegen<span class="r5"> op(</span><span class="r5">0.120</span><span class="r5">)</span> Io.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     How would Io&#x27;s gravity pull on me? If you stood on the surface of Io, you would 
+weigh less than you do on Earth.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Welk effect heeft de zwaartekracht van Io op mij? Op het oppervlak van Io weeg je 
+minder dan op<span class="r1"> aarde(</span><span class="r1">0.003</span><span class="r1">).(</span><span class="r1">0.003</span><span class="r1">)</span>
+
+</code></pre>
+</body>
+</html>
