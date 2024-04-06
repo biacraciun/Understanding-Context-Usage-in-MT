@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080}
+.r8 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  Ecuador requires that Cuban citizens receive an invitation letter prior to entering Ecuador through 
+international airports or frontier admission points. This letter must be legalized by the Ecuadorian Ministry of 
+Foreign Affairs, and comply with certain requirements. These requirements are designed to provide an organized 
+migratory flow between both countries. Cuban citizens who are US green card holders should visit an Ecuadorian 
+Consulate to obtain an exemption to this requirement.
+<span class="r2">Input current:</span> Your passport must be valid for at least <span class="r4">6</span> months beyond your travel dates. A round/onward trip ticket 
+is needed to prove the length of your stay.
+<span class="r2">Output context:</span> Ecuadorul cere ca cetățenii Cubei să primească o scrisoare de invitație înainte de a intra în Ecuador 
+folosind aeroporturile internaționale sau punctele de trecere a frontierei. Scrisoarea aceasta trebuie să fie 
+legalizată de către Ministerul Afacerilor Externe al Ecuadorului și trebuie să respecte anumite cerințe. Cerințele 
+acestea sunt concepute pentru a asigura o deplasare bine organizată între cele două țări. Cetățenii cubanezi care dețin
+cărți verzi pentru SUA trebuie să viziteze un consulat ecuadorian pentru a obține o scutire de la această cerință.
+<span class="r2">Output current:</span> Pașaportul dumneavoastră trebuie să fie valabil pentru cel puțin <span class="r4">6</span> luni după datele de călătorie. Un 
+bilet de călătorie în direcție <span class="r7">/</span> în continuare este necesar pentru a dovedi durata șederii dumneavoastră.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.165</span><span class="r2">):</span> <span class="r5"> Pa(</span><span class="r5">1.870</span><span class="r5">)</span>șaportul dumneavoastră trebuie să fie valabil pentru cel puțin <span class="r4">6</span> luni după 
+datele de călătorie. Un bilet de călătorie în direcție <span class="r7">/</span> în continuare este necesar pentru a dovedi durata șederii 
+dumneavoastră.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Ecuador requires that Cuban citizens receive an invitation letter prior to entering 
+Ecuador through international airports or frontier admission points. This letter must be legalized by<span class="r1"> the(</span><span class="r1">0.002</span><span class="r1">)</span> 
+Ecuadorian Ministry of Foreign Affairs, and comply with certain requirements. These requirements are designed to 
+provide an organized migratory flow between both countries. Cuban citizens who are US green card holders should visit<span class="r1"> </span>
+<span class="r1">an(</span><span class="r1">0.001</span><span class="r1">)</span> Ecuadorian Consulate to obtain an exemption to this <span class="r8">requir</span><span class="r1">ement(</span><span class="r1">0.003</span><span class="r1">).(</span><span class="r1">0.002</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Ecuadorul cere ca cetățenii Cubei să primească o scrisoare de invitație înainte de a 
+intra în Ecuador folosind aeroporturile internaționale sau punctele de trecere a frontierei. Scrisoarea aceasta trebuie
+să fie legalizată de către Ministerul Afacerilor Externe al Ecuadorului și trebuie să respecte anumite cerințe. 
+Cerințele acestea sunt concepute pentru a asigura o deplasare bine organizată între cele două țări. Cetățenii cubanezi 
+care dețin cărți verzi pentru SUA trebuie să viziteze un consulat ecuadorian pentru a obține o scutire de la această 
+<span class="r8">cerință</span><span class="r1">.(</span><span class="r1">0.006</span><span class="r1">)</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.165</span><span class="r2">):</span>  Pașaportul dumneavoastră trebuie să fie valabil pentru cel puțin <span class="r4">6</span> luni după datele de
+călătorie.<span class="r5"> Un(</span><span class="r5">1.225</span><span class="r5">)</span> bilet de călătorie în direcție <span class="r7">/</span> în continuare este necesar pentru a dovedi durata șederii 
+dumneavoastră.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Ecuador requires that Cuban citizens receive an invitation letter prior to entering 
+Ecuador through international airports or frontier admission points. This letter must be legalized by<span class="r1"> the(</span><span class="r1">0.001</span><span class="r1">)</span> 
+Ecuadorian Ministry of Foreign Affairs, and comply with certain requirements. These requirements are designed to 
+provide an organized migratory flow between both countries. Cuban citizens who are US green card holders should visit<span class="r1"> </span>
+<span class="r1">an(</span><span class="r1">0.001</span><span class="r1">)</span> Ecuadorian Consulate to obtain an exemption to this <span class="r8">requir</span><span class="r1">ement(</span><span class="r1">0.001</span><span class="r1">)</span>.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Ecuadorul cere ca cetățenii Cubei să primească o scrisoare de invitație înainte de a 
+intra în Ecuador folosind aeroporturile internaționale sau punctele de trecere a frontierei. Scrisoarea aceasta trebuie
+să fie legalizată de către Ministerul Afacerilor Externe al Ecuadorului și<span class="r1"> trebuie(</span><span class="r1">0.001</span><span class="r1">)</span> să respecte anumite cerințe. 
+Cerințele acestea sunt concepute pentru a asigura o deplasare<span class="r1"> bine(</span><span class="r1">0.002</span><span class="r1">)</span> organizată între cele două <span class="r8">țări</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span> 
+Cetățenii cubanezi care <span class="r8">de</span><span class="r1">țin(</span><span class="r1">0.001</span><span class="r1">)</span> cărți verzi pentru SUA trebuie să viziteze un consulat ecuadorian pentru a obține 
+o scutire de la această <span class="r8">cerință</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.165</span><span class="r2">):</span>  Pașaportul dumneavoastră trebuie să fie valabil pentru cel puțin <span class="r4">6</span> luni după datele de
+<span class="r8">călătorie</span><span class="r5">.(</span><span class="r5">0.679</span><span class="r5">)</span> Un bilet de călătorie în direcție <span class="r7">/</span> în continuare este necesar pentru a dovedi durata șederii 
+dumneavoastră.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>     Ecuador requires that Cuban citizens receive an invitation letter prior to entering 
+Ecuador through international airports or frontier admission points. This letter must be legalized by the Ecuadorian 
+Ministry of Foreign Affairs, and comply with certain requirements. These requirements are designed to provide an 
+organized migratory flow between both countries. Cuban citizens who are US green card holders should visit an 
+Ecuadorian Consulate to obtain an exemption to this <span class="r8">requir</span><span class="r1">ement(</span><span class="r1">0.001</span><span class="r1">).(</span><span class="r1">0.001</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    Ecuadorul cere ca cetățenii Cubei să primească o scrisoare de invitație înainte de a 
+intra în Ecuador folosind aeroporturile internaționale sau punctele de trecere a frontierei. Scrisoarea aceasta trebuie
+să fie legalizată de către Ministerul Afacerilor Externe al Ecuadorului și trebuie să respecte anumite cerințe. 
+Cerințele acestea sunt concepute pentru a asigura o <span class="r8">dep</span><span class="r1">las(</span><span class="r1">0.001</span><span class="r1">)</span>are bine organizată între cele două<span class="r1"> ț(</span><span class="r1">0.000</span><span class="r1">)</span>ări.<span class="r1"> </span>
+<span class="r1">Cet(</span><span class="r1">0.000</span><span class="r1">)</span>ățenii cubanezi care dețin cărți verzi pentru SUA trebuie să viziteze un consulat ecuadorian pentru a obține 
+o scutire de la această <span class="r8">cerin</span><span class="r1">ță(</span><span class="r1">0.000</span><span class="r1">).(</span><span class="r1">0.001</span><span class="r1">)</span>
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.165</span><span class="r2">):</span>  Pașaportul dumneavoastră trebuie să fie valabil pentru cel puțin <span class="r4">6</span> luni după datele de
+călătorie. Un bilet de călătorie în direcție <span class="r7">/</span> în<span class="r5"> continuare(</span><span class="r5">0.503</span><span class="r5">)</span> este necesar pentru a dovedi durata șederii 
+dumneavoastră.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Ecuador requires that Cuban citizens receive an invitation letter prior to entering 
+Ecuador through international airports or<span class="r1"> fron(</span><span class="r1">0.003</span><span class="r1">)</span>tier admission points. This letter must be legalized by the 
+Ecuadorian Ministry of Foreign Affairs, and comply with certain requirements. These requirements are designed to 
+provide an organized migratory flow between both countries. Cuban citizens who are US<span class="r1"> green(</span><span class="r1">0.006</span><span class="r1">)</span> card holders should 
+visit an Ecuadorian Consulate to obtain an exemption to this<span class="r1"> requir(</span><span class="r1">0.003</span><span class="r1">)ement(</span><span class="r1">0.003</span><span class="r1">).(</span><span class="r1">0.009</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Ecuadorul cere ca cetățenii Cubei să primească o scrisoare de invitație înainte de a 
+intra în Ecuador folosind aeroporturile internaționale sau punctele de trecere a frontierei. Scrisoarea aceasta trebuie
+să fie legalizată de către Ministerul Afacerilor Externe al Ecuadorului și trebuie să respecte anumite cerințe. 
+Cerințele acestea sunt concepute pentru a asigura o deplasare bine organizată între cele două țări. Cetățenii cubanezi 
+care dețin cărți verzi pentru SUA trebuie să viziteze un consulat ecuadorian pentru a obține o scutire de la această 
+cerință.
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.165</span><span class="r2">):</span>  Pașaportul dumneavoastră trebuie să fie valabil pentru cel puțin <span class="r4">6</span> luni după datele de
+călătorie. Un bilet de călătorie în direcție <span class="r7">/</span> în continuare este necesar pentru a dovedi durata șederii<span class="r5"> </span>
+<span class="r5">dumneavoastră(</span><span class="r5">0.454</span><span class="r5">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Ecuador requires that Cuban citizens receive an invitation letter prior to entering 
+Ecuador through international airports or frontier admission points. This letter must be legalized by<span class="r1"> the(</span><span class="r1">0.001</span><span class="r1">)</span> 
+Ecuadorian Ministry of Foreign Affairs, and comply with certain requirements. These requirements are designed to 
+provide an organized migratory flow between both countries. Cuban citizens who are US green card holders should visit<span class="r1"> </span>
+<span class="r1">an(</span><span class="r1">0.001</span><span class="r1">)</span> Ecuadorian Consulate to obtain an exemption to this <span class="r8">requir</span><span class="r1">ement(</span><span class="r1">0.001</span><span class="r1">)</span>.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Ecuadorul cere ca cetățenii Cubei să primească o scrisoare de invitație înainte de a 
+intra în Ecuador folosind aeroporturile internaționale sau punctele de trecere a frontierei. Scrisoarea aceasta trebuie
+să fie legalizată de către Ministerul Afacerilor Externe al Ecuadorului și trebuie să respecte anumite cerințe. 
+Cerințele acestea sunt concepute pentru a asigura o deplasare bine organizată între cele două țări. Cetățenii cubanezi 
+care <span class="r8">de</span><span class="r1">țin(</span><span class="r1">0.002</span><span class="r1">) căr(</span><span class="r1">0.001</span><span class="r1">)ți(</span><span class="r1">0.001</span><span class="r1">)</span> verzi pentru SUA trebuie să viziteze un consulat ecuadorian pentru a obține o<span class="r1"> </span>
+<span class="r1">sc(</span><span class="r1">0.001</span><span class="r1">)</span>utire de la această <span class="r8">cerință</span><span class="r1">.(</span><span class="r1">0.002</span><span class="r1">)</span>
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.165</span><span class="r2">):</span>  Pașaportul dumneavoastră trebuie să fie valabil pentru cel puțin <span class="r4">6</span> luni după datele de
+călătorie. Un bilet de<span class="r5"> căl(</span><span class="r5">0.416</span><span class="r5">)</span>ătorie în direcție <span class="r7">/</span> în continuare este necesar pentru a dovedi durata șederii 
+dumneavoastră.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Ecuador requires that Cuban citizens receive an invitation letter prior to entering 
+Ecuador through international airports or frontier admission points. This letter must be legalized by<span class="r1"> the(</span><span class="r1">0.003</span><span class="r1">)</span> 
+Ecuadorian Ministry of Foreign Affairs, and comply with certain requirements. These requirements are designed to 
+provide an organized migratory flow between both countries. Cuban citizens who are US green card holders should visit<span class="r1"> </span>
+<span class="r1">an(</span><span class="r1">0.002</span><span class="r1">)</span> Ecuadorian Consulate to obtain an exemption to this <span class="r8">requir</span><span class="r1">ement(</span><span class="r1">0.002</span><span class="r1">).(</span><span class="r1">0.010</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Ecuadorul cere ca cetățenii Cubei să primească o scrisoare de invitație înainte de a 
+intra în Ecuador folosind aeroporturile internaționale sau punctele de trecere a frontierei. Scrisoarea aceasta trebuie
+să fie legalizată de către Ministerul Afacerilor Externe al Ecuadorului și trebuie să respecte anumite cerințe. 
+Cerințele acestea sunt concepute pentru a asigura o deplasare bine organizată între cele două țări. Cetățenii cubanezi 
+care dețin cărți verzi pentru SUA trebuie să viziteze un consulat ecuadorian pentru a obține o scutire de la această 
+cerință.
+#<span class="r4">7</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.165</span><span class="r2">):</span>  Pașaportul<span class="r5"> dumneavoastră(</span><span class="r5">0.335</span><span class="r5">)</span> trebuie să fie valabil pentru cel puțin <span class="r4">6</span> luni după 
+datele de călătorie. Un bilet de călătorie în direcție <span class="r7">/</span> în continuare este necesar pentru a dovedi durata șederii 
+dumneavoastră.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Ecuador requires that Cuban citizens receive an invitation letter prior to entering 
+Ecuador through international airports or frontier admission points. This letter must be legalized by the Ecuadorian 
+Ministry of Foreign Affairs, and comply with certain requirements. These requirements are designed to provide an 
+organized migratory flow between both countries. Cuban citizens who are US green card holders should visit an 
+Ecuadorian Consulate to obtain an exemption to this <span class="r8">requir</span><span class="r1">ement(</span><span class="r1">0.002</span><span class="r1">).(</span><span class="r1">0.001</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Ecuadorul cere ca cetățenii Cubei să primească o scrisoare de invitație înainte de a 
+intra în Ecuador folosind aeroporturile internaționale sau punctele de trecere a frontierei. Scrisoarea aceasta trebuie
+să fie legalizată de către Ministerul <span class="r8">A</span><span class="r1">fa(</span><span class="r1">0.001</span><span class="r1">)</span>cerilor Externe al Ecuadorului și trebuie să respecte anumite cerințe. 
+Cerințele acestea sunt concepute pentru a asigura o deplasare bine organizată între cele două țări. Cetățenii cubanezi 
+care dețin cărți verzi pentru SUA trebuie să viziteze un consulat ecuadorian pentru a obține o<span class="r1"> sc(</span><span class="r1">0.002</span><span class="r1">)</span>utire de la 
+această <span class="r8">cerință</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span>
+#<span class="r4">8</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.165</span><span class="r2">):</span>  Pașaportul dumneavoastră trebuie să fie valabil pentru cel puțin <span class="r4">6</span> luni după datele de
+călătorie. Un bilet de călătorie în direcție<span class="r5"> /(</span><span class="r5">0.294</span><span class="r5">)</span> în continuare este necesar pentru a dovedi durata șederii 
+dumneavoastră.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Ecuador requires that Cuban citizens receive an invitation letter prior to 
+<span class="r8">ent</span><span class="r1">ering(</span><span class="r1">0.001</span><span class="r1">)</span> Ecuador through international airports or frontier admission points. This letter must be legalized by<span class="r1"> </span>
+<span class="r1">the(</span><span class="r1">0.002</span><span class="r1">)</span> Ecuadorian Ministry of Foreign Affairs, and comply with certain requirements. These requirements are 
+designed to provide an organized migratory flow between both countries. Cuban citizens who<span class="r1"> are(</span><span class="r1">0.001</span><span class="r1">)</span> US green card 
+holders should visit<span class="r1"> an(</span><span class="r1">0.001</span><span class="r1">)</span> Ecuadorian Consulate to obtain an exemption to this <span class="r8">requirement</span><span class="r1">.(</span><span class="r1">0.002</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Ecuadorul cere ca cetățenii Cubei să primească o scrisoare de<span class="r1"> invita(</span><span class="r1">0.001</span><span class="r1">)</span>ție înainte
+de a intra în Ecuador folosind aeroporturile internaționale sau punctele de trecere a frontierei. Scrisoarea aceasta 
+trebuie să fie legalizată de către Ministerul Afacerilor Externe al Ecuadorului și trebuie să respecte anumite cerințe.
+Cerințele acestea sunt concepute pentru a asigura o deplasare<span class="r1"> bine(</span><span class="r1">0.001</span><span class="r1">) organizat(</span><span class="r1">0.001</span><span class="r1">)</span>ă între cele două țări. 
+Cetățenii cubanezi care dețin cărți verzi pentru SUA trebuie să viziteze un consulat ecuadorian pentru a obține o 
+scutire de la această cerință.
+#<span class="r4">9</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.165</span><span class="r2">):</span>  Pașaportul dumneavoastră trebuie să fie valabil pentru cel puțin <span class="r4">6</span> luni după<span class="r5"> </span>
+<span class="r5">dat(</span><span class="r5">0.268</span><span class="r5">)</span>ele de călătorie. Un bilet de călătorie în direcție <span class="r7">/</span> în continuare este necesar pentru a dovedi durata 
+șederii dumneavoastră.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Ecuador requires that Cuban citizens receive an invitation letter prior to entering 
+Ecuador through international airports or frontier admission points. This letter must be legalized by<span class="r1"> the(</span><span class="r1">0.002</span><span class="r1">)</span> 
+Ecuadorian Ministry of Foreign Affairs, and comply with certain requirements. These requirements are designed to 
+provide an organized migratory flow between both countries. Cuban citizens who are US green card holders should visit<span class="r1"> </span>
+<span class="r1">an(</span><span class="r1">0.001</span><span class="r1">)</span> Ecuadorian Consulate to obtain an exemption to this <span class="r8">requir</span><span class="r1">ement(</span><span class="r1">0.002</span><span class="r1">).(</span><span class="r1">0.002</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Ecuadorul cere ca cetățenii Cubei să primească o scrisoare de invitație înainte de a 
+intra în Ecuador<span class="r1"> folos(</span><span class="r1">0.001</span><span class="r1">)</span>ind aeroporturile internaționale sau punctele de trecere a frontierei. Scrisoarea aceasta 
+trebuie să fie legalizată de către Ministerul Afacerilor Externe al Ecuadorului și<span class="r1"> trebuie(</span><span class="r1">0.001</span><span class="r1">)</span> să respecte anumite 
+cerințe. Cerințele acestea sunt concepute<span class="r1"> pentru(</span><span class="r1">0.002</span><span class="r1">)</span> a asigura o <span class="r8">dep</span><span class="r1">las(</span><span class="r1">0.001</span><span class="r1">)</span>are<span class="r1"> bine(</span><span class="r1">0.003</span><span class="r1">)</span> organizată între cele 
+două țări. Cetățenii cubanezi care dețin cărți verzi pentru SUA trebuie să viziteze un consulat ecuadorian pentru a 
+obține o scutire de la această cerință.
+#<span class="r4">10</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.165</span><span class="r2">):</span>  <span class="r8">Pa</span><span class="r5">ș(</span><span class="r5">0.261</span><span class="r5">)</span>aportul dumneavoastră trebuie să fie valabil pentru cel puțin <span class="r4">6</span> luni după 
+datele de călătorie. Un bilet de călătorie în direcție <span class="r7">/</span> în continuare este necesar pentru a dovedi durata șederii 
+dumneavoastră.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>     Ecuador requires that Cuban citizens receive an invitation letter prior to entering 
+Ecuador through international airports or frontier admission points. This letter must be legalized by the Ecuadorian 
+Ministry of Foreign Affairs, and comply with certain requirements. These requirements are designed to provide an 
+organized migratory flow between both countries. Cuban citizens who are US green card holders should visit an 
+Ecuadorian Consulate to obtain an exemption to this <span class="r8">requir</span><span class="r1">ement(</span><span class="r1">0.000</span><span class="r1">)</span>.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    Ecuadorul cere ca cetățenii Cubei să primească o scrisoare de invitație înainte de a 
+intra în Ecuador folosind aeroporturile internaționale sau punctele de trecere a frontierei. Scrisoarea aceasta trebuie
+să fie legalizată de către Ministerul Afacerilor Externe al Ecuadorului<span class="r1"> și(</span><span class="r1">0.000</span><span class="r1">)</span> trebuie să respecte anumite cerințe. 
+Cerințele acestea sunt concepute pentru a asigura o deplasare bine organizată<span class="r1"> între(</span><span class="r1">0.000</span><span class="r1">)</span> cele două țări. Cetățenii 
+cubanezi care dețin<span class="r1"> căr(</span><span class="r1">0.000</span><span class="r1">)ți(</span><span class="r1">0.000</span><span class="r1">)</span> verzi pentru SUA trebuie să viziteze un consulat ecuadorian pentru a obține o 
+scutire de la această <span class="r8">cerin</span><span class="r1">ță(</span><span class="r1">0.000</span><span class="r1">)</span>.
+#<span class="r4">11</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.165</span><span class="r2">):</span>  Pașaportul dumneavoastră trebuie să fie valabil pentru cel puțin <span class="r4">6</span> luni după datele de
+călătorie. Un bilet de călătorie în direcție <span class="r7">/</span><span class="r5"> în(</span><span class="r5">0.191</span><span class="r5">)</span> continuare este necesar pentru a dovedi durata șederii 
+dumneavoastră.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Ecuador requires that Cuban citizens receive an invitation letter prior to entering 
+Ecuador through international airports or frontier admission points. This letter must be legalized by the Ecuadorian 
+Ministry of Foreign Affairs, and comply with certain requirements. These requirements are designed to provide an 
+organized migratory flow between both countries. Cuban citizens who are<span class="r1"> US(</span><span class="r1">0.001</span><span class="r1">) green(</span><span class="r1">0.002</span><span class="r1">)</span> card holders should 
+visit an Ecuadorian Consulate to obtain an <span class="r8">exemp</span><span class="r1">tion(</span><span class="r1">0.001</span><span class="r1">)</span> to this<span class="r1"> requir(</span><span class="r1">0.001</span><span class="r1">)</span><span class="r8">ement</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Ecuadorul cere ca cetățenii Cubei să primească o scrisoare de<span class="r1"> invita(</span><span class="r1">0.001</span><span class="r1">)</span>ție înainte
+de a intra în Ecuador folosind aeroporturile internaționale sau punctele de trecere a frontierei. Scrisoarea aceasta 
+trebuie să fie legalizată de către <span class="r8">Minister</span><span class="r1">ul(</span><span class="r1">0.001</span><span class="r1">)</span> Afacerilor Externe al Ecuadorului și trebuie să respecte anumite 
+cerințe. Cerințele acestea sunt concepute pentru a asigura o deplasare bine<span class="r1"> organizat(</span><span class="r1">0.001</span><span class="r1">)</span>ă între cele două țări. 
+Cetățenii cubanezi care dețin cărți verzi pentru <span class="r8">SU</span><span class="r1">A(</span><span class="r1">0.001</span><span class="r1">)</span> trebuie să viziteze un consulat ecuadorian pentru a obține 
+o scutire de la această <span class="r8">cerință</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span>
+#<span class="r4">12</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.165</span><span class="r2">):</span>  Pașaportul dumneavoastră trebuie să fie valabil pentru cel puțin <span class="r4">6</span> luni după datele<span class="r5"> </span>
+<span class="r5">de(</span><span class="r5">0.178</span><span class="r5">)</span> călătorie. Un bilet de călătorie în direcție <span class="r7">/</span> în continuare este necesar pentru a dovedi durata șederii 
+dumneavoastră.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Ecuador requires that Cuban citizens receive an invitation letter prior to entering 
+Ecuador through international airports or frontier admission points. This letter must be legalized by the Ecuadorian 
+Ministry of Foreign Affairs, and comply with certain requirements. These requirements are designed to provide an 
+organized migratory flow between both countries. Cuban citizens who are US green card holders should visit an 
+Ecuadorian Consulate to obtain an exemption to this <span class="r8">requir</span><span class="r1">ement(</span><span class="r1">0.001</span><span class="r1">)</span>.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Ecuadorul cere ca<span class="r1"> cet(</span><span class="r1">0.001</span><span class="r1">)</span>ățenii Cubei să primească o scrisoare de invitație înainte
+de a intra în Ecuador folosind aeroporturile internaționale sau punctele de trecere a frontierei. Scrisoarea aceasta 
+trebuie să fie legalizată de către Ministerul Afacerilor Externe al Ecuadorului și trebuie să respecte anumite cerințe.
+Cerințele acestea sunt<span class="r1"> conce(</span><span class="r1">0.001</span><span class="r1">)</span>pute pentru a asigura o deplasare<span class="r1"> bine(</span><span class="r1">0.002</span><span class="r1">)</span> organizată între cele două țări. 
+Cetățenii cubanezi care <span class="r8">de</span><span class="r1">țin(</span><span class="r1">0.001</span><span class="r1">)</span> cărți verzi pentru SUA trebuie să viziteze un consulat ecuadorian pentru a obține 
+o<span class="r1"> sc(</span><span class="r1">0.002</span><span class="r1">)</span>utire de la această cerință.
+
+</code></pre>
+</body>
+</html>

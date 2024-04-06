@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  Learning to create interactive media requires conventional and traditional skills, as well as tools 
+mastered in interactive classes <span class="r2">(</span>storyboarding, audio and video editing, story telling, etc.<span class="r2">)</span>
+<span class="r2">Input current:</span> Interactive design requires that you re-assess your assumptions about media production and learn to 
+think in a non-linear ways.
+<span class="r2">Output context:</span> Pentru a învăța să creăm prezentări interactive avem nevoie atât de abilități convenționale și 
+tradiționale, cât și de instrumente stăpânite în cursurile interactive <span class="r2">(</span>storyboarding, editare audio și video, tehnici 
+de narațiune etc.<span class="r2">)</span>
+<span class="r2">Output current:</span> Designul interactiv necesită să vă reevaluati ipotezele despre producția de media și să învățați să 
+gândiți în mod non-linear.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.056</span><span class="r2">):</span>  Designul interactiv necesită să vă reevaluati ipotezele despre producția de<span class="r5"> </span>
+<span class="r5">media(</span><span class="r5">0.324</span><span class="r5">)</span> și să învățați să gândiți în mod non-linear.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Learning to create interactive media requires conventional and traditional skills, as 
+well as tools mastered in interactive classes <span class="r2">(</span>storyboarding, audio and video editing, story telling, etc.<span class="r2">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Pentru a învăța să creăm<span class="r1"> prezent(</span><span class="r1">0.007</span><span class="r1">)</span>ări interactive avem nevoie atât de abilități 
+convenționale și tradiționale, cât și de instrumente stăpânite în cursurile interactive <span class="r2">(</span>storyboarding, editare audio 
+și video, tehnici de narațiune etc.<span class="r2">)</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.056</span><span class="r2">):</span>  Designul interactiv necesită să vă reevaluati ipotezele despre <span class="r7">produc</span><span class="r5">ția(</span><span class="r5">0.320</span><span class="r5">)</span> de 
+media și să învățați să gândiți în mod non-linear.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Learning to create interactive media requires conventional and traditional skills, as 
+well as tools mastered in interactive classes <span class="r2">(</span>storyboarding, audio and video editing, story telling, etc.<span class="r2">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Pentru a învăța să creăm <span class="r7">prezent</span><span class="r1">ări(</span><span class="r1">0.002</span><span class="r1">)</span> interactive avem nevoie atât de abilități 
+convenționale și tradiționale, cât și de instrumente stăpânite în cursurile interactive <span class="r2">(</span>storyboarding, editare audio 
+și video, tehnici de<span class="r1"> nara(</span><span class="r1">0.002</span><span class="r1">)ți(</span><span class="r1">0.003</span><span class="r1">)</span>une etc.<span class="r2">)</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.056</span><span class="r2">):</span> <span class="r5"> Design(</span><span class="r5">0.297</span><span class="r5">)</span>ul interactiv necesită să vă reevaluati ipotezele despre producția de 
+media și să învățați să gândiți în mod non-linear.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     Learning to create interactive media requires conventional and traditional skills, as 
+well as tools mastered in interactive classes <span class="r2">(</span>storyboarding, audio and video editing, story telling,<span class="r1"> </span>
+<span class="r1">etc(</span><span class="r1">0.003</span><span class="r1">).)(</span><span class="r1">0.003</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>   <span class="r1"> Pentru(</span><span class="r1">0.004</span><span class="r1">)</span> a învăța să creăm<span class="r1"> prezent(</span><span class="r1">0.005</span><span class="r1">)</span>ări interactive avem nevoie atât de 
+abilități convenționale și tradiționale, cât și de instrumente stăpânite în cursurile interactive <span class="r2">(</span>storyboarding, 
+editare audio și video, tehnici de narațiune etc<span class="r1">.)(</span><span class="r1">0.007</span><span class="r1">)</span>
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.056</span><span class="r2">):</span>  Designul interactiv<span class="r5"> neces(</span><span class="r5">0.151</span><span class="r5">)</span>ită să vă reevaluati ipotezele despre producția de 
+media și să învățați să gândiți în mod non-linear.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Learning to create interactive media requires conventional and traditional skills, as 
+well as tools mastered in interactive classes <span class="r2">(</span>storyboarding, audio and video editing, story telling, etc.<span class="r2">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Pentru a învăța să creăm prezentări interactive<span class="r1"> avem(</span><span class="r1">0.006</span><span class="r1">)</span> nevoie atât de abilități 
+convenționale și tradiționale, cât și de instrumente stăpânite în cursurile interactive <span class="r2">(</span>storyboarding, editare audio 
+și video, tehnici de narațiune etc.<span class="r2">)</span>
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.056</span><span class="r2">):</span>  Designul interactiv necesită să vă reevaluati ipotezele despre producția<span class="r5"> de(</span><span class="r5">0.143</span><span class="r5">)</span> 
+media și să învățați să gândiți în mod non-linear.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Learning to create interactive media requires conventional and traditional skills, as 
+well as tools mastered in interactive classes <span class="r2">(</span>storyboarding, audio and video editing, story telling, etc.<span class="r2">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Pentru a învăța să creăm<span class="r1"> prezent(</span><span class="r1">0.004</span><span class="r1">)</span>ări interactive avem nevoie atât de abilități 
+convenționale și tradiționale, cât și de instrumente stăpânite în cursurile interactive <span class="r2">(</span>storyboarding, editare audio 
+și video, tehnici de narațiune etc.<span class="r2">)</span>
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.056</span><span class="r2">):</span>  Designul interactiv necesită să vă reevaluati <span class="r7">ipo</span><span class="r5">te(</span><span class="r5">0.137</span><span class="r5">)</span>zele despre producția de 
+media și să învățați să gândiți în mod non-linear.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Learning to create interactive media requires conventional and traditional skills, as 
+well as tools mastered in interactive classes <span class="r2">(</span>storyboarding, audio and video editing, story telling, etc.<span class="r2">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Pentru a învăța să creăm prezentări interactive avem nevoie atât de<span class="r1"> a(</span><span class="r1">0.002</span><span class="r1">)</span>bilități 
+convenționale și tradiționale, cât și de instrumente stăpânite în cursurile interactive <span class="r2">(</span>storyboarding<span class="r1">,(</span><span class="r1">0.002</span><span class="r1">)</span> editare 
+audio și video, tehnici de narațiune etc.<span class="r2">)</span>
+#<span class="r4">7</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.056</span><span class="r2">):</span>  Designul interactiv necesită<span class="r5"> să(</span><span class="r5">0.135</span><span class="r5">)</span> vă reevaluati ipotezele despre producția de 
+media și să învățați să gândiți în mod non-linear.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Learning to create interactive media requires conventional and traditional skills, as 
+well as tools mastered in interactive classes <span class="r2">(</span>storyboarding, audio and video editing, story telling, etc.<span class="r2">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Pentru a învăța să creăm prezentări interactive avem nevoie atât de abilități 
+convenționale și tradiționale,<span class="r1"> cât(</span><span class="r1">0.003</span><span class="r1">)</span> și de instrumente stăpânite în cursurile interactive <span class="r2">(</span>storyboarding, editare 
+audio și video<span class="r1">,(</span><span class="r1">0.003</span><span class="r1">)</span> tehnici<span class="r1"> de(</span><span class="r1">0.002</span><span class="r1">) nara(</span><span class="r1">0.006</span><span class="r1">)</span>țiune etc.<span class="r2">)</span>
+#<span class="r4">8</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.056</span><span class="r2">):</span>  Designul interactiv necesită să<span class="r5"> vă(</span><span class="r5">0.068</span><span class="r5">)</span> reevaluati ipotezele despre producția de 
+media și să învățați să gândiți în mod non-linear.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Learning to create interactive media requires conventional and traditional skills, as 
+well as tools mastered in interactive classes <span class="r2">(</span>storyboarding, audio and video editing, story telling, etc.<span class="r2">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Pentru a învăța să<span class="r1"> cre(</span><span class="r1">0.002</span><span class="r1">)ăm(</span><span class="r1">0.003</span><span class="r1">)</span> prezentări interactive<span class="r1"> avem(</span><span class="r1">0.002</span><span class="r1">)</span> nevoie atât 
+de abilități convenționale și tradiționale, cât și de instrumente stăpânite în cursurile interactive <span class="r2">(</span>storyboarding, 
+editare audio și video, tehnici de narațiune etc.<span class="r2">)</span>
+
+</code></pre>
+</body>
+</html>

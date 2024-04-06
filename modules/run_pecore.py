@@ -31,11 +31,11 @@ def run_pecore(langugage_code, notebook=False):
     model = load_model(langugage_code)
     
     # Create the output directory for saving the output if it does not exist
-    if not os.path.exists("pecore_output"):
-       os.makedirs("pecore_output")
+    if not os.path.exists("notebooks/pecore_output"):
+       os.makedirs("notebooks/pecore_output")
     
     # Create the output directory per language if it does not exist
-    directory_path = os.path.join("pecore_output", langugage_code)
+    directory_path = os.path.join("notebooks/pecore_output", langugage_code)
     
     if not os.path.exists(directory_path):
        os.makedirs(directory_path)

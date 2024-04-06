@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  After hundreds of hours of operation the filament in the bulb eventually burns out and the light bulb 
+no longer works. The light bulb then needs replacing. It is necessary to be careful in replacing the light bulb. First,
+the switch for the light fixture needs to be turned off or the cable disconnected.
+<span class="r2">Input current:</span> This is because electricity flowing into the socket where the metallic part of bulb sits can give you a 
+severe electric shock if you touch the inside of the socket or the metal base of the bulb while it is still partly in 
+the socket.
+<span class="r2">Output context:</span> След стотици часове работа, накрая спиралата в крушката изгаря и тя вече не работи. Крушката трябва да 
+се смени след това. Трябва да внимавате при смяна на електрическата крушка. Първо трябва да се изключи превключвателят 
+за осветителното тяло или кабелът да се разкачи.
+<span class="r2">Output current:</span> Това е така, защото електричеството, което тече в заглавието, където се намира металната част на 
+крушката, може да ви причини тежък електрически удар, ако докоснете вътрешността на заглавието или металната основа на 
+крушката, докато тя все още е частично в заглавието.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Това е така, защото електричеството, което тече в заглавието, където се намира 
+металната част на<span class="r5"> кру(</span><span class="r5">0.910</span><span class="r5">)</span>шката, може да ви причини тежък електрически удар, ако докоснете вътрешността на заглавието
+или металната основа на крушката, докато тя все още е частично в заглавието.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>     After hundreds of hours of operation the filament in the bulb eventually burns out and
+the light bulb no longer works. The light bulb then needs replacing. It is necessary to be careful in replacing the 
+light bulb. First, the switch for the light fixture needs to be turned off or the cable disconnected.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.006</span><span class="r2">):</span>    След стотици часове работа, накрая спиралата в<span class="r1"> кру(</span><span class="r1">0.019</span><span class="r1">)</span>шката изгаря и тя вече не 
+работи. Крушката трябва да се смени след това. Трябва да внимавате при смяна на<span class="r1"> електри(</span><span class="r1">0.017</span><span class="r1">)</span>ческата крушка. Първо 
+трябва да се изключи превключвателят за осветителното тяло или кабелът да се разкачи.
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span> <span class="r5"> Това(</span><span class="r5">0.611</span><span class="r5">)</span> е така, защото електричеството, което тече в заглавието, където се намира 
+металната част на крушката, може да ви причини тежък електрически удар, ако докоснете вътрешността на заглавието или 
+металната основа на крушката, докато тя все още е частично в заглавието.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     After hundreds of hours of operation the filament in the bulb eventually burns out and
+the light bulb no longer works. The light bulb then needs replacing. It is necessary to be careful in replacing the 
+light bulb. First, the switch for the light fixture needs to be turned off or the cable <span class="r7">disconne</span><span class="r1">cted(</span><span class="r1">0.007</span><span class="r1">)</span>.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    След стотици часове работа, накрая спиралата в крушката изгаря и тя вече не работи. 
+Крушката трябва да се смени след това. Трябва да внимавате при смяна на електрическата крушка. Първо трябва да се 
+изключи превключвателят за осветителното тяло или<span class="r1"> ка(</span><span class="r1">0.005</span><span class="r1">)</span>белът да се <span class="r7">разкачи</span><span class="r1">.(</span><span class="r1">0.016</span><span class="r1">)</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Това е така, защото електричеството, което тече в заглавието, където се намира 
+металната част на <span class="r7">кру</span><span class="r5">шката(</span><span class="r5">0.312</span><span class="r5">)</span>, може да ви причини тежък електрически удар, ако докоснете вътрешността на заглавието
+или металната основа на крушката, докато тя все още е частично в заглавието.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     After hundreds of hours of operation the filament in the bulb eventually burns out and
+the light bulb no longer works. The light bulb then needs replacing. It is necessary to be careful in replacing the 
+light bulb. First, the switch for the light fixture needs to be turned off or the cable disconnected.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    След стотици часове работа, накрая<span class="r1"> спи(</span><span class="r1">0.004</span><span class="r1">)</span><span class="r7">ра</span><span class="r1">лата(</span><span class="r1">0.004</span><span class="r1">)</span> в <span class="r7">кру</span><span class="r1">шката(</span><span class="r1">0.004</span><span class="r1">)</span> изгаря и 
+тя вече не работи. <span class="r7">Кру</span><span class="r1">шката(</span><span class="r1">0.003</span><span class="r1">)</span> трябва да се смени след това. Трябва да внимавате при смяна на електрическата 
+<span class="r7">кру</span><span class="r1">шка(</span><span class="r1">0.003</span><span class="r1">)</span>. Първо трябва да се изключи превключвателят за осветителното тяло или кабелът да се разкачи.
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Това е така, защото<span class="r5"> електри(</span><span class="r5">0.200</span><span class="r5">)</span>чеството, което тече в заглавието, където се намира 
+металната част на крушката, може да ви причини тежък електрически удар, ако докоснете вътрешността на заглавието или 
+металната основа на крушката, докато тя все още е частично в заглавието.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     After hundreds of hours of operation the filament in the bulb eventually burns out and
+the light bulb no longer works. The light bulb then needs replacing. It is necessary to be careful in replacing the 
+light bulb. First, the switch for the light fixture needs to be turned off or the cable disconnected.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    След стотици часове работа<span class="r1">,(</span><span class="r1">0.002</span><span class="r1">)</span> накрая<span class="r1"> спи(</span><span class="r1">0.003</span><span class="r1">)</span><span class="r7">ра</span><span class="r1">лата(</span><span class="r1">0.002</span><span class="r1">)</span> в крушката изгаря и<span class="r1"> </span>
+<span class="r1">тя(</span><span class="r1">0.003</span><span class="r1">)</span> вече не работи. Крушката трябва да се<span class="r1"> смени(</span><span class="r1">0.001</span><span class="r1">)</span> след това. Трябва да внимавате при смяна на електрическата
+крушка. Първо трябва да се изключи превключвателят за осветителното тяло или кабелът да се разкачи.
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Това е така, защото електричеството, което тече в заглавието, където се намира 
+металната част на крушката, може да ви причини тежък електрически удар, ако докоснете вътрешността на заглавието или 
+металната основа на крушката, докато<span class="r5"> тя(</span><span class="r5">0.183</span><span class="r5">)</span> все още е частично в заглавието.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     After hundreds of hours of operation the filament in the bulb eventually burns out and
+the light bulb no longer works. The light bulb then needs replacing. It<span class="r1"> is(</span><span class="r1">0.003</span><span class="r1">)</span> necessary to be careful in replacing 
+the light bulb. First, the switch for the light fixture needs to be turned off or the cable disconnected.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    След стотици часове работа, накрая спиралата в крушката <span class="r7">изга</span><span class="r1">ря(</span><span class="r1">0.004</span><span class="r1">)</span> и<span class="r1"> тя(</span><span class="r1">0.003</span><span class="r1">)</span> вече
+не работи. Крушката трябва да се смени след <span class="r7">това</span><span class="r1">.(</span><span class="r1">0.003</span><span class="r1">)</span> Трябва да внимавате при смяна на електрическата <span class="r7">крушка</span><span class="r1">.(</span><span class="r1">0.003</span><span class="r1">)</span>
+Първо трябва да се изключи превключвателят за<span class="r1"> осве(</span><span class="r1">0.002</span><span class="r1">)</span>тителното тяло или кабелът да се разкачи.
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Това е така, защото електричеството, което<span class="r5"> те(</span><span class="r5">0.135</span><span class="r5">)</span>че в заглавието, където се намира 
+металната част на крушката, може да ви причини тежък електрически удар, ако докоснете вътрешността на заглавието или 
+металната основа на крушката, докато тя все още е частично в заглавието.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     After hundreds of hours of operation the filament in the bulb eventually burns out and
+the light bulb no longer works. The light bulb then needs replacing. It is necessary to be careful in replacing the 
+light bulb. First, the switch for the light fixture needs to be turned off or the cable disconnected.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    След стотици часове работа<span class="r1">,(</span><span class="r1">0.002</span><span class="r1">)</span> накрая<span class="r1"> спи(</span><span class="r1">0.002</span><span class="r1">)</span>ралата в крушката изгаря и<span class="r1"> </span>
+<span class="r1">тя(</span><span class="r1">0.003</span><span class="r1">)</span> вече не работи. Крушката трябва да се смени<span class="r1"> след(</span><span class="r1">0.001</span><span class="r1">)</span> това. Трябва да внимавате при смяна на електрическата
+крушка. Първо трябва да се изключи превключвателят за осветителното тяло или кабелът да се разкачи.
+#<span class="r4">7</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Това е така, защото електричеството, което тече в <span class="r7">за</span><span class="r5">гла(</span><span class="r5">0.131</span><span class="r5">)</span>вието, където се намира 
+металната част на крушката, може да ви причини тежък електрически удар, ако докоснете вътрешността на заглавието или 
+металната основа на крушката, докато тя все още е частично в заглавието.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     After hundreds of hours of operation the<span class="r1"> fi(</span><span class="r1">0.001</span><span class="r1">)</span>lament in the bulb eventually burns 
+out and the light bulb no longer works. The light bulb then needs replacing. It is necessary to be careful in replacing
+the light bulb. First, the switch for the light fixture needs to be turned off or the cable<span class="r1"> dis(</span><span class="r1">0.001</span><span class="r1">)</span>connected.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    След<span class="r1"> сто(</span><span class="r1">0.001</span><span class="r1">)</span>тици часове работа, накрая спиралата в крушката изгаря и тя вече не 
+работи. Крушката трябва да се смени след това. Трябва да внимавате при смяна на електрическата крушка. Първо трябва да 
+се изключи превключвателят<span class="r1"> за(</span><span class="r1">0.001</span><span class="r1">)</span> осветителното тяло или<span class="r1"> ка(</span><span class="r1">0.001</span><span class="r1">)</span>белът да се<span class="r1"> раз(</span><span class="r1">0.001</span><span class="r1">)</span><span class="r7">качи</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span>
+#<span class="r4">8</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Това е<span class="r5"> така(</span><span class="r5">0.119</span><span class="r5">)</span>, защото електричеството, което тече в заглавието, където се намира 
+металната част на крушката, може да ви причини тежък електрически удар, ако докоснете вътрешността на заглавието или 
+металната основа на крушката, докато тя все още е частично в заглавието.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     After hundreds of hours of operation the filament in the bulb eventually burns out and
+the light bulb no longer works. The light bulb then needs replacing. It is necessary to be careful in replacing the 
+light bulb. First, the switch for the light fixture needs to be turned off or the cable <span class="r7">disconnected</span><span class="r1">.(</span><span class="r1">0.006</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    След стотици часове работа, накрая спиралата в крушката изгаря и тя вече не работи. 
+Крушката трябва да се смени след това. Трябва да внимавате при смяна на електрическата крушка. Първо трябва да се 
+изключи превключвателят за осветителното тяло или<span class="r1"> ка(</span><span class="r1">0.005</span><span class="r1">)</span>белът<span class="r1"> да(</span><span class="r1">0.005</span><span class="r1">)</span> се<span class="r1"> раз(</span><span class="r1">0.004</span><span class="r1">)</span><span class="r7">качи</span><span class="r1">.(</span><span class="r1">0.006</span><span class="r1">)</span>
+#<span class="r4">9</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Това е така, защото електричеството, което тече в заглавието, където се намира 
+металната част на крушката, може да ви причини тежък електрически удар, ако докоснете вътрешността на заглавието или 
+металната основа на<span class="r5"> кру(</span><span class="r5">0.091</span><span class="r5">)</span>шката, докато тя все още е частично в заглавието.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     After hundreds of hours of operation the filament in the bulb eventually burns out and
+the<span class="r1"> light(</span><span class="r1">0.005</span><span class="r1">) bul(</span><span class="r1">0.006</span><span class="r1">)</span>b no longer works. The<span class="r1"> light(</span><span class="r1">0.005</span><span class="r1">) bul(</span><span class="r1">0.007</span><span class="r1">)</span>b then needs replacing. It is necessary to be 
+careful in replacing the<span class="r1"> light(</span><span class="r1">0.004</span><span class="r1">)</span> bulb. First, the switch for the light fixture needs to be turned off or the cable
+disconnected.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    След стотици часове работа, накрая спиралата в<span class="r1"> кру(</span><span class="r1">0.013</span><span class="r1">)</span>шката изгаря и тя вече не 
+работи. Крушката трябва да се смени след това. Трябва да внимавате при смяна на<span class="r1"> електри(</span><span class="r1">0.009</span><span class="r1">)</span>ческата крушка. Първо 
+трябва да се изключи превключвателят за осветителното тяло или кабелът да се разкачи.
+#<span class="r4">10</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Това е така, защото електричеството, което тече в заглавието<span class="r5">,(</span><span class="r5">0.070</span><span class="r5">)</span> където се намира 
+металната част на крушката, може да ви причини тежък електрически удар, ако докоснете вътрешността на заглавието или 
+металната основа на крушката, докато тя все още е частично в заглавието.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>     After hundreds of hours of operation the filament in the bulb eventually burns out and
+the light bulb no longer works. The light bulb then needs replacing. It is necessary to be careful in replacing the 
+light bulb. First, the switch for the light fixture needs to be turned off or the cable disconnected.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    След стотици часове работа<span class="r1">,(</span><span class="r1">0.000</span><span class="r1">)</span> накрая<span class="r1"> спи(</span><span class="r1">0.000</span><span class="r1">)</span>ралата в крушката изгаря и<span class="r1"> </span>
+<span class="r1">тя(</span><span class="r1">0.001</span><span class="r1">)</span> вече не работи. Крушката трябва да се смени след това. Трябва да внимавате при смяна на електрическата 
+крушка. Първо трябва да се изключи превключвателят за осветителното тяло или кабелът да се разкачи.
+#<span class="r4">11</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Това е така, защото електричеството, което тече в заглавието, където се намира 
+металната част на крушката, може да ви причини тежък електрически удар, ако докоснете вътрешността на заглавието или 
+металната основа на крушката, докато тя все още<span class="r5"> е(</span><span class="r5">0.067</span><span class="r5">)</span> частично в заглавието.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>     After hundreds of hours of operation the filament in the bulb eventually burns out and
+the light bulb no longer works. The light bulb then needs <span class="r7">repla</span><span class="r1">cing(</span><span class="r1">0.000</span><span class="r1">)</span>. It is necessary to be careful in replacing 
+the light <span class="r7">bul</span><span class="r1">b(</span><span class="r1">0.000</span><span class="r1">)</span>. First, the switch for the light fixture needs to be turned off or the cable disconnected.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    След стотици часове работа, накрая<span class="r1"> спи(</span><span class="r1">0.000</span><span class="r1">)</span>ралата в крушката изгаря и<span class="r1"> тя(</span><span class="r1">0.000</span><span class="r1">)</span> вече
+не работи. Крушката трябва да се смени след <span class="r7">това</span><span class="r1">.(</span><span class="r1">0.000</span><span class="r1">)</span> Трябва да внимавате при смяна на електрическата <span class="r7">крушка</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span>
+Първо трябва да се изключи превключвателят за осветителното тяло<span class="r1"> или(</span><span class="r1">0.001</span><span class="r1">)</span> кабелът да се разкачи.
+#<span class="r4">12</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Това е така, защото електричеството, което тече в<span class="r5"> за(</span><span class="r5">0.066</span><span class="r5">)</span>главието, където се намира 
+металната част на крушката, може да ви причини тежък електрически удар, ако докоснете вътрешността на заглавието или 
+металната основа на крушката, докато тя все още е частично в заглавието.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>     After hundreds of hours of operation the filament in the bulb eventually burns out and
+the light bulb no longer works. The light bulb then needs replacing. It is necessary to be careful in replacing the 
+light <span class="r7">bulb</span><span class="r1">.(</span><span class="r1">0.000</span><span class="r1">)</span> First, the switch for the light fixture needs to be turned off or the cable disconnected.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    След стотици часове работа<span class="r1">,(</span><span class="r1">0.000</span><span class="r1">)</span> накрая спиралата в<span class="r1"> кру(</span><span class="r1">0.000</span><span class="r1">)</span>шката изгаря и<span class="r1"> </span>
+<span class="r1">тя(</span><span class="r1">0.001</span><span class="r1">)</span> вече не работи. Крушката трябва да се смени след това. Трябва да внимавате при смяна на<span class="r1"> електри(</span><span class="r1">0.000</span><span class="r1">)</span>ческата
+крушка. Първо трябва да се изключи превключвателят за осветителното тяло или кабелът да се <span class="r7">разкачи</span><span class="r1">.(</span><span class="r1">0.000</span><span class="r1">)</span>
+#<span class="r4">13</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Това е така, защото електричеството, което тече в заглавието, където се намира 
+металната част на крушката, може да<span class="r5"> ви(</span><span class="r5">0.061</span><span class="r5">)</span> причини тежък електрически удар, ако докоснете вътрешността на заглавието
+или металната основа на крушката, докато тя все още е частично в заглавието.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     After hundreds of hours of operation the filament in the bulb eventually burns out and
+the light bulb no longer works. The light bulb then needs replacing. It is necessary to be careful in replacing the 
+light bulb. First, the switch for the light fixture needs to be turned off or the cable disconnected.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    След стотици часове работа, накрая<span class="r1"> спи(</span><span class="r1">0.002</span><span class="r1">)</span>ралата в крушката изгаря и<span class="r1"> тя(</span><span class="r1">0.005</span><span class="r1">)</span> вече
+не работи. Крушката трябва да се смени след това.<span class="r1"> Трябва(</span><span class="r1">0.002</span><span class="r1">)</span> да<span class="r1"> внима(</span><span class="r1">0.002</span><span class="r1">)вате(</span><span class="r1">0.004</span><span class="r1">)</span> при смяна на електрическата 
+крушка. Първо трябва да се изключи превключвателят за осветителното тяло или кабелът да се разкачи.
+#<span class="r4">14</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.054</span><span class="r2">):</span>  Това е така, защото електричеството, което тече в заглавието, където се намира 
+металната част на крушката, може да ви причини тежък електрически удар, ако докоснете вътрешността на заглавието или 
+металната основа на <span class="r7">кру</span><span class="r5">шката(</span><span class="r5">0.058</span><span class="r5">)</span>, докато тя все още е частично в заглавието.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     After hundreds of hours of operation the filament in the bulb eventually burns out and
+the light bulb no longer works. The light bulb then needs replacing. It is necessary to be careful in replacing the 
+light bulb. First, the switch for the light fixture needs to be turned off or the cable disconnected.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    След стотици часове работа, накрая<span class="r1"> спи(</span><span class="r1">0.004</span><span class="r1">)</span><span class="r7">ра</span><span class="r1">лата(</span><span class="r1">0.004</span><span class="r1">)</span> в <span class="r7">кру</span><span class="r1">шката(</span><span class="r1">0.003</span><span class="r1">)</span> изгаря и 
+тя вече не работи. <span class="r7">Кру</span><span class="r1">шката(</span><span class="r1">0.003</span><span class="r1">)</span> трябва да се смени след това. Трябва да внимавате при смяна на електрическата 
+<span class="r7">кру</span><span class="r1">шка(</span><span class="r1">0.004</span><span class="r1">)</span>. Първо трябва да се изключи превключвателят за осветителното тяло или кабелът да се разкачи.
+
+</code></pre>
+</body>
+</html>

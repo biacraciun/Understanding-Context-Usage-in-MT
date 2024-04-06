@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  You should choose your Frequent Flyer airline in an alliance carefully.
+<span class="r2">Input current:</span> Although you may think it is intuitive to join the airline you fly most, you should be aware that 
+privileges offered are often different and frequent flyer points may be more generous under a different airline in the 
+same alliance.
+<span class="r2">Output context:</span> Ar trebui să alegeți cu atenție compania aeriană a programului de fidelizare asociată alianței.
+<span class="r2">Output current:</span> Deși poate credeți că este intuitiv să vă alăturați companiei aeriene pe care le veți zbura cel mai 
+mult, trebuie să fiți conștienți că privilegiile oferite sunt adesea diferite și că punctele de viteză frecventă pot fi
+mai generoase în cadrul unei alte companii aeriene din aceeași alianță.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.108</span><span class="r2">):</span>  Deși poate credeți că este intuitiv să vă alăturați companiei aeriene pe care le veți 
+zbura cel mai mult, trebuie să fiți conștienți că privilegiile oferite sunt adesea diferite și că punctele de<span class="r5"> </span>
+<span class="r5">vite(</span><span class="r5">2.287</span><span class="r5">)</span>ză frecventă pot fi mai generoase în cadrul unei alte companii aeriene din aceeași alianță.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     You should choose your Frequent Flyer airline in an alliance carefully.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Ar trebui să alegeți cu atenție compania aeriană a programului de<span class="r1"> fide(</span><span class="r1">0.008</span><span class="r1">)</span>lizare 
+asociată alianței.
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.108</span><span class="r2">):</span> <span class="r5"> De(</span><span class="r5">2.011</span><span class="r5">)</span>și poate credeți că este intuitiv să vă alăturați companiei aeriene pe care 
+le veți zbura cel mai mult, trebuie să fiți conștienți că privilegiile oferite sunt adesea diferite și că punctele de 
+viteză frecventă pot fi mai generoase în cadrul unei alte companii aeriene din aceeași alianță.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.011</span><span class="r2">):</span>     You should choose your Frequent Flyer airline in an alliance carefully.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.011</span><span class="r2">):</span>    Ar trebui să alegeți cu atenție compania aeriană a programului de fidelizare asociată 
+<span class="r7">alian</span><span class="r1">ței(</span><span class="r1">0.014</span><span class="r1">).(</span><span class="r1">0.022</span><span class="r1">)</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.108</span><span class="r2">):</span>  <span class="r7">De</span><span class="r5">și(</span><span class="r5">1.527</span><span class="r5">)</span> poate credeți că este intuitiv să vă alăturați companiei aeriene pe care 
+le veți zbura cel mai mult, trebuie să fiți conștienți că privilegiile oferite sunt adesea diferite și că punctele de 
+viteză frecventă pot fi mai generoase în cadrul unei alte companii aeriene din aceeași alianță.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     You should choose your Frequent Flyer airline in an alliance carefully.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Ar trebui să alegeți cu atenție compania aeriană a programului de fidelizare asociată 
+<span class="r7">alian</span><span class="r1">ței(</span><span class="r1">0.001</span><span class="r1">).(</span><span class="r1">0.002</span><span class="r1">)</span>
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.108</span><span class="r2">):</span>  Deși poate credeți că este intuitiv să vă alăturați companiei aeriene pe care le veți<span class="r5"> </span>
+<span class="r5">zb(</span><span class="r5">0.548</span><span class="r5">)</span>ura cel mai mult, trebuie să fiți conștienți că privilegiile oferite sunt adesea diferite și că punctele de 
+viteză frecventă pot fi mai generoase în cadrul unei alte companii aeriene din aceeași alianță.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     You should choose your Frequent Flyer airline in an alliance carefully.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Ar trebui să alegeți cu atenție compania aeriană a programului de<span class="r1"> fide(</span><span class="r1">0.007</span><span class="r1">)</span>lizare 
+asociată alianței.
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.108</span><span class="r2">):</span>  Deși poate credeți că este intuitiv să vă alăturați companiei aeriene pe care le<span class="r5"> </span>
+<span class="r5">ve(</span><span class="r5">0.443</span><span class="r5">)</span>ți zbura cel mai mult, trebuie să fiți conștienți că privilegiile oferite sunt adesea diferite și că punctele 
+de viteză frecventă pot fi mai generoase în cadrul unei alte companii aeriene din aceeași alianță.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     You should choose your Frequent Flyer airline in an alliance carefully.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Ar trebui să alegeți cu atenție compania aeriană a programului de<span class="r1"> fide(</span><span class="r1">0.005</span><span class="r1">)</span>lizare 
+asociată alianței.
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.108</span><span class="r2">):</span>  Deși poate credeți că este intuitiv să vă alăturați companiei aeriene pe care le veți 
+zbura cel mai mult, trebuie să fiți conștienți că privilegiile oferite sunt adesea diferite și că punctele de viteză<span class="r5"> </span>
+<span class="r5">fre(</span><span class="r5">0.295</span><span class="r5">)</span>cventă pot fi mai generoase în cadrul unei alte companii aeriene din aceeași alianță.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.017</span><span class="r2">):</span>     You should choose your Frequent Flyer airline in an alliance carefully.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.018</span><span class="r2">):</span>    Ar trebui să alegeți cu atenție compania aeriană a programului de<span class="r1"> fide(</span><span class="r1">0.027</span><span class="r1">)</span>lizare<span class="r1"> </span>
+<span class="r1">asoci(</span><span class="r1">0.025</span><span class="r1">)</span>ată alianței.
+#<span class="r4">7</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.108</span><span class="r2">):</span>  Deși<span class="r5"> poate(</span><span class="r5">0.199</span><span class="r5">)</span> credeți că este intuitiv să vă alăturați companiei aeriene pe care 
+le veți zbura cel mai mult, trebuie să fiți conștienți că privilegiile oferite sunt adesea diferite și că punctele de 
+viteză frecventă pot fi mai generoase în cadrul unei alte companii aeriene din aceeași alianță.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     You should choose your Frequent Flyer airline in an alliance carefully.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Ar trebui să<span class="r1"> alege(</span><span class="r1">0.003</span><span class="r1">)ți(</span><span class="r1">0.004</span><span class="r1">)</span> cu atenție compania aeriană a programului de 
+fidelizare asociată alianței.
+#<span class="r4">8</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.108</span><span class="r2">):</span>  Deși poate<span class="r5"> crede(</span><span class="r5">0.189</span><span class="r5">)</span>ți că este intuitiv să vă alăturați companiei aeriene pe care 
+le veți zbura cel mai mult, trebuie să fiți conștienți că privilegiile oferite sunt adesea diferite și că punctele de 
+viteză frecventă pot fi mai generoase în cadrul unei alte companii aeriene din aceeași alianță.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     You should choose your Frequent Flyer airline in an alliance carefully.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Ar trebui să<span class="r1"> alege(</span><span class="r1">0.003</span><span class="r1">)ți(</span><span class="r1">0.003</span><span class="r1">)</span> cu atenție compania aeriană a programului de 
+fidelizare asociată <span class="r7">alianței</span><span class="r1">.(</span><span class="r1">0.003</span><span class="r1">)</span>
+#<span class="r4">9</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.108</span><span class="r2">):</span>  Deși poate credeți că este intuitiv să vă alăturați companiei aeriene pe care le veți 
+zbura cel mai mult, trebuie să fiți conștienți că privilegiile oferite sunt adesea diferite și că punctele de 
+<span class="r7">vite</span><span class="r5">ză(</span><span class="r5">0.123</span><span class="r5">)</span> frecventă pot fi mai generoase în cadrul unei alte companii aeriene din aceeași alianță.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.010</span><span class="r2">):</span>     You should choose your Frequent Flyer airline in an alliance carefully.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.011</span><span class="r2">):</span>    Ar trebui să alegeți cu atenție compania aeriană a programului de<span class="r1"> fide(</span><span class="r1">0.025</span><span class="r1">)</span>lizare 
+asociată alianței.
+
+</code></pre>
+</body>
+</html>

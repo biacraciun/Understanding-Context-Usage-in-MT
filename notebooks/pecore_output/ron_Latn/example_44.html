@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+.r8 {color: #800080; text-decoration-color: #800080}
+.r9 {color: #ff00ff; text-decoration-color: #ff00ff}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  Booking in advance gives the traveller peace of mind that they will have somewhere to sleep once they 
+arrive at their destination. Travel agents often have deals with specific hotels, although you may find it possible to 
+book other forms of accommodation, like camping grounds, through a travel agent. Travel agents usually offer packages 
+that include breakfast, transportation arrangements to/from the airport or even combined flight and hotel packages.
+<span class="r2">Input current:</span> They can also hold the reservation for you if you need time to think about the offer or procure other 
+documents for your destination <span class="r2">(</span>e.g. visa<span class="r2">)</span>.
+<span class="r2">Output context:</span> Rezervarea în avans oferă călătorului liniște sufletească că va avea un loc unde să doarmă când va 
+ajunge la destinație. Agenții de voiaj au deseori înțelegeri cu anumite hoteluri, dar prin intermediul unui agent de 
+voiaj puteți să faceți rezervări și pentru alte forme de cazare, cum ar fi terenuri de camping. Agenții de voiaj de 
+obicei ofertă pachete care includ micul dejun, transport la și de la aeroport sau chiar pachete care combină zborurile 
+și cazarea la hotel.
+<span class="r2">Output current:</span> Ei pot de asemenea să țină rezervarea pentru tine dacă ai nevoie de timp pentru a te gândi la ofertă 
+sau pentru a achiziționa alte documente pentru destinație <span class="r2">(</span>de exemplu viză<span class="r2">)</span>.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.089</span><span class="r2">):</span> <span class="r5"> Ei(</span><span class="r5">1.113</span><span class="r5">)</span> pot de asemenea să țină rezervarea pentru tine dacă ai nevoie de timp pentru
+a te gândi la ofertă sau pentru a achiziționa alte documente pentru destinație <span class="r2">(</span>de exemplu viză<span class="r2">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Booking in advance gives the traveller peace of mind that they will have somewhere to 
+sleep once they arrive at their destination. Travel agents often have deals with specific hotels, although you may find
+it possible to book other forms of accommodation, like camping grounds, through a travel agent. Travel agents usually 
+offer packages that include breakfast, transportation arrangements to/from the airport or even combined flight and 
+hotel <span class="r7">pack</span><span class="r1">ages(</span><span class="r1">0.003</span><span class="r1">).(</span><span class="r1">0.003</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Rezervarea în avans oferă călătorului liniște sufletească că va avea un loc unde să 
+doarmă când va ajunge la destinație. Agenții de voiaj au deseori înțelegeri cu anumite hoteluri, dar prin intermediul 
+unui agent de voiaj puteți să faceți rezervări și pentru alte forme de cazare, cum ar fi terenuri de camping. Agenții 
+de voiaj de obicei<span class="r1"> ofert(</span><span class="r1">0.005</span><span class="r1">)</span>ă pachete care includ micul dejun, transport la și de la aeroport sau chiar pachete care
+combină zborurile și cazarea la <span class="r7">hotel</span><span class="r1">.(</span><span class="r1">0.008</span><span class="r1">)</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.089</span><span class="r2">):</span>  Ei pot de asemenea să țină rezervarea pentru tine dacă ai nevoie de timp pentru a te 
+gândi la ofertă sau pentru a achiziționa alte documente pentru <span class="r7">destina</span><span class="r5">ție(</span><span class="r5">0.598</span><span class="r5">)</span> <span class="r2">(</span>de exemplu viză<span class="r2">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Booking in advance gives the traveller peace of mind that they will have somewhere to 
+sleep once they arrive at their destination. Travel agents often have deals with specific hotels, although you may find
+it possible to book other forms of accommodation, like camping grounds, through a travel agent. Travel agents usually 
+offer packages that include breakfast, transportation arrangements to/from the airport or even combined flight and 
+hotel packages.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Rezervarea în avans oferă călătorului liniște sufletească că va avea un loc unde să 
+doarmă când va ajunge la<span class="r1"> destina(</span><span class="r1">0.004</span><span class="r1">)ție(</span><span class="r1">0.006</span><span class="r1">)</span>. Agenții de voiaj au deseori înțelegeri cu anumite hoteluri, dar prin
+intermediul unui agent de voiaj puteți să faceți rezervări și pentru alte forme de cazare, cum ar fi terenuri de 
+camping. Agenții de voiaj de obicei<span class="r1"> ofert(</span><span class="r1">0.004</span><span class="r1">)</span>ă pachete care includ micul dejun, transport la și de la aeroport sau 
+chiar pachete care combină zborurile și cazarea la hotel.
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.089</span><span class="r2">):</span>  Ei pot de asemenea să<span class="r5"> ț(</span><span class="r5">0.288</span><span class="r5">)</span>ină rezervarea pentru tine dacă ai nevoie de timp pentru
+a te gândi la ofertă sau pentru a achiziționa alte documente pentru destinație <span class="r2">(</span>de exemplu viză<span class="r2">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Booking in advance gives the traveller peace of mind that they will have somewhere to 
+sleep once they arrive at their destination. Travel agents often have deals with specific hotels, although you may find
+it possible to book other forms of accommodation, like camping grounds, through a travel agent. Travel agents<span class="r1"> </span>
+<span class="r1">usually(</span><span class="r1">0.002</span><span class="r1">)</span> offer packages that include breakfast, transportation arrangements<span class="r1"> to(</span><span class="r1">0.002</span><span class="r1">)</span><span class="r8">/</span><span class="r9">from</span> the airport or even 
+combined flight and hotel <span class="r7">pack</span><span class="r1">ages(</span><span class="r1">0.003</span><span class="r1">).(</span><span class="r1">0.004</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Rezervarea în avans oferă călătorului liniște sufletească că va avea un loc unde să 
+doarmă când va ajunge la destinație. Agenții de voiaj au deseori înțelegeri cu anumite hoteluri, dar prin intermediul 
+unui agent de voiaj<span class="r1"> pute(</span><span class="r1">0.002</span><span class="r1">)</span>ți să <span class="r7">face</span><span class="r1">ți(</span><span class="r1">0.002</span><span class="r1">)</span> rezervări și pentru alte forme de cazare, cum ar fi terenuri de 
+camping. Agenții de voiaj de obicei<span class="r1"> ofert(</span><span class="r1">0.006</span><span class="r1">)ă(</span><span class="r1">0.002</span><span class="r1">)</span> pachete care includ micul dejun, transport la și de la 
+aeroport sau chiar pachete care combină zborurile și<span class="r1"> caz(</span><span class="r1">0.002</span><span class="r1">)</span>area la hotel.
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.089</span><span class="r2">):</span>  Ei pot de asemenea să țină rezervarea pentru tine dacă ai nevoie de timp pentru a<span class="r5"> </span>
+<span class="r5">te(</span><span class="r5">0.210</span><span class="r5">)</span> gândi la ofertă sau pentru a achiziționa alte documente pentru destinație <span class="r2">(</span>de exemplu viză<span class="r2">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Booking in advance gives the traveller peace of mind that they will have somewhere to 
+sleep once they arrive at their destination. Travel agents often have deals with specific hotels, although you may find
+it possible to book other forms of accommodation, like camping grounds, through a travel agent. Travel agents usually 
+offer packages that include breakfast, transportation arrangements to/from the airport or even combined flight and 
+hotel <span class="r7">pack</span><span class="r1">ages(</span><span class="r1">0.002</span><span class="r1">).(</span><span class="r1">0.003</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Rezervarea în avans oferă călătorului liniște sufletească că va avea un loc unde să 
+doarmă când va ajunge la destinație. Agenții de voiaj au deseori înțelegeri cu anumite hoteluri, dar prin intermediul 
+unui agent de voiaj puteți să <span class="r7">face</span><span class="r1">ți(</span><span class="r1">0.002</span><span class="r1">)</span> rezervări și<span class="r1"> pentru(</span><span class="r1">0.003</span><span class="r1">)</span> alte forme de cazare, cum ar fi terenuri de 
+camping. Agenții de voiaj de obicei<span class="r1"> ofert(</span><span class="r1">0.003</span><span class="r1">)</span>ă pachete care includ micul dejun<span class="r1">,(</span><span class="r1">0.002</span><span class="r1">) transport(</span><span class="r1">0.002</span><span class="r1">)</span> la și de la 
+aeroport sau chiar pachete care combină zborurile și cazarea la hotel.
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.089</span><span class="r2">):</span>  Ei<span class="r5"> pot(</span><span class="r5">0.206</span><span class="r5">)</span> de asemenea să țină rezervarea pentru tine dacă ai nevoie de timp pentru
+a te gândi la ofertă sau pentru a achiziționa alte documente pentru destinație <span class="r2">(</span>de exemplu viză<span class="r2">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Booking in advance gives the traveller peace of mind that they will have somewhere to 
+sleep once they arrive at their destination. Travel agents often have deals with specific hotels, although you may find
+it possible to book other forms of accommodation, like camping grounds, through a travel agent. Travel agents usually 
+offer packages that include breakfast, transportation arrangements to/from the airport or even combined flight and 
+hotel <span class="r7">pack</span><span class="r1">ages(</span><span class="r1">0.001</span><span class="r1">).(</span><span class="r1">0.003</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Rezervarea în avans oferă călătorului liniște sufletească că va avea un loc unde să 
+doarmă când va ajunge la destinație. Agenții de voiaj au deseori înțelegeri cu anumite hoteluri, dar prin intermediul 
+unui agent de voiaj<span class="r1"> pute(</span><span class="r1">0.003</span><span class="r1">)</span>ți să faceți rezervări și pentru alte forme de cazare, cum ar fi terenuri de camping. 
+Agenții de voiaj de<span class="r1"> obicei(</span><span class="r1">0.002</span><span class="r1">) ofert(</span><span class="r1">0.003</span><span class="r1">)ă(</span><span class="r1">0.002</span><span class="r1">)</span> pachete care includ micul dejun, transport la și de la aeroport 
+sau chiar pachete care combină zborurile și cazarea la <span class="r7">hotel</span><span class="r1">.(</span><span class="r1">0.003</span><span class="r1">)</span>
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.089</span><span class="r2">):</span>  Ei pot<span class="r5"> de(</span><span class="r5">0.201</span><span class="r5">)</span> asemenea să țină rezervarea pentru tine dacă ai nevoie de timp pentru
+a te gândi la ofertă sau pentru a achiziționa alte documente pentru destinație <span class="r2">(</span>de exemplu viză<span class="r2">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Booking in advance gives the traveller peace<span class="r1"> of(</span><span class="r1">0.001</span><span class="r1">)</span> mind that they will have 
+somewhere to sleep once they arrive at their destination. Travel agents often have deals with specific hotels, although
+you may find it possible to book other forms of accommodation, like camping grounds, through a travel agent. Travel 
+agents usually offer packages that include breakfast, transportation arrangements<span class="r1"> to(</span><span class="r1">0.001</span><span class="r1">)</span><span class="r8">/</span><span class="r9">from</span> the airport or even 
+combined flight and hotel<span class="r1"> pack(</span><span class="r1">0.001</span><span class="r1">)ages(</span><span class="r1">0.002</span><span class="r1">).(</span><span class="r1">0.001</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Rezervarea în avans oferă călătorului liniște sufletească că va avea un loc unde să 
+doarmă când va ajunge la destinație. Agenții de voiaj au deseori înțelegeri cu anumite hoteluri, dar prin intermediul 
+unui agent de voiaj puteți să faceți rezervări și pentru alte forme de cazare, cum ar fi terenuri de camping. Agenții 
+de voiaj de<span class="r1"> obicei(</span><span class="r1">0.001</span><span class="r1">) ofert(</span><span class="r1">0.002</span><span class="r1">)ă(</span><span class="r1">0.001</span><span class="r1">)</span> pachete care includ micul dejun, transport la și de la aeroport sau 
+chiar pachete care combină zborurile și<span class="r1"> caz(</span><span class="r1">0.001</span><span class="r1">)</span>area la <span class="r7">hotel</span><span class="r1">.(</span><span class="r1">0.002</span><span class="r1">)</span>
+#<span class="r4">7</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.089</span><span class="r2">):</span>  Ei pot de asemenea să țină rezervarea pentru tine dacă ai nevoie de timp pentru a te 
+gândi la ofertă sau pentru a achiziționa alte documente pentru destinație <span class="r2">(</span>de<span class="r5"> exemplu(</span><span class="r5">0.159</span><span class="r5">)</span> viză<span class="r2">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>     Booking in advance gives the traveller peace of mind that they will have somewhere to 
+sleep once they arrive at their destination. Travel agents often have deals with specific hotels, although you may find
+it possible to book other forms of accommodation, like camping grounds, through a travel agent. Travel agents usually 
+offer packages that include breakfast, transportation arrangements<span class="r1"> to(</span><span class="r1">0.000</span><span class="r1">)</span><span class="r8">/</span><span class="r9">from</span> the airport or even combined flight 
+and hotel packages.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    Rezervarea în avans oferă călătorului liniște sufletească că va avea un loc unde să 
+doarmă când va ajunge la destinație. Agenții de voiaj au deseori înțelegeri cu anumite hoteluri, dar prin intermediul 
+unui agent de voiaj puteți să faceți<span class="r1"> rezer(</span><span class="r1">0.000</span><span class="r1">)</span>vări și pentru alte forme de cazare, cum ar fi terenuri de camping. 
+Agenții de voiaj de obicei ofertă pachete care<span class="r1"> incl(</span><span class="r1">0.000</span><span class="r1">)</span>ud <span class="r7">mi</span><span class="r1">cul(</span><span class="r1">0.001</span><span class="r1">)</span> <span class="r7">de</span><span class="r1">jun(</span><span class="r1">0.000</span><span class="r1">)</span>, transport la și de la aeroport 
+sau chiar pachete care <span class="r7">combin</span><span class="r1">ă(</span><span class="r1">0.000</span><span class="r1">)</span> zborurile și cazarea la hotel.
+#<span class="r4">8</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.089</span><span class="r2">):</span>  Ei pot de asemenea să țină rezervarea pentru tine dacă<span class="r5"> ai(</span><span class="r5">0.146</span><span class="r5">)</span> nevoie de timp pentru
+a te gândi la ofertă sau pentru a achiziționa alte documente pentru destinație <span class="r2">(</span>de exemplu viză<span class="r2">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Booking in advance gives the traveller peace of mind that they will have somewhere to 
+sleep once they arrive at their destination. Travel agents often have deals with specific hotels, although you may find
+it possible to book other forms of accommodation, like camping grounds, through a travel agent. Travel agents usually 
+offer packages that include breakfast, transportation arrangements to/from the airport or even combined flight and 
+hotel <span class="r7">pack</span><span class="r1">ages(</span><span class="r1">0.002</span><span class="r1">).(</span><span class="r1">0.002</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Rezervarea în avans oferă călătorului liniște sufletească că va avea un loc unde să 
+doarmă când va ajunge la destinație. Agenții de voiaj au deseori înțelegeri cu anumite hoteluri, dar prin intermediul 
+unui agent de voiaj<span class="r1"> pute(</span><span class="r1">0.004</span><span class="r1">)ți(</span><span class="r1">0.004</span><span class="r1">) să(</span><span class="r1">0.002</span><span class="r1">)</span> <span class="r7">face</span><span class="r1">ți(</span><span class="r1">0.002</span><span class="r1">)</span> rezervări și pentru alte forme de cazare, cum ar fi 
+terenuri de camping. Agenții de voiaj de obicei ofertă pachete care includ micul dejun, transport la și de la aeroport 
+sau chiar pachete care combină zborurile și cazarea la <span class="r7">hotel</span><span class="r1">.(</span><span class="r1">0.002</span><span class="r1">)</span>
+#<span class="r4">9</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.089</span><span class="r2">):</span>  Ei pot de asemenea<span class="r5"> să(</span><span class="r5">0.112</span><span class="r5">)</span> țină rezervarea pentru tine dacă ai nevoie de timp pentru
+a te gândi la ofertă sau pentru a achiziționa alte documente pentru destinație <span class="r2">(</span>de exemplu viză<span class="r2">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Booking in advance gives the traveller peace of mind that they will have somewhere to 
+sleep once they arrive at their destination. Travel agents often have deals with specific hotels, although you may find
+it possible to book other forms of accommodation, like camping grounds, through a travel agent. Travel agents<span class="r1"> </span>
+<span class="r1">usually(</span><span class="r1">0.001</span><span class="r1">)</span> offer packages that include breakfast, transportation arrangements to/from the airport or even combined 
+flight and hotel <span class="r7">packages</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Rezervarea în avans oferă călătorului liniște sufletească că va avea un loc unde să 
+doarmă când va ajunge la destinație. Agenții de voiaj au deseori înțelegeri cu anumite hoteluri, dar prin intermediul 
+unui agent<span class="r1"> de(</span><span class="r1">0.003</span><span class="r1">)</span> voiaj puteți<span class="r1"> să(</span><span class="r1">0.002</span><span class="r1">)</span> faceți rezervări și pentru alte forme de cazare, cum ar fi terenuri de 
+camping. Agenții de voiaj<span class="r1"> de(</span><span class="r1">0.002</span><span class="r1">)</span> obicei<span class="r1"> ofert(</span><span class="r1">0.004</span><span class="r1">)</span>ă pachete care includ micul dejun, transport la și de la 
+aeroport sau chiar pachete care combină zborurile și cazarea la <span class="r7">hotel</span><span class="r1">.(</span><span class="r1">0.002</span><span class="r1">)</span>
+#<span class="r4">10</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.089</span><span class="r2">):</span>  Ei pot de<span class="r5"> asemenea(</span><span class="r5">0.101</span><span class="r5">)</span> să țină rezervarea pentru tine dacă ai nevoie de timp pentru
+a te gândi la ofertă sau pentru a achiziționa alte documente pentru destinație <span class="r2">(</span>de exemplu viză<span class="r2">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Booking in advance gives the traveller peace of mind that they will have somewhere to 
+sleep once they arrive at their destination. Travel agents often have deals with specific hotels, although you may find
+it possible to book other forms of accommodation, like camping grounds, through a travel agent. Travel agents usually 
+offer packages that include breakfast, transportation arrangements to/from the airport or even combined flight and 
+hotel <span class="r7">pack</span><span class="r1">ages(</span><span class="r1">0.003</span><span class="r1">).(</span><span class="r1">0.003</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Rezervarea în avans oferă călătorului liniște sufletească că va avea un loc unde să 
+doarmă când va ajunge la destinație. Agenții de voiaj au deseori înțelegeri cu anumite hoteluri, dar prin intermediul 
+unui agent de voiaj puteți să faceți rezervări și pentru alte forme de cazare, cum ar fi terenuri de camping. Agenții 
+de voiaj de obicei<span class="r1"> ofert(</span><span class="r1">0.002</span><span class="r1">)</span>ă pachete care includ micul dejun, transport la și de la aeroport sau chiar pachete care
+combină<span class="r1"> zbor(</span><span class="r1">0.002</span><span class="r1">)</span>urile și<span class="r1"> caz(</span><span class="r1">0.003</span><span class="r1">)</span>area la <span class="r7">hotel</span><span class="r1">.(</span><span class="r1">0.005</span><span class="r1">)</span>
+#<span class="r4">11</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.089</span><span class="r2">):</span>  Ei pot de asemenea să țină rezervarea pentru<span class="r5"> tine(</span><span class="r5">0.096</span><span class="r5">)</span> dacă ai nevoie de timp pentru
+a te gândi la ofertă sau pentru a achiziționa alte documente pentru destinație <span class="r2">(</span>de exemplu viză<span class="r2">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Booking in advance gives the traveller peace of mind that they will have somewhere to 
+sleep once they arrive at their destination. Travel agents often have deals with specific hotels, although you may find
+it possible to book other forms of accommodation, like camping grounds, through a travel agent. Travel agents usually 
+offer packages that include breakfast, transportation arrangements to/from the airport or even combined flight and 
+hotel packages.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Rezervarea în avans oferă călătorului liniște sufletească că va avea un loc unde să 
+doarmă când va ajunge la destinație. Agenții de voiaj au deseori înțelegeri cu anumite hoteluri, dar prin intermediul 
+unui agent de voiaj<span class="r1"> pute(</span><span class="r1">0.004</span><span class="r1">)ți(</span><span class="r1">0.004</span><span class="r1">)</span> să <span class="r7">face</span><span class="r1">ți(</span><span class="r1">0.004</span><span class="r1">)</span> rezervări și pentru alte forme de cazare, cum ar fi terenuri 
+de camping. Agenții de voiaj de obicei<span class="r1"> ofert(</span><span class="r1">0.005</span><span class="r1">)ă(</span><span class="r1">0.004</span><span class="r1">)</span> pachete care includ micul dejun, transport la și de la 
+aeroport sau chiar pachete care combină zborurile și cazarea la hotel.
+#<span class="r4">12</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.089</span><span class="r2">):</span>  Ei pot de asemenea să țină<span class="r5"> rezerv(</span><span class="r5">0.093</span><span class="r5">)</span>area pentru tine dacă ai nevoie de timp pentru
+a te gândi la ofertă sau pentru a achiziționa alte documente pentru destinație <span class="r2">(</span>de exemplu viză<span class="r2">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Booking in advance gives the traveller peace of mind that they will have somewhere to 
+sleep once they arrive at their destination. Travel agents often have deals with specific hotels, although you may find
+it possible to book other forms of accommodation, like camping grounds, through a travel agent. Travel agents<span class="r1"> </span>
+<span class="r1">usually(</span><span class="r1">0.001</span><span class="r1">)</span> offer packages that include breakfast, transportation arrangements to/from the airport or even combined 
+flight and hotel packages.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Rezervarea în avans oferă călătorului liniște sufletească că va avea un loc unde să 
+doarmă când va ajunge la destinație. Agenții de voiaj au deseori înțelegeri cu anumite hoteluri, dar prin intermediul 
+unui agent de voiaj puteți să faceți<span class="r1"> rezer(</span><span class="r1">0.002</span><span class="r1">)vă(</span><span class="r1">0.001</span><span class="r1">)</span>ri și pentru alte forme de cazare, cum ar fi terenuri de 
+camping. Agenții de voiaj de obicei<span class="r1"> ofert(</span><span class="r1">0.001</span><span class="r1">)</span>ă<span class="r1"> pach(</span><span class="r1">0.001</span><span class="r1">)</span>ete care includ micul dejun, transport la și de la 
+aeroport sau chiar pachete care combină zborurile și cazarea la hotel.
+
+</code></pre>
+</body>
+</html>

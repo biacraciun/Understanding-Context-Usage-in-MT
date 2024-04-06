@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  Ecuador requires that Cuban citizens receive an invitation letter prior to entering Ecuador through 
+international airports or frontier admission points. This letter must be legalized by the Ecuadorian Ministry of 
+Foreign Affairs, and comply with certain requirements. These requirements are designed to provide an organized 
+migratory flow between both countries. Cuban citizens who are US green card holders should visit an Ecuadorian 
+Consulate to obtain an exemption to this requirement.
+<span class="r2">Input current:</span> Your passport must be valid for at least <span class="r4">6</span> months beyond your travel dates. A round/onward trip ticket 
+is needed to prove the length of your stay.
+<span class="r2">Output context:</span> Еквадор изисква кубинските граждани да получат писмо с покана преди да влязат в Еквадор през 
+международните летища или граничните пропускателни пунктове. Това писмо трябва да отговаря на определени изисквания и 
+да бъде легализирано от Министерството на външните работи на Еквадор. Тези изисквания са създаденида предоставят 
+организиран миграционен поток между двете държави. Гражданите на Куба, които притежават зелена карта от САЩ, следва да 
+посетят консулство на Еквадор, за да получат освобождаване от това изискване.
+<span class="r2">Output current:</span> Паспортът ви трябва да е валиден най-малко <span class="r4">6</span> месеца след датите на пътуване.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.104</span><span class="r2">):</span> <span class="r5"> Па(</span><span class="r5">1.338</span><span class="r5">)</span>спортът ви трябва да е валиден най-малко <span class="r4">6</span> месеца след датите на пътуване.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     Ecuador requires that Cuban citizens receive an invitation letter prior to entering 
+Ecuador through international airports or frontier admission points. This letter must be legalized by the Ecuadorian 
+Ministry of Foreign Affairs, and comply with certain requirements. These requirements are designed to provide an 
+organized migratory flow between both countries. Cuban citizens who are US green card holders should visit an 
+Ecuadorian Consulate to obtain an exemption to this <span class="r7">requir</span><span class="r1">ement(</span><span class="r1">0.009</span><span class="r1">).(</span><span class="r1">0.006</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Еквадор изисква кубинските граждани да получат писмо с покана преди да влязат в 
+Еквадор през международните летища или граничните пропускателни пунктове. Това писмо трябва да отговаря на определени 
+изисквания и да бъде легализирано от Министерството на външните работи на Еквадор. Тези изисквания са<span class="r1"> </span>
+<span class="r1">създа(</span><span class="r1">0.005</span><span class="r1">)</span><span class="r7">дени</span><span class="r1">да(</span><span class="r1">0.008</span><span class="r1">)</span> предоставят организиран миграционен поток между двете държави. Гражданите на Куба, които 
+притежават зелена карта от САЩ, следва да посетят консулство на Еквадор, за да получат освобождаване от това 
+<span class="r7">изискване</span><span class="r1">.(</span><span class="r1">0.009</span><span class="r1">)</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.104</span><span class="r2">):</span>  Паспортът ви трябва да е валиден най-малко <span class="r4">6</span> месеца след датите на <span class="r7">пътуване</span><span class="r5">.(</span><span class="r5">0.271</span><span class="r5">)</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>     Ecuador requires that Cuban citizens receive an invitation letter prior to entering 
+Ecuador through international airports or frontier admission points. This letter must be legalized by<span class="r1"> the(</span><span class="r1">0.000</span><span class="r1">)</span> 
+Ecuadorian Ministry of Foreign Affairs, and comply with certain requirements. These requirements are designed to 
+provide an organized migratory flow between both countries. Cuban citizens who are US green card holders should visit 
+an Ecuadorian Consulate to obtain an exemption to this requirement.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    Еквадор изисква кубинските граждани да получат писмо с покана преди да влязат в 
+Еквадор през международните летища или граничните пропускателни пунктове. Това писмо трябва да отговаря на определени 
+изисквания и да бъде легализирано от Министерството на външните работи на Еквадор. Тези изисквания са<span class="r1"> </span>
+<span class="r1">създа(</span><span class="r1">0.000</span><span class="r1">)</span>денида предоставят организиран миграционен поток между двете държави.<span class="r1"> Гра(</span><span class="r1">0.000</span><span class="r1">)</span>жданите на Куба, които<span class="r1"> </span>
+<span class="r1">при(</span><span class="r1">0.000</span><span class="r1">)</span>тежават зелена карта от САЩ, следва да посетят<span class="r1"> консул(</span><span class="r1">0.000</span><span class="r1">)</span>ство на Еквадор, за да<span class="r1"> полу(</span><span class="r1">0.000</span><span class="r1">)</span>чат 
+освобождаване от това изискване.
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.104</span><span class="r2">):</span>  Паспортът ви трябва да е валиден най-малко <span class="r4">6</span> месеца след <span class="r7">да</span><span class="r5">тите(</span><span class="r5">0.164</span><span class="r5">)</span> на пътуване.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Ecuador requires that Cuban citizens receive an invitation letter prior to entering 
+Ecuador through international airports or frontier admission points. This letter must be legalized by<span class="r1"> the(</span><span class="r1">0.004</span><span class="r1">)</span> 
+Ecuadorian Ministry of Foreign Affairs, and comply with certain requirements. These requirements are designed to 
+provide an organized migratory flow between both countries. Cuban citizens who are US green card holders should visit<span class="r1"> </span>
+<span class="r1">an(</span><span class="r1">0.003</span><span class="r1">)</span> Ecuadorian Consulate to obtain an exemption to this <span class="r7">requir</span><span class="r1">ement(</span><span class="r1">0.003</span><span class="r1">).(</span><span class="r1">0.003</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Еквадор изисква кубинските граждани да получат писмо с покана преди да влязат в 
+Еквадор през международните летища или граничните пропускателни пунктове. Това писмо трябва да отговаря на определени 
+изисквания и да бъде легализирано от Министерството на<span class="r1"> въ(</span><span class="r1">0.002</span><span class="r1">)</span>ншните работи на Еквадор.<span class="r1"> Тези(</span><span class="r1">0.005</span><span class="r1">)</span> изисквания са<span class="r1"> </span>
+<span class="r1">създа(</span><span class="r1">0.004</span><span class="r1">)</span><span class="r7">дени</span><span class="r1">да(</span><span class="r1">0.004</span><span class="r1">)</span> предоставят организиран миграционен поток между двете държави. Гражданите на Куба, които 
+притежават зелена карта от САЩ, следва да посетят консулство на Еквадор, за да получат освобождаване от това изискване.
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.104</span><span class="r2">):</span>  Паспортът<span class="r5"> ви(</span><span class="r5">0.137</span><span class="r5">)</span> трябва да е валиден най-малко <span class="r4">6</span> месеца след датите на пътуване.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Ecuador requires that Cuban citizens receive an invitation letter prior to entering 
+Ecuador through international airports or frontier admission points. This letter must be legalized by the Ecuadorian 
+Ministry of Foreign Affairs, and comply with certain requirements. These requirements are designed to provide an 
+organized migratory flow between both countries. Cuban citizens who are US green card holders should visit an 
+Ecuadorian Consulate to obtain an exemption to this <span class="r7">requir</span><span class="r1">ement(</span><span class="r1">0.004</span><span class="r1">).(</span><span class="r1">0.003</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Еквадор изисква кубинските граждани да получат писмо с покана преди да влязат в 
+Еквадор през международните летища или граничните пропускателни пунктове. Това писмо трябва да отговаря на определени 
+изисквания и да бъде легализирано от Министерството на <span class="r7">въ</span><span class="r1">нш(</span><span class="r1">0.002</span><span class="r1">)</span>ните работи на Еквадор. Тези изисквания са 
+създаденида предоставят организиран миграционен поток между двете държави. Гражданите на Куба, които притежават<span class="r1"> </span>
+<span class="r1">зе(</span><span class="r1">0.002</span><span class="r1">)</span>лена карта от САЩ, следва да посетят консулство на Еквадор, за да получат освобождаване от<span class="r1"> това(</span><span class="r1">0.001</span><span class="r1">)</span> 
+<span class="r7">изискване</span><span class="r1">.(</span><span class="r1">0.003</span><span class="r1">)</span>
+
+</code></pre>
+</body>
+</html>

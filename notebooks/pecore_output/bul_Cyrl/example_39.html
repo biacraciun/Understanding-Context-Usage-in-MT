@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  In summer, especially, you&#x27;ll need to watch out for mosquitoes if you decide to hike through the 
+rainforest.
+<span class="r2">Input current:</span> Even if you&#x27;re driving through the subtropical rainforest, a few seconds with the doors open while you 
+get inside the vehicle is enough time for mosquitoes to get in the vehicle with you.
+<span class="r2">Output context:</span> През лятото ще трябва най-вече да се пазиш от комари, ако решиш да се разхождаш из тропическите гори.
+<span class="r2">Output current:</span> Дори и да караш през тропическите гори, няколко секунди с отворени врати, докато влезеш в колата, е 
+достатъчно време за комарите да се качат с теб в колата.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.107</span><span class="r2">):</span>  Дори и да караш през <span class="r7">тропи</span><span class="r5">ческите(</span><span class="r5">1.520</span><span class="r5">)</span> гори, няколко секунди с отворени врати, 
+докато влезеш в колата, е достатъчно време за комарите да се качат с теб в колата.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     In summer, especially, you&#x27;ll need to watch out for mosquitoes if you decide to hike 
+through the rainforest.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    През лятото ще трябва най-вече да се пазиш от комари, ако решиш да се разхождаш из<span class="r1"> </span>
+<span class="r1">тро(</span><span class="r1">0.003</span><span class="r1">)</span><span class="r7">пи</span><span class="r1">ческите(</span><span class="r1">0.006</span><span class="r1">)</span> гори.
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.107</span><span class="r2">):</span>  Дори и да караш през тропическите<span class="r5"> гори(</span><span class="r5">0.476</span><span class="r5">)</span>, няколко секунди с отворени врати, 
+докато влезеш в колата, е достатъчно време за комарите да се качат с теб в колата.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.013</span><span class="r2">):</span>     In summer, especially, you&#x27;ll need to watch out for mosquitoes if you decide to hike 
+through the rainforest.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.014</span><span class="r2">):</span>    През лятото ще трябва най-вече да се пазиш от комари, ако решиш да се разхождаш из<span class="r1"> </span>
+<span class="r1">тро(</span><span class="r1">0.020</span><span class="r1">)</span><span class="r7">пи</span><span class="r1">ческите(</span><span class="r1">0.019</span><span class="r1">) гори(</span><span class="r1">0.030</span><span class="r1">)</span>.
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.107</span><span class="r2">):</span> <span class="r5"> Дори(</span><span class="r5">0.475</span><span class="r5">)</span> и да караш през тропическите гори, няколко секунди с отворени врати, 
+докато влезеш в колата, е достатъчно време за комарите да се качат с теб в колата.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.007</span><span class="r2">):</span>     In summer, especially, you&#x27;ll need to watch out for mosquitoes if you decide to hike 
+through the <span class="r7">rainfor</span><span class="r1">est(</span><span class="r1">0.007</span><span class="r1">)</span>.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.007</span><span class="r2">):</span>    През лятото ще трябва най-вече да се пазиш от комари, ако решиш да се разхождаш из 
+тропическите <span class="r7">гори</span><span class="r1">.(</span><span class="r1">0.015</span><span class="r1">)</span>
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.107</span><span class="r2">):</span>  Дори и да<span class="r5"> караш(</span><span class="r5">0.269</span><span class="r5">)</span> през тропическите гори, няколко секунди с отворени врати, 
+докато влезеш в колата, е достатъчно време за комарите да се качат с теб в колата.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     In summer, especially, you&#x27;ll need to watch out for mosquitoes if you decide to<span class="r1"> </span>
+<span class="r1">h(</span><span class="r1">0.002</span><span class="r1">)</span>ike through the rainforest.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    През лятото ще трябва най-вече да се пазиш от комари, ако<span class="r1"> реши(</span><span class="r1">0.002</span><span class="r1">)ш(</span><span class="r1">0.002</span><span class="r1">)</span> да се 
+разхождаш из тропическите гори.
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.107</span><span class="r2">):</span>  Дори<span class="r5"> и(</span><span class="r5">0.177</span><span class="r5">)</span> да караш през тропическите гори, няколко секунди с отворени врати, 
+докато влезеш в колата, е достатъчно време за комарите да се качат с теб в колата.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     In summer, especially, you&#x27;ll need to watch out for mosquitoes if you decide to hike 
+through the rainforest.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    През лятото ще трябва най-вече да се пазиш от комари, ако решиш да се разхождаш из 
+тропическите<span class="r1"> гори(</span><span class="r1">0.002</span><span class="r1">).(</span><span class="r1">0.005</span><span class="r1">)</span>
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.107</span><span class="r2">):</span>  Дори и да караш през тропическите гори, няколко секунди с отворени врати, докато 
+влезеш в колата, е достатъчно време<span class="r5"> за(</span><span class="r5">0.136</span><span class="r5">)</span> комарите да се качат с теб в колата.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     In summer, especially, you&#x27;ll need to watch out for mosquitoes if you decide to hike 
+through the rainforest.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    През лятото ще трябва най-вече да се пазиш от<span class="r1"> кома(</span><span class="r1">0.012</span><span class="r1">)</span>ри, ако решиш да се разхождаш
+из тропическите гори.
+
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  Fill your home with a rich coffee in the morning and some relaxing chamomile tea at night. When you&#x27;re 
+on a staycation, you have the time to treat yourself and take a few extra minutes to brew up something special. If 
+you&#x27;re feeling more adventurous, take the opportunity to juice or blend up some smoothies:
+<span class="r2">Input current:</span> maybe you&#x27;ll discover a simple beverage that you can make for breakfast when you&#x27;re back to your daily 
+routine.
+<span class="r2">Output context:</span> Изпълнете дома си с богато кафе сутринта и отпускащ чай от лайка вечерта. Когато сте на почивка у дома,
+имате време да се поглезите и да отделите няколко минути повече, за да сготвите нещо специално. Ако сте готови за 
+авантюри, възползвайте се от възможността да изстискате един сок или забъркате някакво смути:
+<span class="r2">Output current:</span> може би ще откриете проста напитка, която можете да направите за закуска, когато се върнете към 
+ежедневната си рутина.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.174</span><span class="r2">):</span> <span class="r5"> може(</span><span class="r5">2.390</span><span class="r5">)</span> би ще откриете проста напитка, която можете да направите за закуска, 
+когато се върнете към ежедневната си рутина.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Fill your home with a rich coffee in the morning and some relaxing chamomile tea at 
+night. When you&#x27;re on a staycation, you have the time to treat yourself and take a few extra minutes to brew up 
+something special. If you&#x27;re feeling more adventurous, take the opportunity to juice or blend up some 
+<span class="r7">smoothi</span><span class="r1">es(</span><span class="r1">0.001</span><span class="r1">):(</span><span class="r1">0.002</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Изпълнете дома си с богато кафе сутринта и отпускащ чай от лайка вечерта. Когато сте 
+на почивка у дома, имате време да се поглезите и да отделите няколко минути повече, за да сготвите нещо специално. Ако 
+сте готови за авантюри, възползвайте се от възможността да изстискате<span class="r1"> един(</span><span class="r1">0.001</span><span class="r1">)</span> сок или забъркате някакво 
+смути<span class="r1">:(</span><span class="r1">0.003</span><span class="r1">)</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.174</span><span class="r2">):</span>  може би ще <span class="r7">откри</span><span class="r5">ете(</span><span class="r5">1.790</span><span class="r5">)</span> проста напитка, която можете да направите за закуска, 
+когато се върнете към ежедневната си рутина.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>     Fill your home with a rich coffee in the morning and some relaxing chamomile tea at 
+night. When you&#x27;re on a staycation, you have the time to treat yourself and take a few extra minutes to brew up 
+something special. If you&#x27;re feeling more adventurous, take the opportunity to juice or blend up some smoothies:
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    Изпълнете дома си с богато кафе сутринта и отпускащ чай от лайка вечерта. Когато сте 
+на почивка у дома, имате време да се поглезите и да отделите няколко минути повече, за да сготвите нещо специално. Ако 
+сте готови за авантюри, <span class="r7">възползва</span><span class="r1">йте(</span><span class="r1">0.000</span><span class="r1">)</span> се от възможността да<span class="r1"> из(</span><span class="r1">0.000</span><span class="r1">)сти(</span><span class="r1">0.000</span><span class="r1">)</span><span class="r7">ска</span><span class="r1">те(</span><span class="r1">0.000</span><span class="r1">)</span> един сок или<span class="r1"> </span>
+<span class="r1">заб(</span><span class="r1">0.000</span><span class="r1">)</span>ъркате някакво смути:
+
+</code></pre>
+</body>
+</html>

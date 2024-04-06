@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  Fill your home with a rich coffee in the morning and some relaxing chamomile tea at night. When you&#x27;re 
+on a staycation, you have the time to treat yourself and take a few extra minutes to brew up something special. If 
+you&#x27;re feeling more adventurous, take the opportunity to juice or blend up some smoothies:
+<span class="r2">Input current:</span> maybe you&#x27;ll discover a simple beverage that you can make for breakfast when you&#x27;re back to your daily 
+routine.
+<span class="r2">Output context:</span> Umple-ți casa cu o aromă de cafea savuroasă dimineața și de ceai de mușețel relaxant seara. Când stați 
+consemnat la domiciliu, aveți timp să vă faceți plăcerile și să vă permiteți câteva minute extra ca să pregătiți o masă
+specială. Dacă ai chef de aventură, profită de ocazie ca să faci un suc sau să amesteci niște smoothies:
+<span class="r2">Output current:</span> poate vei descoperi o băutură simplă pe care o poți face pentru micul dejun când te-ai întors la rutina
+de zi cu zi.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.161</span><span class="r2">):</span> <span class="r5"> poate(</span><span class="r5">2.328</span><span class="r5">)</span> vei descoperi o băutură simplă pe care o poți face pentru micul dejun 
+când te-ai întors la rutina de zi cu zi.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Fill your home with a rich coffee in the morning and some relaxing chamomile tea at 
+night. When you&#x27;re on a staycation, you have the time to treat yourself and take a few extra minutes to brew up 
+something special. If you&#x27;re feeling more adventurous, take the opportunity to juice or blend up some 
+<span class="r7">smoothi</span><span class="r1">es(</span><span class="r1">0.003</span><span class="r1">):(</span><span class="r1">0.003</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Umple-ți casa cu o aromă de cafea savuroasă dimineața și de ceai de mușețel relaxant 
+seara. Când stați consemnat la domiciliu, aveți timp să vă faceți plăcerile și să vă permiteți câteva minute extra ca 
+să pregătiți o masă specială. Dacă ai chef de aventură, profită de ocazie ca să faci un suc sau să amesteci niște 
+smoothies<span class="r1">:(</span><span class="r1">0.002</span><span class="r1">)</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.161</span><span class="r2">):</span>  poate vei descoperi o băutură simplă pe care o<span class="r5"> po(</span><span class="r5">1.392</span><span class="r5">)</span>ți face pentru micul dejun 
+când te-ai întors la rutina de zi cu zi.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Fill your home with a rich coffee in the morning and some relaxing chamomile tea at 
+night. When you&#x27;re on a staycation, you have the time to treat yourself and take a few extra minutes to brew up 
+something special. If you&#x27;re feeling more adventurous, take the opportunity to juice or blend up some smoothies:
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Umple-ți casa cu o aromă de cafea savuroasă dimineața și de ceai de mușețel relaxant 
+seara. Când <span class="r7">sta</span><span class="r1">ți(</span><span class="r1">0.003</span><span class="r1">)</span> consemnat la domiciliu,<span class="r1"> ave(</span><span class="r1">0.003</span><span class="r1">)ți(</span><span class="r1">0.005</span><span class="r1">)</span> timp să vă faceți plăcerile și să vă permiteți 
+câteva minute extra ca să pregătiți o masă specială. Dacă ai chef de aventură, profită de ocazie ca să faci un suc sau 
+să<span class="r1"> am(</span><span class="r1">0.004</span><span class="r1">)este(</span><span class="r1">0.005</span><span class="r1">)</span>ci niște smoothies:
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.161</span><span class="r2">):</span>  poate vei descoperi o băutură simplă pe care o poți face pentru micul dejun când 
+te<span class="r5">-(</span><span class="r5">0.355</span><span class="r5">)</span>ai întors la rutina de zi cu zi.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Fill your home with a rich coffee in the morning and some relaxing chamomile tea at 
+night. When you&#x27;re on a staycation, you have the time to treat yourself and take a few extra minutes to brew up 
+something special. If you&#x27;re feeling more adventurous, take the opportunity to juice or blend up some smoothies:
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Umple-ți casa cu o aromă<span class="r1"> de(</span><span class="r1">0.004</span><span class="r1">)</span> cafea savuroasă dimineața<span class="r1"> și(</span><span class="r1">0.002</span><span class="r1">)</span> de ceai de 
+mușețel relaxant seara. Când stați consemnat la domiciliu, aveți timp să vă faceți plăcerile și să vă permiteți câteva 
+minute extra ca să pregătiți o masă specială. Dacă ai chef<span class="r1"> de(</span><span class="r1">0.005</span><span class="r1">)</span> aventură, profită de ocazie ca să faci un suc sau 
+să amesteci<span class="r1"> ni(</span><span class="r1">0.003</span><span class="r1">)</span>ște smoothies:
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.161</span><span class="r2">):</span>  poate<span class="r5"> vei(</span><span class="r5">0.332</span><span class="r5">)</span> descoperi o băutură simplă pe care o poți face pentru micul dejun 
+când te-ai întors la rutina de zi cu zi.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     Fill your home with a rich coffee in the morning and some relaxing chamomile tea at 
+night. When you&#x27;re on a staycation, you have the time to treat yourself and take a few extra minutes to brew up 
+something special. If you&#x27;re feeling more adventurous, take the opportunity to juice or blend up some smoothies:
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    Umple-ți casa cu o aromă de cafea savuroasă dimineața și de ceai de mușețel relaxant 
+seara. Când stați consemnat la domiciliu,<span class="r1"> ave(</span><span class="r1">0.004</span><span class="r1">)ți(</span><span class="r1">0.007</span><span class="r1">)</span> timp să vă faceți plăcerile și să vă<span class="r1"> permite(</span><span class="r1">0.004</span><span class="r1">)</span>ți 
+câteva minute extra ca să pregătiți o masă specială. Dacă<span class="r1"> ai(</span><span class="r1">0.007</span><span class="r1">)</span> chef de aventură, profită de ocazie ca să faci un 
+suc sau să amesteci niște smoothies<span class="r1">:(</span><span class="r1">0.011</span><span class="r1">)</span>
+
+</code></pre>
+</body>
+</html>

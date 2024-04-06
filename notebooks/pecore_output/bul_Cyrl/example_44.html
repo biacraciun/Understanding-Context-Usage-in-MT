@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  Booking in advance gives the traveller peace of mind that they will have somewhere to sleep once they 
+arrive at their destination. Travel agents often have deals with specific hotels, although you may find it possible to 
+book other forms of accommodation, like camping grounds, through a travel agent. Travel agents usually offer packages 
+that include breakfast, transportation arrangements to/from the airport or even combined flight and hotel packages.
+<span class="r2">Input current:</span> They can also hold the reservation for you if you need time to think about the offer or procure other 
+documents for your destination <span class="r2">(</span>e.g. visa<span class="r2">)</span>.
+<span class="r2">Output context:</span> Резервирането предварително осигурява спокойствие за пътника, че ще има къде да преспи, когато 
+пристигне в местоназначението си. Туристическите агенти често имат договорки с определени хотели, въпреки че може да 
+намерите и други начини на настаняване, като къмпинги, чрез туристически агент. Туристическите агенции често предлагат 
+пакети с включени закуска, транспорт от/до летището или дори комбинирани пакети самолет и хотел.
+<span class="r2">Output current:</span> Те могат да запазят резервацията за вас, ако имате нужда от време да помислите за офертата или да си 
+набавите други документи за местоназначението си <span class="r2">(</span>напр. виза<span class="r2">)</span>.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.155</span><span class="r2">):</span>  Те могат да запазят резервацията за вас, ако имате нужда от време да помислите за 
+офертата или да си набавите други документи за <span class="r7">местона</span><span class="r5">зна(</span><span class="r5">2.038</span><span class="r5">)</span>чението си <span class="r2">(</span>напр. виза<span class="r2">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>     Booking in advance gives the traveller peace of mind that they will have somewhere to 
+sleep once they arrive at their destination. Travel agents often have deals with specific hotels, although you may find
+it possible to book other forms of accommodation, like camping grounds, through a travel agent. Travel agents usually 
+offer packages that include breakfast, transportation arrangements to/from the airport or even combined flight and 
+hotel packages.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Резервирането предварително осигурява спокойствие за пътника, че ще има къде да 
+преспи, когато пристигне в<span class="r1"> место(</span><span class="r1">0.001</span><span class="r1">)на(</span><span class="r1">0.001</span><span class="r1">)зна(</span><span class="r1">0.002</span><span class="r1">)</span>чението си. Туристическите агенти често имат договорки с 
+определени хотели, въпреки че може да<span class="r1"> намери(</span><span class="r1">0.001</span><span class="r1">)</span>те и други начини на настаняване, като къмпинги, чрез туристически 
+агент. Туристическите агенции често предлагат пакети с включени закуска, транспорт от/до летището или дори комбинирани 
+пакети самолет и хотел.
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.155</span><span class="r2">):</span> <span class="r5"> Те(</span><span class="r5">1.493</span><span class="r5">)</span> могат да запазят резервацията за вас, ако имате нужда от време да помислите 
+за офертата или да си набавите други документи за местоназначението си <span class="r2">(</span>напр. виза<span class="r2">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     Booking in advance gives the traveller peace of mind that they will have somewhere to 
+sleep once they arrive at their destination. Travel agents often have deals with specific hotels, although you may find
+it possible to book other forms of accommodation, like camping grounds, through a travel agent. Travel agents usually 
+offer packages that include breakfast, transportation arrangements to/from the airport or even combined flight and 
+hotel <span class="r7">pack</span><span class="r1">ages(</span><span class="r1">0.003</span><span class="r1">)</span>.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Резервирането предварително осигурява спокойствие за пътника, че ще има къде да 
+преспи, когато пристигне в местоназначението си. Туристическите агенти често имат договорки с определени хотели, 
+въпреки че може да намерите и други начини на настаняване, като къмпинги, чрез туристически агент. Туристическите 
+агенции често предлагат пакети с включени закуска, транспорт от/до летището или дори комбинирани пакети самолет и<span class="r1"> </span>
+<span class="r1">хотел(</span><span class="r1">0.005</span><span class="r1">).(</span><span class="r1">0.014</span><span class="r1">)</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.155</span><span class="r2">):</span>  Те могат да запазят резервацията за вас, ако имате нужда от време да помислите за 
+офертата или да си набавите други документи за <span class="r7">место</span><span class="r5">на(</span><span class="r5">0.803</span><span class="r5">)</span>значението си <span class="r2">(</span>напр. виза<span class="r2">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Booking in advance gives the traveller peace of mind that they will have somewhere to 
+sleep once they arrive at their destination. Travel agents often have deals with specific hotels, although you may find
+it possible to book other forms of accommodation, like camping grounds, through a travel agent. Travel agents usually 
+offer packages that include breakfast, transportation arrangements to/from the airport or even combined flight and 
+hotel packages.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Резервирането предварително осигурява спокойствие за пътника, че ще има къде да 
+преспи, когато пристигне<span class="r1"> в(</span><span class="r1">0.002</span><span class="r1">) место(</span><span class="r1">0.005</span><span class="r1">)на(</span><span class="r1">0.004</span><span class="r1">)</span>значението си. Туристическите агенти често имат договорки с 
+определени хотели, въпреки че може да<span class="r1"> намери(</span><span class="r1">0.001</span><span class="r1">)</span>те и други начини на настаняване, като къмпинги, чрез туристически 
+агент. Туристическите агенции често предлагат пакети с включени закуска, транспорт от/до летището или дори комбинирани 
+пакети самолет и хотел.
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.155</span><span class="r2">):</span>  Те могат да запазят резервацията за вас, ако имате нужда от време да помислите за 
+офертата или да си набавите други документи за<span class="r5"> место(</span><span class="r5">0.425</span><span class="r5">)</span>назначението си <span class="r2">(</span>напр. виза<span class="r2">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     Booking in advance gives the traveller peace of mind that they will have somewhere to 
+sleep once they arrive at their destination. Travel agents often have deals with specific hotels, although you may find
+it possible to book other forms of accommodation, like camping grounds, through a travel agent. Travel agents usually 
+offer packages that include breakfast, transportation arrangements to/from the airport or even combined flight and 
+hotel packages.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>    Резервирането предварително осигурява спокойствие за пътника, че ще има къде да 
+преспи, когато пристигне<span class="r1"> в(</span><span class="r1">0.005</span><span class="r1">) место(</span><span class="r1">0.024</span><span class="r1">)</span>назначението си. Туристическите агенти често имат договорки с определени 
+хотели, въпреки че може да намерите и други начини на настаняване, като къмпинги, чрез туристически агент. 
+Туристическите агенции често предлагат пакети с включени закуска, транспорт от/до летището или дори комбинирани пакети 
+самолет и хотел.
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.155</span><span class="r2">):</span>  Те могат да запазят резервацията за<span class="r5"> вас(</span><span class="r5">0.352</span><span class="r5">)</span>, ако имате нужда от време да помислите 
+за офертата или да си набавите други документи за местоназначението си <span class="r2">(</span>напр. виза<span class="r2">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>     Booking in advance gives the traveller peace of mind that they will have somewhere to 
+sleep once they arrive at their destination. Travel agents often have deals with specific hotels, although you may find
+it possible to book other forms of accommodation, like camping grounds, through a travel agent. Travel agents usually 
+offer packages that include breakfast, transportation arrangements to/from the airport or even combined flight and 
+hotel packages.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    Резервирането предварително осигурява спокойствие за<span class="r1"> път(</span><span class="r1">0.001</span><span class="r1">)</span>ника, че ще има къде да
+преспи, когато пристигне в местоназначението си. Туристическите агенти често имат договорки с определени хотели, 
+въпреки че може да<span class="r1"> намери(</span><span class="r1">0.001</span><span class="r1">)те(</span><span class="r1">0.001</span><span class="r1">) и(</span><span class="r1">0.001</span><span class="r1">)</span> други начини на настаняване, като къмпинги, чрез туристически агент.
+Туристическите агенции често предлагат пакети с включени закуска, транспорт от/до летището или дори комбинирани пакети 
+самолет и <span class="r7">хотел</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span>
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.155</span><span class="r2">):</span>  Те могат да запазят резервацията за вас, ако имате нужда от време да помислите за 
+офертата<span class="r5"> или(</span><span class="r5">0.213</span><span class="r5">)</span> да си набавите други документи за местоназначението си <span class="r2">(</span>напр. виза<span class="r2">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>     Booking in advance gives the traveller peace of mind that they will have somewhere to 
+sleep once they arrive at their destination. Travel agents often have deals with specific hotels, although you may find
+it possible to book other forms of accommodation, like camping grounds, through a travel agent. Travel agents usually 
+offer packages that include breakfast, transportation arrangements to/from the airport or even combined flight and 
+hotel packages.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    Резервирането предварително осигурява спокойствие за пътника, че ще има къде да 
+преспи, когато пристигне в местоназначението<span class="r1"> си(</span><span class="r1">0.000</span><span class="r1">)</span>. Туристическите агенти често имат договорки с определени хотели,
+въпреки че може да <span class="r7">намери</span><span class="r1">те(</span><span class="r1">0.000</span><span class="r1">) и(</span><span class="r1">0.000</span><span class="r1">)</span> други начини на настаняване, като къмпинги, чрез туристически агент. 
+Туристическите агенции често предлагат пакети<span class="r1"> с(</span><span class="r1">0.000</span><span class="r1">)</span> включени закуска<span class="r1">,(</span><span class="r1">0.000</span><span class="r1">)</span> транспорт от/до летището или дори 
+комбинирани пакети самолет и хотел.
+#<span class="r4">7</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.155</span><span class="r2">):</span>  Те могат да<span class="r5"> запа(</span><span class="r5">0.209</span><span class="r5">)</span>зят резервацията за вас, ако имате нужда от време да помислите 
+за офертата или да си набавите други документи за местоназначението си <span class="r2">(</span>напр. виза<span class="r2">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     Booking in advance gives the traveller peace of mind that they will have somewhere to 
+sleep once they arrive at their destination. Travel agents often have deals with specific hotels, although you may find
+it possible to book other forms of accommodation, like camping grounds, through a travel agent. Travel agents usually 
+offer<span class="r1"> pack(</span><span class="r1">0.001</span><span class="r1">)</span>ages that include breakfast, transportation arrangements to/from the airport or even combined<span class="r1"> </span>
+<span class="r1">flight(</span><span class="r1">0.001</span><span class="r1">)</span> and hotel<span class="r1"> pack(</span><span class="r1">0.001</span><span class="r1">)ages(</span><span class="r1">0.001</span><span class="r1">).(</span><span class="r1">0.002</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Резервирането предварително осигурява спокойствие за пътника, че ще има къде да 
+преспи, когато пристигне в местоназначението си. Туристическите агенти често имат договорки с определени хотели, 
+въпреки че може да намерите и други начини на настаняване, като къмпинги, чрез туристически агент. Туристическите 
+агенции често предлагат пакети с включени закуска, транспорт от/до летището или дори комбинирани пакети самолет и 
+<span class="r7">хотел</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span>
+
+</code></pre>
+</body>
+</html>

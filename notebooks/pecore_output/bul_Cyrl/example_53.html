@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  Courier companies are well paid for delivering things quickly. Frequently, time is very important with 
+business documents, merchandise or spare parts for an urgent repair. On some routes, the larger companies have their 
+own planes, but for other routes and smaller firms there was a problem. If they sent things by air freight, on some 
+routes it may have taken days to get through unloading and customs.
+<span class="r2">Input current:</span> The only way to get it through faster was to send it as checked luggage. Airline regulations will not 
+allow them to send luggage without a passenger, which is where you come in.
+<span class="r2">Output context:</span> На куриерските компании се плаща добре, за да доставят бързо нещата. Често времето е много важно за 
+бизнес документи, стоки или резервни части за спешен ремонт. По някои маршрути по-големите компании имат собствени 
+самолети, но за други маршрути и за по-малките фирми това е било проблем. Ако са изпратили неща с въздушен транспорт, 
+по някои маршрути разтоварването и преминаването през митниците може да отнеме дни.
+<span class="r2">Output current:</span> Единственият начин да се стигне по-бързо е да ги изпратите като регистриран багаж.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.328</span><span class="r2">):</span> <span class="r5"> Един(</span><span class="r5">3.940</span><span class="r5">)</span>ственият начин да се стигне по-бързо е да ги изпратите като регистриран 
+багаж.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     Courier companies are well paid for delivering things quickly. Frequently, time is 
+very important with business documents, merchandise or spare parts for an urgent repair. On some routes, the larger 
+companies have their own planes, but for other routes and smaller firms there was a problem. If they sent things by air
+freight, on some routes it may have taken days to get through unloading and<span class="r1"> customs(</span><span class="r1">0.003</span><span class="r1">)</span>.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    На куриерските компании се плаща добре, за да доставят бързо нещата. Често времето е 
+много важно за бизнес документи, стоки или резервни части за спешен ремонт. По някои маршрути по-големите компании имат
+собствени самолети, но за други маршрути и за по-малките фирми това е било проблем. Ако са изпратили неща с въздушен 
+транспорт, по някои маршрути разтоварването и преминаването през<span class="r1"> ми(</span><span class="r1">0.004</span><span class="r1">)</span>тниците може да отнеме <span class="r7">дни</span><span class="r1">.(</span><span class="r1">0.016</span><span class="r1">)</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.328</span><span class="r2">):</span>  Единственият начин да се стигне по-бързо е да ги изпратите като регистриран 
+<span class="r7">багаж</span><span class="r5">.(</span><span class="r5">1.117</span><span class="r5">)</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>     Courier companies are well paid for delivering things quickly. Frequently, time is 
+very important with business documents,<span class="r1"> merch(</span><span class="r1">0.000</span><span class="r1">)</span>andise or spare parts for an urgent repair. On some routes, the 
+larger companies have their own planes, but for other routes and smaller firms there was a<span class="r1"> problem(</span><span class="r1">0.000</span><span class="r1">)</span>. If they sent
+things by air freight, on some routes it may have taken days to get through unloading and<span class="r1"> customs(</span><span class="r1">0.000</span><span class="r1">)</span>.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    На куриерските компании се плаща добре, за да доставят бързо нещата. Често времето е 
+много важно за бизнес документи, стоки или резервни части за спешен ремонт. По някои маршрути по-големите компании имат
+собствени самолети, но за други маршрути и за по-малките фирми това е било <span class="r7">проблем</span><span class="r1">.(</span><span class="r1">0.000</span><span class="r1">)</span> Ако са<span class="r1"> изпра(</span><span class="r1">0.000</span><span class="r1">)</span>тили неща
+с<span class="r1"> възду(</span><span class="r1">0.000</span><span class="r1">)</span>шен транспорт, по някои маршрути разтоварването и преминаването през митниците може да отнеме <span class="r7">дни</span><span class="r1">.(</span><span class="r1">0.000</span><span class="r1">)</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.328</span><span class="r2">):</span>  Единственият начин да се стигне по-бързо е да<span class="r5"> ги(</span><span class="r5">0.503</span><span class="r5">)</span> изпратите като регистриран 
+багаж.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Courier companies are well paid for delivering things quickly. Frequently, time is 
+very important with business documents, merchandise or spare parts for an urgent repair. On some routes, the larger 
+companies have their own planes, but for other routes and smaller firms there was a problem. If they<span class="r1"> sent(</span><span class="r1">0.002</span><span class="r1">)</span> things
+by air freight, on some routes it may have taken days to<span class="r1"> get(</span><span class="r1">0.002</span><span class="r1">)</span> through unloading and customs.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    На куриерските компании се плаща добре, за да доставят бързо нещата. Често времето е 
+много важно за бизнес документи, стоки или резервни части за спешен ремонт. По някои маршрути по-големите компании имат
+собствени самолети, но за други маршрути и за по-малките фирми това е било проблем. Ако са <span class="r7">изпра</span><span class="r1">тили(</span><span class="r1">0.002</span><span class="r1">) неща(</span><span class="r1">0.007</span><span class="r1">)</span>
+с въздушен транспорт, по някои маршрути разтоварването и преминаването през митниците може да отнеме дни.
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.328</span><span class="r2">):</span>  Единственият начин да се стигне по-бързо е<span class="r5"> да(</span><span class="r5">0.359</span><span class="r5">)</span> ги изпратите като регистриран 
+багаж.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     Courier companies are well paid for delivering things quickly. Frequently, time is 
+very important with business documents, merchandise or spare parts for an urgent repair. On some routes, the larger 
+companies have their own planes, but for other routes and smaller firms there was a problem. If they sent things by air
+freight, on some <span class="r7">ro</span><span class="r1">utes(</span><span class="r1">0.005</span><span class="r1">)</span> it<span class="r1"> may(</span><span class="r1">0.007</span><span class="r1">)</span> have<span class="r1"> taken(</span><span class="r1">0.005</span><span class="r1">)</span> days to get through unloading and<span class="r1"> customs(</span><span class="r1">0.004</span><span class="r1">).(</span><span class="r1">0.007</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    На куриерските компании се плаща добре, за да доставят бързо нещата. Често времето е 
+много важно за бизнес документи, стоки или резервни части за спешен ремонт. По някои маршрути по-големите компании имат
+собствени самолети<span class="r1">,(</span><span class="r1">0.004</span><span class="r1">)</span> но за други маршрути и за по-малките фирми това е било проблем. Ако<span class="r1"> са(</span><span class="r1">0.006</span><span class="r1">)</span> 
+<span class="r7">изпра</span><span class="r1">тили(</span><span class="r1">0.005</span><span class="r1">)</span> неща с въздушен транспорт, по някои маршрути разтоварването и преминаването през митниците може да<span class="r1"> </span>
+<span class="r1">отне(</span><span class="r1">0.005</span><span class="r1">)</span>ме <span class="r7">дни</span><span class="r1">.(</span><span class="r1">0.006</span><span class="r1">)</span>
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.328</span><span class="r2">):</span>  Единственият начин да<span class="r5"> се(</span><span class="r5">0.333</span><span class="r5">)</span> стигне по-бързо е да ги изпратите като регистриран 
+багаж.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Courier companies are well paid for delivering things quickly. Frequently, time is 
+very important with business documents, merchandise or spare parts for an urgent repair. On some routes, the larger 
+companies have their own planes, but for other routes and smaller firms there was a problem. If they sent things by air
+freight, on some routes it may have taken days to<span class="r1"> get(</span><span class="r1">0.004</span><span class="r1">)</span> through<span class="r1"> un(</span><span class="r1">0.002</span><span class="r1">)</span>loading and<span class="r1"> customs(</span><span class="r1">0.002</span><span class="r1">).(</span><span class="r1">0.005</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    На куриерските компании се плаща добре, за да доставят бързо нещата. Често времето е 
+много важно за бизнес документи, стоки или резервни части за спешен ремонт. По някои маршрути по-големите компании имат
+собствени самолети, но за други маршрути и за по-малките фирми това е било проблем. Ако са изпратили<span class="r1"> неща(</span><span class="r1">0.003</span><span class="r1">)</span> с 
+въздушен транспорт, по някои маршрути разтоварването и преминаването през митниците може да<span class="r1"> отне(</span><span class="r1">0.003</span><span class="r1">)ме(</span><span class="r1">0.002</span><span class="r1">)</span> дни.
+
+</code></pre>
+</body>
+</html>
