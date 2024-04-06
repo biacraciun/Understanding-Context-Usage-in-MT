@@ -8,7 +8,7 @@ This study explores the influence of the preceding context on the use of formali
 
 ### Data
 
-The dataset that is used for investigating how formality transfers given the English source pronouns 'you', 'your', and 'yours' into the three target languages is [FLORES-200](https://huggingface.co/datasets/facebook/flores) dataset. It consists of parallel sentence translations for 200 languages, including Dutch, Romanian, and Bulgarian. 
+The dataset that is used for investigating how formality transfers given the English source pronouns 'you', 'your', and 'yours' into the three target languages is FLORES-200 dataset. It consists of parallel sentence translations for 200 languages, including Dutch, Romanian, and Bulgarian. 
 
 ### Preprocessing and postprocessing 
 
@@ -20,12 +20,12 @@ To identify formality-sensitive pronouns, we drew inspiration from the [Multilin
 
 ### PECoRe 
 
-[PECoRe](https://huggingface.co/spaces/gsarti/pecore), or Plausibility Evaluation of Context Reliance, is an interpretability framework that aims to evaluate and quantify how language models utilize contextual information when generating texts. Using this framework, we can identify the specific tokens that contribute to the translation performed by the model. The exact parameters used for this study can be observed in the [use_pecore.py](modules/use_pecore.py) file.  
+PECoRe or Plausibility Evaluation of Context Reliance, is an interpretability framework that aims to evaluate and quantify how language models utilize contextual information when generating texts. Using this framework, we can identify the specific tokens that contribute to the translation performed by the model. The exact parameters used for this study can be observed in the [use_pecore.py](modules/use_pecore.py) file.  
 
 ### DivEMT Dutch
 We additionally look into the ability of contextual information to predict translation errors in Dutch: are machine translation errors caused by an unreasonable use of contextual information?
 
-We randomly select 50 Dutch translations from [mBART1-to-50](https://huggingface.co/facebook/mbart-large-50-one-to-many-mmt), sourced from the [DivEMT](https://huggingface.co/datasets/GroNLP/divemt) data set, which we manually analyse through the [PECoRe](https://huggingface.co/spaces/gsarti/pecore) and [Inseq](https://github.com/inseq-team/inseq) architectures. In this analysis, we focus on the tokens that were modified (insertions, deletions, substitutions, and shifts) during post-editing by a professional translator and assess if their invalidity is the result of relying on incorrect context.  
+We randomly select 50 Dutch translations from [mBART1-to-50](https://huggingface.co/facebook/mbart-large-50-one-to-many-mmt), sourced from the [DivEMT](https://huggingface.co/datasets/GroNLP/divemt) data set, which we manually analyse through the PECoRe and [Inseq](https://github.com/inseq-team/inseq) architectures. In this analysis, we focus on the tokens that were modified (insertions, deletions, substitutions, and shifts) during post-editing by a professional translator and assess if their invalidity is the result of relying on incorrect context.  
 
 We extract these randomly selected 50 Dutch mBART translations using [get_data.py](get_data.py), which outputs the sentences as a 🤗 Dataset object to the [data/divemt_data](data/divemt_data) folder.
 Subsequently, we call [divemt_dutch.py](divemt_dutch.py) to parse the mBART translations accompanied by the requested data (source text, target text andcontext) to bot PECoRE and Inseq. Their outputs can be found in [divemt_dutch_analyse](divemt_dutch_analyse), ordered by sentence number. 
