@@ -34,7 +34,6 @@ def get_pecore_args(sentence_eng_Latn, context_eng_Latn, context_target_language
     Returns:
         The PECoRe args
     """
-    # create directory for saving the output
 
     # Set the arguments for the PECoRe model
     pecore_args = AttributeContextArgs(
@@ -91,7 +90,8 @@ def comp_sal_scores(example, idx):
         f.write(html)
 
     # Get all the words that are modified during post-editing \
-    # and output them along with the target text
+    # and output them along with the source text, predicted text and \
+    # target text
     words_to_analyse = [example["mt_tokens"][c] for c, tag in enumerate(example["mt_wmt22_qe"]) if tag == "BAD"]
     with open(f"divemt_dutch_analyse/sen_{idx + 1}/sen_{idx + 1}.txt", "w") as f:
         f.write(f"Source sen: {example['src_text']} \nMT sen: {example['mt_text']} \nTarget sen: {example['tgt_text']} \nModified words during post-editing: {str(words_to_analyse)}")
