@@ -1,12 +1,9 @@
 import argparse
 from datasets import Dataset, load_dataset
 import sys
-import numpy as np
-import pandas as pd
 from transformers import (
     set_seed
 )
-import inseq
 
 
 def preprocess(dataset):
@@ -88,7 +85,7 @@ if __name__ == "__main__":
     random_seed = 0
     set_seed(random_seed)
 
-    identifier = args.divEmt  # For example: "divemt"
+    identifier = args.divEmt  # For example: "GroNLP/divemt"
     dataset = load_dataset(identifier)
     print(dataset, file=sys.stderr)
     print(f"{dataset['train'].format = }", file=sys.stderr)
