@@ -1,0 +1,4 @@
+Source sen: Technology offers the solution with virtual field trips. Students can look at museum artifacts, visit an aquarium, or admire beautiful art while sitting with their class. 
+MT sen: Technologie biedt de oplossing met virtuele veldreizen. Studenten kunnen museumkunstwerken bekijken, een aquarium bezoeken of mooie kunst bewonderen terwijl ze met hun klas zitten. 
+Target sen: Technologie biedt de oplossing met virtuele excursies. Studenten kunnen artefacten in musea bekijken, een aquarium bezoeken of mooie kunst bewonderen terwijl ze in de klas zitten. 
+Modified words during post-editing: ['veldreizen', 'museumkunstwerken', 'met', 'hun']

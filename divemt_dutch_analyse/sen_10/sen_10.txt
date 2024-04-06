@@ -1,0 +1,4 @@
+Source sen: The Giza Plateau, or "Giza Necropolis" in the Egyptian Valley of the Dead contains several pyramids (of which the great pyramid is the largest), several small tombs, several temples, and the great Sphinx. 
+MT sen: Het Giza Plateau, of 'Giza Necropolis' in de Egyptische Vallei van de Doden, bevat meerdere piramides ( waarvan de grote piramide de grootste is), verschillende kleine grafen, verschillende tempels, en de grote Sphinx. 
+Target sen: Op het plateau van Gizeh, of de 'necropolis van Gizeh', in de Egyptische Vallei van de Doden, bevinden zich meerdere piramides (waarvan de Grote Piramide de grootste is), verschillende kleine graftombes, verschillende tempels en de Grote Sfinx. 
+Modified words during post-editing: ['Het', 'Giza', 'Plateau', "'", 'Giza', 'Necropolis', 'in', 'bevat', 'grote', 'piramide', 'grafen', ',', 'grote', 'Sphinx']

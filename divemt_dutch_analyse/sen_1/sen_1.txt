@@ -1,0 +1,4 @@
+Source sen: After the dam was built in 1963, the seasonal floods that would spread sediment throughout the river were halted. 
+MT sen: Nadat de dam in 1963 werd gebouwd, werden de seizoens-overstromingen die sedimenten over de hele rivier zouden verspreiden gestopt. 
+Target sen: Nadat de dam in 1963 werd gebouwd, waren er geen seizoensoverstromingen meer die sedimenten over de hele rivier verspreidden. 
+Modified words during post-editing: ['werden', 'de', 'seizoens-overstromingen', 'zouden', 'verspreiden', 'gestopt']

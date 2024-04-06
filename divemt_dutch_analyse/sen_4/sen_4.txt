@@ -1,0 +1,4 @@
+Source sen: The "up bow" mark looks like a V and the "down bow mark" like a staple or a square missing its bottom side. 
+MT sen: De "boog omhoog"-marke ziet eruit als een V en de "boog omlaag"-marke als een stapel of een vierkant zonder onderkant. 
+Target sen: Het teken 'boog omhoog' ziet eruit als een V en de het teken 'boog omlaag' als een nietje of een vierkant zonder onderkant. 
+Modified words during post-editing: ['De', '"', 'omhoog"-marke', '"', 'omlaag"-marke', 'stapel']

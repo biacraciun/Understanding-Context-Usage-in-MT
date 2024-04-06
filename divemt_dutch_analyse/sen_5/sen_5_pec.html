@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  The first known transportation was walking, hum<span class="r3">...</span>
+<span class="r2">Input current:</span> Their predecessors, the Australopithecus did not walk upright as habitually.
+<span class="r2">Output context:</span> De eerste bekende vervoersmethode was lopen. Me<span class="r3">...</span>
+<span class="r2">Output current:</span> Hun voorgangers, de Australopithecus, liepen niet rechtop zoals gewoonlijk.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.025</span><span class="r2">):</span> <span class="r5"> Hun(</span><span class="r5">0.179</span><span class="r5">)</span> voorgangers, de Australopithecus, liepen niet rechtop zoals gewoonlijk.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.030</span><span class="r2">):</span>     The first known transportation was walking, hum<span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.032</span><span class="r2">):</span>    De eerste bekende vervoersmethode was lopen.<span class="r1"> Me(</span><span class="r1">0.038</span><span class="r1">)...(</span><span class="r1">0.034</span><span class="r1">)</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.025</span><span class="r2">):</span>  Hun voorgangers, de Australopithecus, liepen niet<span class="r5"> recht(</span><span class="r5">0.116</span><span class="r5">)</span>op zoals gewoonlijk.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     The first known transportation was walking<span class="r1">,(</span><span class="r1">0.003</span><span class="r1">)</span> hum<span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    De eerste bekende vervoersmethode was lopen. Me<span class="r3">...</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.025</span><span class="r2">):</span>  Hun voorgangers, de Australopithecus<span class="r5">,(</span><span class="r5">0.055</span><span class="r5">)</span> liepen niet rechtop zoals gewoonlijk.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.006</span><span class="r2">):</span>     The first known transportation was walking<span class="r1">,(</span><span class="r1">0.008</span><span class="r1">)</span> hum<span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.006</span><span class="r2">):</span>    De eerste bekende vervoersmethode was lopen. Me<span class="r3">...</span>
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.025</span><span class="r2">):</span>  Hun voorgangers, de Australopithecus, liepen niet <span class="r7">recht</span><span class="r5">op(</span><span class="r5">0.049</span><span class="r5">)</span> zoals gewoonlijk.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.014</span><span class="r2">):</span>     The first known transportation<span class="r1"> was(</span><span class="r1">0.016</span><span class="r1">)</span> walking<span class="r1">,(</span><span class="r1">0.015</span><span class="r1">)</span> hum<span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.013</span><span class="r2">):</span>    De eerste bekende vervoersmethode was lopen. Me<span class="r3">...</span>
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.025</span><span class="r2">):</span>  Hun voorgangers, de Australopithecus, liepen niet rechtop zoals<span class="r5"> gewoon(</span><span class="r5">0.040</span><span class="r5">)</span>lijk.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     The first known transportation was walking<span class="r1">,(</span><span class="r1">0.002</span><span class="r1">)</span> hum<span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    De eerste bekende vervoersmethode was lopen. Me<span class="r3">...</span>
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.025</span><span class="r2">):</span>  Hun <span class="r7">voor</span><span class="r5">gang(</span><span class="r5">0.036</span><span class="r5">)</span>ers, de Australopithecus, liepen niet rechtop zoals gewoonlijk.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>     The first known transportation was walking, hum<span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>    De eerste bekende vervoersmethode was lopen.<span class="r1"> Me(</span><span class="r1">0.007</span><span class="r1">)</span><span class="r3">...</span>
+
+</code></pre>
+</body>
+</html>

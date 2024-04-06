@@ -1,0 +1,4 @@
+Source sen: Their predecessors, the Australopithecus did not walk upright as habitually. 
+MT sen: Hun voorgangers, de Australopithecus, liepen niet recht zoals normaal. 
+Target sen: Hun voorgangers, de Australopithecus, liepen nog niet zo vaak rechtop. 
+Modified words during post-editing: ['niet', 'recht', 'zoals', 'normaal']

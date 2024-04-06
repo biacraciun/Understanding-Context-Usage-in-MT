@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  Field trips are a large part of any classroom. <span class="r3">...</span>
+<span class="r2">Input current:</span> Technology offers the solution with virtual field trips. Students can look at museum artifacts, visit an 
+aquarium, or admire beautiful art while sitting with their class.
+<span class="r2">Output context:</span> Excursies zijn een groot onderdeel in elke klas<span class="r3">...</span>
+<span class="r2">Output current:</span> Technologie biedt de oplossing met virtuele excursionen. Studenten kunnen museumkunsten bekijken, een 
+aquarium bezoeken of mooie kunst bewonderen terwijl ze met hun klas zitten.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.065</span><span class="r2">):</span>  Technologie biedt de oplossing met virtuele<span class="r5"> (</span><span class="r5">0.742</span><span class="r5">)</span>excursionen. Studenten kunnen 
+museumkunsten bekijken, een aquarium bezoeken of mooie kunst bewonderen terwijl ze met hun klas zitten.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>     Field trips are a large part of any classroom. <span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>   <span class="r1"> Excursi(</span><span class="r1">0.000</span><span class="r1">)</span>es zijn een groot onderdeel in elke klas<span class="r3">...</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.065</span><span class="r2">):</span>  Technologie biedt de oplossing met virtuele <span class="r5">excursion(</span><span class="r5">0.409</span><span class="r5">)</span>en. Studenten kunnen 
+museumkunsten bekijken, een aquarium bezoeken of mooie kunst bewonderen terwijl ze met hun klas zitten.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.048</span><span class="r2">):</span>     Field trips are a large part of any classroom. <span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.056</span><span class="r2">):</span>   <span class="r1"> Excursi(</span><span class="r1">0.099</span><span class="r1">)</span>es zijn een groot onderdeel in elke klas<span class="r3">...</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.065</span><span class="r2">):</span>  Technologie biedt de oplossing<span class="r5"> met(</span><span class="r5">0.176</span><span class="r5">)</span> virtuele excursionen. Studenten kunnen 
+museumkunsten bekijken, een aquarium bezoeken of mooie kunst bewonderen terwijl ze met hun klas zitten.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.012</span><span class="r2">):</span>     Field trips are a large part of any classroom.<span class="r1"> ...(</span><span class="r1">0.014</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.012</span><span class="r2">):</span>   <span class="r1"> Excursi(</span><span class="r1">0.014</span><span class="r1">)</span>es zijn een groot onderdeel in elke klas<span class="r3">...</span>
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.065</span><span class="r2">):</span>  Technologie biedt de oplossing met virtuele excursionen. Studenten kunnen<span class="r5"> </span>
+<span class="r5">museum(</span><span class="r5">0.154</span><span class="r5">)</span>kunsten bekijken, een aquarium bezoeken of mooie kunst bewonderen terwijl ze met hun klas zitten.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>     Field trips are a large part of any classroom. <span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>   <span class="r1"> Excursi(</span><span class="r1">0.006</span><span class="r1">)</span>es zijn een groot onderdeel in elke klas<span class="r3">...</span>
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.065</span><span class="r2">):</span>  Technologie biedt de oplossing met virtuele <span class="r7">excursionen</span><span class="r5">.(</span><span class="r5">0.117</span><span class="r5">)</span> Studenten kunnen 
+museumkunsten bekijken, een aquarium bezoeken of mooie kunst bewonderen terwijl ze met hun klas zitten.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.010</span><span class="r2">):</span>     Field trips are a large part of any <span class="r7">classroom</span><span class="r1">.(</span><span class="r1">0.013</span><span class="r1">)</span> <span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.010</span><span class="r2">):</span>    Excursies zijn een groot onderdeel in elke <span class="r7">klas</span><span class="r1">...(</span><span class="r1">0.013</span><span class="r1">)</span>
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.065</span><span class="r2">):</span>  Technologie biedt de oplossing met virtuele excursionen. Studenten kunnen 
+<span class="r7">museumkunst</span><span class="r5">en(</span><span class="r5">0.088</span><span class="r5">)</span> bekijken, een aquarium bezoeken of mooie kunst bewonderen terwijl ze met hun klas zitten.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.009</span><span class="r2">):</span>     Field trips are a large part of any classroom. <span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.010</span><span class="r2">):</span>    Excursies zijn<span class="r1"> een(</span><span class="r1">0.014</span><span class="r1">)</span> groot onderdeel in elke klas<span class="r3">...</span>
+#<span class="r4">7</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.065</span><span class="r2">):</span> <span class="r5"> Technologie(</span><span class="r5">0.075</span><span class="r5">)</span> biedt de oplossing met virtuele excursionen. Studenten kunnen 
+museumkunsten bekijken, een aquarium bezoeken of mooie kunst bewonderen terwijl ze met hun klas zitten.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.011</span><span class="r2">):</span>     Field trips are a large part of any classroom.<span class="r1"> ...(</span><span class="r1">0.016</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.011</span><span class="r2">):</span>    Excursies zijn een groot onderdeel in elke <span class="r7">klas</span><span class="r1">...(</span><span class="r1">0.014</span><span class="r1">)</span>
+#<span class="r4">8</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.065</span><span class="r2">):</span>  Technologie biedt de oplossing met virtuele excursionen. Studenten kunnen 
+<span class="r7">museum</span><span class="r5">kunst(</span><span class="r5">0.074</span><span class="r5">)</span>en bekijken, een aquarium bezoeken of mooie kunst bewonderen terwijl ze met hun klas zitten.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     Field trips are a large part of any classroom. <span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>   <span class="r1"> Excursi(</span><span class="r1">0.005</span><span class="r1">)</span>es zijn een groot onderdeel in elke klas<span class="r3">...</span>
+#<span class="r4">9</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.065</span><span class="r2">):</span>  Technologie<span class="r5"> biedt(</span><span class="r5">0.067</span><span class="r5">)</span> de oplossing met virtuele excursionen. Studenten kunnen 
+museumkunsten bekijken, een aquarium bezoeken of mooie kunst bewonderen terwijl ze met hun klas zitten.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.006</span><span class="r2">):</span>     Field trips are a large part of any classroom.<span class="r1"> ...(</span><span class="r1">0.009</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>    Excursies zijn een groot onderdeel in elke klas<span class="r3">...</span>
+#<span class="r4">10</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.065</span><span class="r2">):</span>  Technologie biedt<span class="r5"> de(</span><span class="r5">0.066</span><span class="r5">)</span> oplossing met virtuele excursionen. Studenten kunnen 
+museumkunsten bekijken, een aquarium bezoeken of mooie kunst bewonderen terwijl ze met hun klas zitten.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     Field trips are a large part of any classroom.<span class="r1"> ...(</span><span class="r1">0.003</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>   <span class="r1"> Excursi(</span><span class="r1">0.003</span><span class="r1">)</span>es zijn een groot onderdeel in elke klas<span class="r3">...</span>
+
+</code></pre>
+</body>
+</html>
