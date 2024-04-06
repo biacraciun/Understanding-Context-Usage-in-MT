@@ -1,0 +1,4 @@
+Source sen: Last month Iran saw its worst air disaster in years when an airliner heading to Armenia crashed, killing the 168 on board. 
+MT sen: Vorige maand zag Iran zijn ergste luchtramp in de jaren toen een vliegtuig dat naar Armenië ging crashte, waarbij 168 mensen aan boord stierven. 
+Target sen: Vorige maand voltrok zich de ergste luchtramp in jaren in Iran, toen een vliegtuig onderweg naar Armenië neerstortte. Alle 168 mensen aan boord kwamen om het leven. 
+Modified words during post-editing: ['zag', 'Iran', 'zijn', 'in', 'de', 'jaren', 'dat', 'ging', 'crashte', ',', 'waarbij', 'stierven']

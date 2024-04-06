@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  The Great Pyramid at Giza is the only one of th<span class="r3">...</span> Built by the Egyptians in the third century BCE<span class="r3">...</span>
+<span class="r2">Input current:</span> The Giza Plateau, or <span class="r6">&quot;Giza Necropolis&quot;</span> in the Egyptian Valley of the Dead contains several pyramids <span class="r2">(</span>of 
+which the great pyramid is the largest<span class="r2">)</span>, several small tombs, several temples, and the great Sphinx.
+<span class="r2">Output context:</span> De Grote Piramide in Gizeh is de enige van de z<span class="r3">...</span> De piramide werd in de derde eeuw voor Christus<span class="r3">...</span>
+<span class="r2">Output current:</span> De Gize Plateau, of <span class="r6">&quot;Giza Necropolis&quot;</span> in de Egyptische Vallei van de Doden, bevat meerdere piramides <span class="r2">(</span> 
+waarvan de grootste is de grote piramide<span class="r2">)</span>, verschillende kleine grafen, verschillende tempels en de grote Sphinx.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.079</span><span class="r2">):</span>  De <span class="r7">Giz</span><span class="r5">e(</span><span class="r5">2.714</span><span class="r5">)</span> Plateau, of <span class="r6">&quot;Giza Necropolis&quot;</span> in de Egyptische Vallei van de Doden, 
+bevat meerdere piramides <span class="r2">(</span> waarvan de grootste is de grote piramide<span class="r2">)</span>, verschillende kleine grafen, verschillende tempels
+en de grote Sphinx.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.021</span><span class="r2">):</span>     The Great Pyramid<span class="r1"> at(</span><span class="r1">0.023</span><span class="r1">)</span> Giza is the only one of th<span class="r3">...</span> Built by the Egyptians in the
+third century BCE<span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.023</span><span class="r2">):</span>    De Grote Piramide in<span class="r1"> Giz(</span><span class="r1">0.030</span><span class="r1">)eh(</span><span class="r1">0.053</span><span class="r1">)</span> is de enige van de z<span class="r3">...</span> De piramide werd in de
+derde eeuw voor Christus<span class="r3">...</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.079</span><span class="r2">):</span>  De Gize Plateau, of <span class="r6">&quot;Giza Necropolis&quot;</span> in de Egyptische Vallei van de Doden, bevat 
+meerdere piramides <span class="r2">(</span> waarvan de grootste<span class="r5"> is(</span><span class="r5">0.198</span><span class="r5">)</span> de grote piramide<span class="r2">)</span>, verschillende kleine grafen, verschillende 
+tempels en de grote Sphinx.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.011</span><span class="r2">):</span>    <span class="r1"> The(</span><span class="r1">0.019</span><span class="r1">) Great(</span><span class="r1">0.013</span><span class="r1">)</span> Pyramid<span class="r1"> at(</span><span class="r1">0.015</span><span class="r1">)</span> Giza is the only one of th<span class="r3">...</span> Built by the 
+Egyptians in the third century BCE<span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.010</span><span class="r2">):</span>    De Grote<span class="r1"> Pir(</span><span class="r1">0.010</span><span class="r1">)</span>amide in Gizeh is de enige van de z<span class="r3">...</span> De piramide werd in de derde 
+eeuw voor Christus<span class="r3">...</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.079</span><span class="r2">):</span>  De Gize<span class="r5"> Plat(</span><span class="r5">0.189</span><span class="r5">)</span>eau, of <span class="r6">&quot;Giza Necropolis&quot;</span> in de Egyptische Vallei van de Doden, 
+bevat meerdere piramides <span class="r2">(</span> waarvan de grootste is de grote piramide<span class="r2">)</span>, verschillende kleine grafen, verschillende tempels
+en de grote Sphinx.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.008</span><span class="r2">):</span>     The Great Pyramid<span class="r1"> at(</span><span class="r1">0.012</span><span class="r1">)</span> Giza is the only one of th<span class="r3">...</span> Built by the Egyptians in the
+third century BCE<span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.009</span><span class="r2">):</span>    De Grote<span class="r1"> Pir(</span><span class="r1">0.009</span><span class="r1">)</span>amide in Gizeh is de enige van de z<span class="r3">...</span> De<span class="r1"> piramid(</span><span class="r1">0.009</span><span class="r1">)</span>e werd in de
+derde eeuw voor Christus<span class="r3">...</span>
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.079</span><span class="r2">):</span>  De<span class="r5"> Giz(</span><span class="r5">0.180</span><span class="r5">)</span>e Plateau, of <span class="r6">&quot;Giza Necropolis&quot;</span> in de Egyptische Vallei van de Doden, 
+bevat meerdere piramides <span class="r2">(</span> waarvan de grootste is de grote piramide<span class="r2">)</span>, verschillende kleine grafen, verschillende tempels
+en de grote Sphinx.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.015</span><span class="r2">):</span>     The Great Pyramid<span class="r1"> at(</span><span class="r1">0.031</span><span class="r1">)</span> Giza is the only one of th<span class="r3">...</span> Built by the Egyptians in the
+third century BCE<span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.016</span><span class="r2">):</span>    De Grote Piramide in<span class="r1"> Giz(</span><span class="r1">0.025</span><span class="r1">)</span>eh is de enige van de z<span class="r3">...</span> De<span class="r1"> piramid(</span><span class="r1">0.019</span><span class="r1">)</span>e werd in de
+derde eeuw voor Christus<span class="r3">...</span>
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.079</span><span class="r2">):</span> <span class="r5"> De(</span><span class="r5">0.145</span><span class="r5">)</span> Gize Plateau, of <span class="r6">&quot;Giza Necropolis&quot;</span> in de Egyptische Vallei van de Doden, 
+bevat meerdere piramides <span class="r2">(</span> waarvan de grootste is de grote piramide<span class="r2">)</span>, verschillende kleine grafen, verschillende tempels
+en de grote Sphinx.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.008</span><span class="r2">):</span>     The Great Pyramid<span class="r1"> at(</span><span class="r1">0.010</span><span class="r1">)</span> Giza is the only one of th<span class="r3">...</span> Built by the Egyptians in the
+third century BCE<span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.009</span><span class="r2">):</span>    De Grote Piramide in<span class="r1"> Giz(</span><span class="r1">0.012</span><span class="r1">)</span>eh is de enige van de z<span class="r3">...</span> De piramide werd in de derde 
+eeuw voor <span class="r7">Christus</span><span class="r1">...(</span><span class="r1">0.015</span><span class="r1">)</span>
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.079</span><span class="r2">):</span>  De Gize Plateau, of <span class="r6">&quot;Giza Necropolis&quot;</span> in de Egyptische Vallei van de Doden, bevat 
+meerdere piramides <span class="r2">(</span> waarvan de grootste is de grote piramide<span class="r2">)</span>, verschillende kleine grafen, verschillende tempels en de
+grote<span class="r5"> Sp(</span><span class="r5">0.094</span><span class="r5">)</span>hinx.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     The<span class="r1"> Great(</span><span class="r1">0.005</span><span class="r1">)</span> Pyramid<span class="r1"> at(</span><span class="r1">0.009</span><span class="r1">)</span> Giza is the only one of th<span class="r3">...</span> Built by the Egyptians
+in the third century BCE<span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    De Grote Piramide in Gizeh is de enige van de z<span class="r3">...</span> De piramide werd in de derde eeuw 
+voor Christus<span class="r3">...</span>
+
+</code></pre>
+</body>
+</html>

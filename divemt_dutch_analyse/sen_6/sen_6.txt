@@ -1,0 +1,4 @@
+Source sen: It is related to but usually not involving alpine style ski touring or mountaineering, the latter ones done in steep terrain and requiring much stiffer skis and boots. 
+MT sen: Het heeft te maken met, maar meestal niet met alpine skitouren of mountaineering, de laatste gedaan op steile terreinen en die veel stijvere ski's en laarzen nodig hebben. 
+Target sen: Het heeft te maken met, maar omvat meestal niet skiën in alpinestijl of mountaineering. Laatstgenoemde wordt gedaan op steil terrein en daar zijn veel stijvere ski's en laarzen voor nodig. 
+Modified words during post-editing: ['meestal', 'met', 'alpine', 'skitouren', ',', 'de', 'laatste', 'steile', 'terreinen', 'die', 'nodig', 'hebben']

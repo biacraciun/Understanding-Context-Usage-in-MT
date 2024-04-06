@@ -1,0 +1,50 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "item_id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "src_text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "mt_text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "tgt_text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "mt_tokens": {
+      "feature": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "mt_wmt22_qe": {
+      "feature": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "__index_level_0__": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "src_context": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "tgt_context": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;probability&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  Air accidents are common in Iran, which has an <span class="r3">...</span> International sanctions have meant that new air<span class="r3">...</span> 
+Earlier this week, a police helicopter crash ki<span class="r3">...</span>
+<span class="r2">Input current:</span> Last month Iran saw its worst air disaster in years when an airliner heading to Armenia crashed, killing 
+the <span class="r4">168</span> on board.
+<span class="r2">Output context:</span> Luchtvaartongelukken komen veel voor in Iran, d<span class="r3">...</span> Internationale sancties hebben betekend dat er <span class="r3">...</span> 
+Eerder deze week stortte een politiehelikopter <span class="r3">...</span>
+<span class="r2">Output current:</span> Vorige maand zag Iran zijn ergste luchtramp in de jaren toen een vliegtuig dat naar Armenië ging 
+crashte, waarbij <span class="r4">168</span> mensen aan boord stierven.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  Vorige maand<span class="r5"> zag(</span><span class="r5">0.189</span><span class="r5">)</span> Iran zijn ergste luchtramp in de jaren toen een vliegtuig dat 
+naar Armenië ging crashte, waarbij <span class="r4">168</span> mensen aan boord stierven.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     Air accidents are common in Iran, which has an <span class="r3">...</span> International sanctions have meant 
+that new air<span class="r3">...</span> Earlier this week, a police helicopter crash <span class="r7">ki</span><span class="r1">...(</span><span class="r1">0.003</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Luchtvaartongelukken komen veel voor in Iran, d<span class="r3">...</span> Internationale sancties hebben 
+betekend dat er <span class="r3">...</span> Eerder deze week<span class="r1"> stort(</span><span class="r1">0.005</span><span class="r1">)</span>te een politiehelikopter<span class="r1"> ...(</span><span class="r1">0.004</span><span class="r1">)</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  Vorige maand zag Iran zijn ergste luchtramp in de jaren toen een vliegtuig dat naar 
+Armenië ging<span class="r5"> crash(</span><span class="r5">0.186</span><span class="r5">)</span>te, waarbij <span class="r4">168</span> mensen aan boord stierven.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.009</span><span class="r2">):</span>     Air accidents are common in Iran, which has an <span class="r3">...</span> International sanctions have meant 
+that new air<span class="r3">...</span> Earlier this week, a police helicopter crash ki<span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.010</span><span class="r2">):</span>    Luchtvaartongelukken komen veel voor in Iran, d<span class="r3">...</span> Internationale sancties hebben 
+betekend dat er <span class="r3">...</span> Eerder deze week<span class="r1"> stort(</span><span class="r1">0.031</span><span class="r1">)</span>te een politiehelikopter <span class="r3">...</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  <span class="r7">Vor</span><span class="r5">ige(</span><span class="r5">0.158</span><span class="r5">)</span> maand zag Iran zijn ergste luchtramp in de jaren toen een vliegtuig dat 
+naar Armenië ging crashte, waarbij <span class="r4">168</span> mensen aan boord stierven.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     Air accidents are common in Iran, which has an <span class="r3">...</span> International sanctions have meant 
+that new air<span class="r3">...</span> Earlier this week, a police helicopter crash <span class="r7">ki</span><span class="r1">...(</span><span class="r1">0.008</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Luchtvaartongelukken komen veel voor in Iran, d<span class="r3">...</span> Internationale sancties hebben 
+betekend dat er <span class="r3">...</span> Eerder deze<span class="r1"> week(</span><span class="r1">0.004</span><span class="r1">)</span> stortte een politiehelikopter<span class="r1"> ...(</span><span class="r1">0.004</span><span class="r1">)</span>
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  Vorige maand zag Iran zijn ergste luchtramp in de<span class="r5"> jaren(</span><span class="r5">0.148</span><span class="r5">)</span> toen een vliegtuig dat 
+naar Armenië ging crashte, waarbij <span class="r4">168</span> mensen aan boord stierven.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Air accidents are common in Iran, which has an <span class="r3">...</span> International sanctions have meant 
+that new air<span class="r3">...</span> Earlier<span class="r1"> this(</span><span class="r1">0.003</span><span class="r1">)</span> week, a police helicopter crash <span class="r7">ki</span><span class="r1">...(</span><span class="r1">0.002</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Luchtvaartongelukken komen veel voor in Iran, d<span class="r3">...</span> Internationale sancties hebben<span class="r1"> </span>
+<span class="r1">beteken(</span><span class="r1">0.002</span><span class="r1">)</span>d dat er <span class="r3">...</span> Eerder deze week<span class="r1"> stort(</span><span class="r1">0.002</span><span class="r1">)</span>te een politiehelikopter <span class="r3">...</span>
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  Vorige maand zag Iran zijn ergste luchtramp in<span class="r5"> de(</span><span class="r5">0.110</span><span class="r5">)</span> jaren toen een vliegtuig dat 
+naar Armenië ging crashte, waarbij <span class="r4">168</span> mensen aan boord stierven.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    <span class="r1"> Air(</span><span class="r1">0.004</span><span class="r1">)</span> accidents are common in Iran, which has<span class="r1"> an(</span><span class="r1">0.004</span><span class="r1">)</span> <span class="r3">...</span> International 
+sanctions have meant that new air<span class="r3">...</span> Earlier this week, a police helicopter crash <span class="r7">ki</span><span class="r1">...(</span><span class="r1">0.004</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    Luchtvaartongelukken komen veel voor in Iran, d<span class="r3">...</span> Internationale sancties hebben<span class="r1"> </span>
+<span class="r1">beteken(</span><span class="r1">0.004</span><span class="r1">)</span>d dat er <span class="r3">...</span> Eerder deze week<span class="r1"> stort(</span><span class="r1">0.004</span><span class="r1">)</span>te een politiehelikopter<span class="r1"> ...(</span><span class="r1">0.004</span><span class="r1">)</span>
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  Vorige maand zag Iran zijn ergste <span class="r7">lucht</span><span class="r5">ram(</span><span class="r5">0.100</span><span class="r5">)</span>p in de jaren toen een vliegtuig dat 
+naar Armenië ging crashte, waarbij <span class="r4">168</span> mensen aan boord stierven.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.010</span><span class="r2">):</span>     Air accidents are common in Iran, which has an <span class="r3">...</span> International sanctions have meant 
+that new air<span class="r3">...</span> Earlier this week, a police helicopter crash ki<span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.011</span><span class="r2">):</span>    <span class="r7">L</span><span class="r1">ucht(</span><span class="r1">0.013</span><span class="r1">)vaart(</span><span class="r1">0.029</span><span class="r1">)</span>ongelukken komen veel voor in Iran, d<span class="r3">...</span> Internationale 
+sancties hebben betekend dat er <span class="r3">...</span> Eerder deze week stortte een politiehelikopter <span class="r3">...</span>
+#<span class="r4">7</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span> <span class="r5"> Vor(</span><span class="r5">0.092</span><span class="r5">)</span>ige maand zag Iran zijn ergste luchtramp in de jaren toen een vliegtuig dat 
+naar Armenië ging crashte, waarbij <span class="r4">168</span> mensen aan boord stierven.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.011</span><span class="r2">):</span>     Air accidents are common in Iran, which has an <span class="r3">...</span> International sanctions have meant 
+that new air<span class="r3">...</span> Earlier this week, a police helicopter crash <span class="r7">ki</span><span class="r1">...(</span><span class="r1">0.030</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.011</span><span class="r2">):</span>    Luchtvaartongelukken komen veel voor in Iran, d<span class="r3">...</span> Internationale sancties hebben 
+betekend dat er <span class="r3">...</span> Eerder deze week stortte een politiehelikopter<span class="r1"> ...(</span><span class="r1">0.023</span><span class="r1">)</span>
+#<span class="r4">8</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  Vorige maand zag Iran zijn ergste luchtramp in de jaren toen een<span class="r5"> vliegtuig(</span><span class="r5">0.074</span><span class="r5">)</span> dat 
+naar Armenië ging crashte, waarbij <span class="r4">168</span> mensen aan boord stierven.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Air accidents are common in Iran, which has an <span class="r3">...</span> International sanctions have meant 
+that new air<span class="r3">...</span> Earlier this week,<span class="r1"> a(</span><span class="r1">0.003</span><span class="r1">)</span> police <span class="r7">he</span><span class="r1">lic(</span><span class="r1">0.003</span><span class="r1">)</span>opter crash ki<span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Luchtvaartongelukken komen veel voor in Iran, d<span class="r3">...</span> Internationale sancties hebben<span class="r1"> </span>
+<span class="r1">beteken(</span><span class="r1">0.003</span><span class="r1">)</span>d dat er <span class="r3">...</span> Eerder deze week<span class="r1"> stort(</span><span class="r1">0.002</span><span class="r1">)</span>te een politiehelikopter <span class="r3">...</span>
+#<span class="r4">9</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  Vorige maand zag Iran zijn ergste luchtramp in de jaren toen een vliegtuig dat naar 
+Armenië<span class="r5"> ging(</span><span class="r5">0.058</span><span class="r5">)</span> crashte, waarbij <span class="r4">168</span> mensen aan boord stierven.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     Air accidents are common in Iran, which has an <span class="r3">...</span> International sanctions have meant 
+that new air<span class="r3">...</span> Earlier this week, a police <span class="r7">helic</span><span class="r1">opter(</span><span class="r1">0.003</span><span class="r1">)</span> crash ki<span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Luchtvaartongelukken komen veel voor in Iran, d<span class="r3">...</span> Internationale sancties hebben 
+betekend dat er <span class="r3">...</span> Eerder deze week<span class="r1"> stort(</span><span class="r1">0.008</span><span class="r1">)</span>te een politiehelikopter <span class="r3">...</span>
+#<span class="r4">10</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  Vorige maand zag Iran zijn ergste luchtramp in de jaren<span class="r5"> toen(</span><span class="r5">0.054</span><span class="r5">)</span> een vliegtuig dat 
+naar Armenië ging crashte, waarbij <span class="r4">168</span> mensen aan boord stierven.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     Air accidents are common in Iran, which has an <span class="r3">...</span> International sanctions have meant 
+that new air<span class="r3">...</span> Earlier this week, a police helicopter crash ki<span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Luchtvaartongelukken komen veel voor in Iran, d<span class="r3">...</span> Internationale sancties hebben 
+betekend dat er <span class="r3">...</span> Eerder deze week<span class="r1"> stort(</span><span class="r1">0.007</span><span class="r1">)</span>te een politiehelikopter <span class="r3">...</span>
+#<span class="r4">11</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  Vorige maand zag Iran zijn ergste luchtramp in de jaren toen een vliegtuig dat naar 
+Armenië ging crashte,<span class="r5"> waarbij(</span><span class="r5">0.051</span><span class="r5">)</span> <span class="r4">168</span> mensen aan boord stierven.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     Air accidents are common in Iran, which has an <span class="r3">...</span> International sanctions have meant 
+that new air<span class="r3">...</span> Earlier this week, a police helicopter crash ki<span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Luchtvaartongelukken komen veel voor in Iran, d<span class="r3">...</span> Internationale sancties hebben<span class="r1"> </span>
+<span class="r1">beteken(</span><span class="r1">0.004</span><span class="r1">)</span>d dat er <span class="r3">...</span> Eerder deze week<span class="r1"> stort(</span><span class="r1">0.005</span><span class="r1">)</span>te een politiehelikopter <span class="r3">...</span>
+#<span class="r4">12</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  Vorige maand zag Iran zijn<span class="r5"> erg(</span><span class="r5">0.045</span><span class="r5">)</span>ste luchtramp in de jaren toen een vliegtuig dat 
+naar Armenië ging crashte, waarbij <span class="r4">168</span> mensen aan boord stierven.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Air accidents are common in Iran, which has an <span class="r3">...</span> International sanctions have meant 
+that new air<span class="r3">...</span> Earlier this week, a police <span class="r7">he</span><span class="r1">lic(</span><span class="r1">0.002</span><span class="r1">)opter(</span><span class="r1">0.002</span><span class="r1">)</span> crash<span class="r1"> ki(</span><span class="r1">0.002</span><span class="r1">)</span><span class="r3">...</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Luchtvaartongelukken komen veel voor in Iran, d<span class="r3">...</span> Internationale sancties hebben 
+betekend dat er <span class="r3">...</span> Eerder deze week<span class="r1"> stort(</span><span class="r1">0.002</span><span class="r1">)</span>te een politiehelikopter <span class="r3">...</span>
+
+</code></pre>
+</body>
+</html>

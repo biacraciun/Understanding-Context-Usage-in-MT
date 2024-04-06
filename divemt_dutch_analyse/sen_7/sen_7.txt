@@ -1,0 +1,4 @@
+Source sen: The disease is carried by pigs, which then migrates to humans through mosquitos. 
+MT sen: De ziekte wordt door varkens vervoerd, die dan via muggen naar mensen migreren. 
+Target sen: De ziekte wordt door varkens gedragen en wordt vervolgens overgedragen op mensen via muggen. 
+Modified words during post-editing: ['vervoerd', ',', 'die', 'dan', 'via', 'muggen', 'naar', 'mensen', 'migreren']

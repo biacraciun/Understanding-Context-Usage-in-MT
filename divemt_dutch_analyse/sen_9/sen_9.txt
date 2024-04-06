@@ -1,0 +1,4 @@
+Source sen: One bomb exploded outside the governor general's office. 
+MT sen: Een bom ontplofte buiten het kabinet van de gouverneur général. 
+Target sen: Een bom ontplofte buiten het kantoor van de gouverneur-generaal. 
+Modified words during post-editing: ['kabinet', 'gouverneur', 'général']
