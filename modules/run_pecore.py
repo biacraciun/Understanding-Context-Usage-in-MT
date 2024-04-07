@@ -62,6 +62,7 @@ def run_pecore(langugage_code, notebook=False):
     
 if __name__ == "__main__":
     
-    #langugage_codes = ['bul_Cyrl', 'nld_Latn', 'ron_Latn']
-    
-    run_pecore('ron_Latn', notebook=False)
+    langugage_codes = ['bul_Cyrl', 'nld_Latn', 'ron_Latn']
+
+    for lang in langugage_codes:
+        run_pecore(lang, notebook=False)
