@@ -28,8 +28,8 @@ We additionally look into the ability of contextual information to predict trans
 We randomly select 50 Dutch translations from [mBART1-to-50](https://huggingface.co/facebook/mbart-large-50-one-to-many-mmt), sourced from the [DivEMT](https://huggingface.co/datasets/GroNLP/divemt) data set, which we manually analyse through the PECoRe and [Inseq](https://github.com/inseq-team/inseq) architectures. In this analysis, we focus on the tokens that were modified (insertions, deletions, substitutions, and shifts) during post-editing by a professional translator and assess if their invalidity is the result of relying on incorrect context.  
 
 We extract these randomly selected 50 Dutch mBART translations using [get_data.py](get_data.py), which outputs the sentences as a 🤗 Dataset object to the [data/divemt_data](data/divemt_data) folder.
-Subsequently, we call [divemt_dutch.py](divemt_dutch.py) to parse the mBART translations accompanied by the requested data (source text, target text andcontext) to bot PECoRE and Inseq. Their outputs can be found in [divemt_dutch_analyse](divemt_dutch_analyse), ordered by sentence number. 
-Note that PECoRe requires context, sometimes a randomly selected is the first of its paragrapg for which is has no (preceding) context. As a result few sentence folders do not contain PECoRe output (sentences: [1](divemt_dutch_analyse/sen_1/), [4](divemt_dutch_analyse/sen_4/) and [9](divemt_dutch_analyse/sen_9/).)
+Subsequently, we call [divemt_dutch.py](divemt_dutch.py) to parse the mBART translations accompanied by the requested data (source text, target text andcontext) to both PECoRE and Inseq. Their outputs can be found in [divemt_dutch_analyse](divemt_dutch_analyse), ordered by sentence number. 
+Note that PECoRe requires context, sometimes a randomly selected is the first of its paragraph for which is has no (preceding) context. As a result few sentence folders do not contain PECoRe output (sentences: [1](divemt_dutch_analyse/sen_1/), [4](divemt_dutch_analyse/sen_4/) and [9](divemt_dutch_analyse/sen_9/).)
 
 
 ## Running the code
@@ -63,7 +63,7 @@ python modules/run_pecore.py
 A notebook for each language is provided for inspecting the generated output of the PECoRe method. These can be found in the [notebooks](notebooks) folder.
 
 ### DivEMT Dutch
-The replication of our DivEMT Dutch research direction involves only two steps and scripts:
+The replication of our DivEMT Dutch research direction involves only two scripts:
 
 To retrieve the desired data from DivEMT:
 ```bash
