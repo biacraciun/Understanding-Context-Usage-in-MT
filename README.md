@@ -29,7 +29,7 @@ We randomly select 50 Dutch translations from [mBART1-to-50](https://huggingface
 
 We extract these randomly selected 50 Dutch mBART translations using [get_data.py](get_data.py), which outputs the sentences as a 🤗 Dataset object to the [data/divemt_data](data/divemt_data) folder.
 Subsequently, we call [divemt_dutch.py](divemt_dutch.py) to parse the mBART translations accompanied by the requested data (source text, target text andcontext) to bot PECoRE and Inseq. Their outputs can be found in [divemt_dutch_analyse](divemt_dutch_analyse), ordered by sentence number. 
-Note that PECoRe requires context, sometimes a randomly selected is the first of its paragrapg for which is has no (preceding) context. As a result few sentence fodlers do not contain PECoRe output (sentences: [1](divemt_dutch_analyse/sen_1/), [4](divemt_dutch_analyse/sen_4/) and [9](divemt_dutch_analyse/sen_9/).)
+Note that PECoRe requires context, sometimes a randomly selected is the first of its paragrapg for which is has no (preceding) context. As a result few sentence folders do not contain PECoRe output (sentences: [1](divemt_dutch_analyse/sen_1/), [4](divemt_dutch_analyse/sen_4/) and [9](divemt_dutch_analyse/sen_9/).)
 
 
 ## Running the code
