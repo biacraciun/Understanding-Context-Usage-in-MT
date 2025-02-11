@@ -1,5 +1,5 @@
 inseq
-transformers==4.38.1
+transformers==4.48.0
 datasets==2.18.0
 numpy==1.26.3
 pandas==2.1.4
